@@ -191,11 +191,11 @@ footer{
     }
 
     #logo-header-revolucion-digital{
-        margin-top: 250px; /*390px*/
+        margin-top: 280px; /*390px*/
     }
 
     #boton-cursos{
-        margin-top: 250px; /*al inicio no tenia este estilo*/
+        margin-top: 150px; /*al inicio no tenia este estilo*/
         margin-bottom: 450px;
     }
 }
