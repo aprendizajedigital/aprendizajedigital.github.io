@@ -202,7 +202,7 @@ footer{
 
 @media (max-width: 394px) {
     #logo-header-revolucion-digital{
-        margin-top: 350px;
+        margin-top: 280px; /*350px*/
     }
 }
 
