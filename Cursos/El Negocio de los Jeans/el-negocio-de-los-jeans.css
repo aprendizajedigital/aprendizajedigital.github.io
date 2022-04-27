@@ -1,0 +1,516 @@
+/*-------------------CUENTA REGRESIVA----------------*/
+.container-clock {
+    /* color: #333; */
+    color: black;
+    /*margin: 0 auto;*/ /*centrar contador*/
+    /* margin-bottom: 20px; */
+
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    text-align: center;
+  
+    max-width: 410px;
+    width: 100%;
+
+
+
+    /*display: inline-block;*/ /*AQUI EL WIDTH SU ANCHO VA A SER TODO EL CONTENIDO*/
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(180deg,#000000 0%,#8c0000 100%); */ /*COLOR DEL FONDO DEL CONTADOR*/
+    background-color: white;
+
+    font-family: Montserrat, sans-serif;
+  
+    /* box-shadow: 10px 10px 0px 0px #8c0000; */ /*SOMBRA DEL CONTADOR*/
+  
+  }
+  
+  .container-clock__headline{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .countdown{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .countdown__item {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  
+  .countdown__item span {
+    display: block;
+    font-size: 50px;
+    font-weight: 800;
+    /* padding: 0 20px; */
+  }
+  
+  .container-clock__final-message {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .container-clock__final-message span {
+    padding: 5px;
+  }
+  /*---------------------------------------------*/
+
+  .discount{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F44336;
+    padding: 10px;
+
+    flex-wrap: wrap; /*Con esto ya no es necesario usar container*/
+  }
+
+  .discount__title{
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    max-width: 600px;
+  }
+
+  .header-background-image-color{
+
+    background-image: url(./prueba.jpg), linear-gradient(rgb(50, 50, 50), rgb(50, 50, 50)); /*PON LA IMAGEN CON DEGRADADO NEGRO EN PHOTOSHOP*/
+    background-repeat: no-repeat;
+    /* background-position: 60% 40%; */
+    background-size: 100% 60%;
+
+    background-blend-mode: multiply;
+    background-color: #FBC02D ;
+  }
+
+  .section-quotas-background-image-color{
+    background: url('./fondo-jeans.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 0 0 1000vmax rgba(0,0,0,.7);
+    padding: 60px 0;
+  }
+
+  .header__container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__container-img__img{
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+
+    margin: 20px 0;
+  }
+
+  .header__container-video {
+    position: relative;
+  }
+  
+  .header__container-video::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    content: '';
+    background: linear-gradient(to top, transparent 0%, black 100%);
+  }
+
+  .header-img{
+    max-width: 300px;
+    height: auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .container-text__title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    color: black;
+    font-weight: 500;
+  }
+
+  .container-text__subtitle{
+    font-family: Montserrat, sans-serif;
+    font-size: 35px;
+    color: black;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  .container-text__subtitle--mark{
+    background-color: white;
+  }
+
+  .container-text__description{
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    color: black;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .container-text__description--bold{
+    font-weight: 900;
+  }
+
+  .quotas__title{
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: normal;
+
+    margin-bottom: 20px;
+  }
+
+  .quotas__subtitle{
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    margin: 0;
+
+    margin-bottom: 30px;
+  }
+
+  .quotas__title span{
+    font-family: Montserrat, sans-serif;
+    font-size: 50px;
+    color: rgb(248, 248, 86);
+    font-weight: 900;
+  }
+
+  .quotas__text-price{
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .quotas_price-before{
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    color: red;
+    font-weight: normal;
+    margin: 0;
+    text-decoration: line-through;
+  }
+
+  .quotas_price-after{
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    color: green;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .quotas__button{
+    margin: 0 auto;
+  }
+
+  .quotas-container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .quotas__img{
+    width: 100%;
+    height: auto;
+  }
+
+  .quotas__description{
+    font-family: Montserrat, sans-serif;
+    color: white;
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+
+    margin-bottom: 30px;
+  }
+
+  .quotas__description span{
+    font-weight: 900;
+  }
+
+  /*BUTTON*/
+/* CSS */
+.button-pay {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #ffc001 0, #fffb00 100%);
+  border: 0;
+  border-radius: 25px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 40px;
+}
+
+.button-pay:focus {
+  box-shadow: #fffb00 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #fffb00 0 -3px 0 inset;
+
+}
+
+.button-pay:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #fffb00 0 -3px 0 inset;
+  transform: translateY(-2px);
+  color: black;
+  text-decoration: none;
+
+}
+
+.button-pay:active {
+  box-shadow: #ffc001 0 3px 7px inset;
+  transform: translateY(2px);
+
+}
+
+/*---------------------------------------------*/
+
+.section-learn-background-image-color{
+  border-top: 35px solid #FBC02D;
+  padding: 40px 0;
+  background-color: black;
+  background: url('./fondo-jeans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 0 0 1000vmax rgba(0,0,0,.7);
+}
+
+.learn-container-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.learn__img{
+  width: 100%;
+  height: auto;
+}
+
+.learn__title{
+  font-family: Montserrat, sans-serif;
+  font-size: 45px;
+  color: rgb(248, 248, 86);
+  font-weight: 900;
+}
+
+.learn__description{
+  font-family: Montserrat, sans-serif;
+  color: white;
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.learn__description span{
+  font-weight: 900;
+}
+
+.lessons__title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 70px;
+  color: black;
+  font-weight: 500;
+  background-color: #ffc001;
+  padding: 30px 0;
+}
+
+.lessons__description{
+  font-family: Montserrat, sans-serif;
+  color: white;
+  margin: 30px 0;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.lessons_container{
+  background-color: rgb(54, 54, 54);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.lessons_container p{
+  font-family: Montserrat, sans-serif;
+  color: white;
+  margin: 0;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0;
+}
+
+.section-lessons-background-image-color{
+  background-color: black;
+  background: url('./fondo-jeans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 0 0 1000vmax rgba(0,0,0,.7);
+}
+
+.section-achieve-background-image-color{
+  border-top: 35px solid #FBC02D;
+  border-bottom: 35px solid #FBC02D;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.achieve__title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 70px;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.achieve__description{
+  font-family: Montserrat, sans-serif;
+  color: black;
+  margin: 0;
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0;
+}
+
+.achieve__description--bold{
+  font-family: Montserrat, sans-serif;
+  color: black;
+  margin: 0;
+  font-weight: 900;
+  font-size: 17px;
+  margin: 0;
+}
+
+.achieve__container-description{
+  margin-bottom: 30px;
+}
+
+.section-opinions-background-image-color{
+  background-color: black;
+  background: url('./fondo-jeans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 0 0 1000vmax rgba(0,0,0,.7);
+
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.seal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.seal-container__img{
+  max-width: 270px;
+  width: 100%;
+  height: auto;
+}
+
+.opinions__container{
+  background-color: rgb(54, 54, 54);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.opinions__title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  color: white;
+  font-weight: 400;
+
+  margin-bottom: 50px;
+}
+
+.opinions__img{
+  border-radius: 100%;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 20px; /*Esto es para el responsive para que cuando ocupe el 100% de width tengan un espaciado abajo*/
+}
+
+.opinions__score-img{
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 20px;
+}
+
+.opinions__text{
+  font-family: Montserrat, sans-serif;
+  color: white;
+  margin: 0;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0;
+
+  margin-bottom: 20px;
+}
+
+.opinions__user{
+  font-family: Montserrat, sans-serif;
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 0;
+}
+
+footer{
+  font-family: Poppins,sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: black;
+}
