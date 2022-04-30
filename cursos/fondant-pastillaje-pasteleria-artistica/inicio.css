@@ -129,6 +129,11 @@ img[src="img2.png"]{
     color: #212529;
 }
 
+.main--container-StudyPlan__item--container--description__container--item--text span{
+    font-weight: 700;
+    color: #48b4b8;
+}
+
 .main--container-StudyPlan__item--container--description__container--item{
     display: flex;
     flex-direction: row;
@@ -145,6 +150,19 @@ img[src="img2.png"]{
 .bold p span{
     font-weight: 900;
     color: rgb(72, 180, 184);
+}
+
+.main--container-StudyPlan__item--container--description__container--img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main--container-StudyPlan__item--container--description__img{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 .main--container-StudyPlan__item--container--description__container--item--icon{
