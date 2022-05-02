@@ -96,7 +96,7 @@
 
 .footer{
     background: black;
-    padding: 30px 0;
+    padding: 30px 30px;
 
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -162,7 +162,45 @@
 }
 
 @media (max-width: 415px) {
-    
+    .header__title{
+        font-size:25px;
+        margin-bottom: 15px;
+    }
+
+    .header__subtitle{
+        font-size:20px;
+        font-weight:500;
+        text-decoration: underline;
+    }
+
+    .form__ebook{
+        margin-bottom:50px;
+    }
+
+    .form__title{
+        font-size:22px;
+    }
+
+    .form__label{
+        font-size:17px;
+    }
+
+    .form__button{
+        font-size:25px;
+    }
+
+    .purpose__title{
+        font-size:30px;
+    }
+
+    .purpose__subtitle{
+        font-size:18px;
+        line-height:25px;
+    }
+
+    .footer{
+        font-size:12px;
+    }
 }
 
 @media (max-width: 413px) {

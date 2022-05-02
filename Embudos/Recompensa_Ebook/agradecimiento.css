@@ -86,7 +86,7 @@
 
 .footer{
     background: black;
-    padding: 30px 0;
+    padding: 30px 30px;
 
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -127,6 +127,25 @@
 @media (max-width: 541px) {
 }
 @media (max-width: 415px) {
+    .header__title{
+        font-size:23px;
+    }
+
+    .main__title{
+        font-size:50px;
+    }
+
+    .main__subtitle{
+        font-size:20px;
+    }
+
+    .main__button{
+        font-size:20px;
+    }
+
+    .footer{
+        font-size:12px;
+    }
 }
 @media (max-width: 413px) {
 }
