@@ -112,46 +112,75 @@
 
 /*------------------------------------------MEDIAQUERYS-----------------------------------------------*/
 
-@media (max-widht: 376px) {
+@media (max-width: 1025px) {
     
 }
 
-@media (max-widht: 415px) {
+@media (max-width: 913px) {
     
 }
 
-@media (max-widht: 391px) {
+@media (max-width: 821px) {
     
 }
 
-@media (max-widht: 394px) {
+@media (max-width: 769px) {
+    .header__title{
+        font-size:28px;
+        margin-bottom: 15px;
+    }
+
+    .header__subtitle{
+        font-size:25px;
+        font-weight:500;
+        text-decoration: underline;
+    }
+
+    .form__ebook{
+        margin-bottom:50px;
+    }
+
+    .form__title{
+        font-size:25px;
+    }
+
+    .purpose__title{
+        font-size:35px;
+    }
+
+    .purpose__subtitle{
+        font-size:18px;
+    }
+
+    .footer{
+        font-size:12px;
+    }
+}
+
+@media (max-width: 541px) {
     
 }
 
-@media (max-widht: 361px) {
+@media (max-width: 415px) {
     
 }
 
-@media (max-widht: 413px) {
+@media (max-width: 413px) {
     
 }
 
-@media (max-widht: 821px) {
+@media (max-width: 394px) {
     
 }
 
-@media (max-widht: 769px) {
+@media (max-width: 391px) {
     
 }
 
-@media (max-widht: 913px) {
+@media (max-width: 376px) {
     
 }
 
-@media (max-widht: 541px) {
-    
-}
-
-@media (max-widht: 1025px) {
+@media (max-width: 361px) {
     
 }
