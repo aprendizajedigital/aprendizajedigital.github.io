@@ -23,6 +23,13 @@
     align-items: center;
 }
 
+.form__ebook{
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    padding: 0px 0px;
+}
+
 .form-user{
     padding: 80px 0;
     background-image: url(./background.jpg);
@@ -44,21 +51,32 @@
 .form__label{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 2px;
 }
 
 .form-container{
-    background: white;
+    background: rgba(255, 255, 255, 0.6);
+    border: 5px dashed black;
     border-radius: 25px;
-    padding: 30px;
+    padding: 37px 30px;
+    text-align: center;
 }
 
-.form__ebook{
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    padding: 0 30px;
+.main__icon{
+    font-size: 80px;
+    color: rgb(237, 24, 0);
+    font-weight: bold;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    animation: mover 0.3s infinite alternate;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
 
 .form__button{
