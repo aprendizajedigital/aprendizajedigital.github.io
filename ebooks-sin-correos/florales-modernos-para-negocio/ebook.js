@@ -48,18 +48,30 @@
     
     document.querySelector(".form__button").addEventListener('click', function () {
       
-      if(isValidate_email === true && isValidate_name_complete === true){
+      let timerInterval;
+      if(true){
         Swal.fire({
-          title: 'Cargando...',
-          html: 'Por favor espere...',
+          title: 'Descargando Ebook...',
+          html: 'Por favor espere <strong></strong> segundos...',
+          imageUrl: './ebooks-sin-correos/florales-modernos-para-negocio/buscando-ebook.jpg',
+          imageWidth: 400,
+          timer: 4000,
+          timerProgressBar: true,
           allowEscapeKey: false,
           allowOutsideClick: false,
           didOpen: () => {
-            Swal.showLoading()
+            Swal.showLoading();
+            const timer_strong = Swal.getHtmlContainer().querySelector('strong')
+            timerInterval = setInterval(() => {
+              timer_strong.textContent = (Swal.getTimerLeft() / 1000).toFixed(0);
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+            window.location.href = './gracias.html';
           }
         });
-
-        document.querySelector(".form__button").setAttribute("disabled", "disabled");
-        document.querySelector(".form__button").style.display = "none";
+        // document.querySelector(".form__button").setAttribute("disabled", "disabled");
+        // document.querySelector(".form__button").style.display = "none";
       }
     })
