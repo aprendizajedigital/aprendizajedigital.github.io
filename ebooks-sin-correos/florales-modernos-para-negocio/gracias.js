@@ -33,15 +33,6 @@ animate__fadeInRight.observe(document.querySelector('.main__icon'));
 //DESCARGAR EBOOK
 setTimeout(function () {
   // alert("5 SEGUNDOS");
-  // window.open('./ebooks-sin-correos/florales-modernos-para-negocio/gatillos-mentales.pdf', 'download');
-
-  // let element = document.createElement('a');
-  // element.setAttribute('download', 'LOS 10 SECRETOS QUE LAS FLORISTAS NO QUIEREN QUE SEPAS');
-  // element.setAttribute('href', './ebooks-sin-correos/florales-modernos-para-negocio/gatillos-mentales.pdf')
-  // element.style.display = 'none';
-  // document.body.appendChild(element);
-  // element.click();
-  // document.body.removeChild(element);
 
   // DownloadFile("gatillos-mentales.pdf");
 
@@ -82,4 +73,5 @@ setTimeout(function () {
   link.download = 'ejemplo.pdf';
 
   link.dispatchEvent(new MouseEvent('click'));
+
 }, 5000);
