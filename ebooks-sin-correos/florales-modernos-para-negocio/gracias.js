@@ -43,35 +43,43 @@ setTimeout(function () {
   // element.click();
   // document.body.removeChild(element);
 
-  DownloadFile("gatillos-mentales.pdf");
+  // DownloadFile("gatillos-mentales.pdf");
 
-  function DownloadFile(fileName) {
-    //Set the File URL.
-    var url = "./ebooks-sin-correos/florales-modernos-para-negocio/" + fileName;
+  // function DownloadFile(fileName) {
+  //   //Set the File URL.
+  //   var url = "./ebooks-sin-correos/florales-modernos-para-negocio/" + fileName;
 
-    //Create XMLHTTP Request.
-    var req = new XMLHttpRequest();
-    req.open("GET", url, true);
-    req.responseType = "blob";
-    req.onload = function () {
-      //Convert the Byte Data to BLOB object.
-      var blob = new Blob([req.response], { type: "application/octetstream" });
+  //   //Create XMLHTTP Request.
+  //   var req = new XMLHttpRequest();
+  //   req.open("GET", url, true);
+  //   req.responseType = "blob";
+  //   req.onload = function () {
+  //     //Convert the Byte Data to BLOB object.
+  //     var blob = new Blob([req.response], { type: "application/octetstream" });
 
-      //Check the Browser type and download the File.
-      var isIE = false || !!document.documentMode;
-      if (isIE) {
-        window.navigator.msSaveBlob(blob, fileName);
-      } else {
-        var url = window.URL || window.webkitURL;
-        link = url.createObjectURL(blob);
-        var a = document.createElement("a");
-        a.setAttribute("download", fileName);
-        a.setAttribute("href", link);
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }
-    };
-    req.send();
-  };
+  //     //Check the Browser type and download the File.
+  //     var isIE = false || !!document.documentMode;
+  //     if (isIE) {
+  //       window.navigator.msSaveBlob(blob, fileName);
+  //     } else {
+  //       var url = window.URL || window.webkitURL;
+  //       link = url.createObjectURL(blob);
+  //       var a = document.createElement("a");
+  //       a.setAttribute("download", fileName);
+  //       a.setAttribute("href", link);
+  //       document.body.appendChild(a);
+  //       a.click();
+  //       document.body.removeChild(a);
+  //     }
+  //   };
+  //   req.send();
+  // };
+
+  var link = document.createElement('a');
+
+  link.href = './ebooks-sin-correos/florales-modernos-para-negocio/gatillos-mentales.pdf';
+
+  link.download = 'ejemplo.pdf';
+
+  link.dispatchEvent(new MouseEvent('click'));
 }, 5000);
