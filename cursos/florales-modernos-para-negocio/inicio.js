@@ -1,3 +1,26 @@
+//EFECTO auto_increment
+const auto_increment = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      // entry.target.classList.add('animate__animated');
+      // entry.target.classList.add('animate__fadeIn');
+
+      let x = 1;
+      const intervalo = setInterval(function () {
+        document.querySelector('.auto_increment').innerText = x;
+        if (x === 10) clearInterval(intervalo);
+        x++;
+      }, 100);
+
+    }
+  });
+});
+
+auto_increment.observe(document.querySelector('.auto_increment'));
+
 //Acordeon
 let question = document.querySelectorAll(".question");
 
