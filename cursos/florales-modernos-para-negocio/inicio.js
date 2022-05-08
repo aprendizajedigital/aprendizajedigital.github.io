@@ -133,6 +133,7 @@ for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--tit
   animate__zoomIn.observe(document.querySelectorAll(".main--container--gifs__item--title")[i]);
 }
 
+animate__zoomIn.observe(document.querySelector(".main--warranty--text__title span"));
 //---------------------------------------------------------------------------------------
 
 //EFECTO auto_increment

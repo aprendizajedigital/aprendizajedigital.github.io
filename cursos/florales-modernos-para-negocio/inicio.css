@@ -156,10 +156,31 @@ header {
     margin-bottom: 35px;
 }
 
+.ability--video{
+    width: 100%;
+    height: 700px;
+    border-radius: 20px;
+    border: 5px solid white !important;
+    box-shadow: 5px 10px 30px #000000;
+    margin: 0 auto;
+    margin-bottom: 35px;
+
+}
+
 .header--question {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 500;
+}
+
+.estudiante__img{
+    max-width:500px;
+    width: 100%;
+    height: auto;
+    border-radius:10px;
+    box-shadow: rgb(0 0 0 / 45%) 0px 4px 8px -1px;
+    padding: 5px;
+    margin-bottom:16px;
 }
 
 img[src="img1.png"] {
