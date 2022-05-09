@@ -1,16 +1,41 @@
-
 setInterval(function () {
   openNotify();
-}, 10000); //TIEMPO PARA QUE APAREZCA LA NOTIFICACION
 
-setInterval(function () {
-  closeNotify();
-}, 20000); //SUMAS EL TIEMPO PARA QUE APAREZCA + EL TIEMPO DE QUE DESAPAREZCA 
+  setTimeout(function () {
+    closeNotify();
+  }, 10000)
+}, 60000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
+
+//----------------------
+
+// let flag = true;
+
+// function wrapper() {
+//   if(flag) {
+//     openNotify();
+//   } else {
+//     closeNotify();
+//   }
+//   flag = !flag;
+// }
+
+// setInterval(wrapper, 10000);
+
+//----------------------
+
+// setInterval(function () {
+//   openNotify();
+// }, 10000); //TIEMPO PARA QUE APAREZCA LA NOTIFICACION
+
+// setInterval(function () {
+//   closeNotify();
+// }, 20000); //SUMAS EL TIEMPO PARA QUE APAREZCA + EL TIEMPO DE QUE DESAPAREZCA 
 
 function openNotify() {
 
   randomUser();
 
+  document.querySelector('.notify__timerBar').style.display = '';
   document.querySelector('.notify__timerBar').style.animationPlayState = 'running'
 
   if(document.querySelector('.notify').style.display == 'none') {
@@ -30,6 +55,7 @@ function openNotify() {
 
 function closeNotify() {
 
+  document.querySelector('.notify__timerBar').style.display = 'none';
   document.querySelector('.notify__timerBar').style.animationPlayState = 'paused'
 
   document.querySelector('.notify').classList.remove('animate__bounceIn');
