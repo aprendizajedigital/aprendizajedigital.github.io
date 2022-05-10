@@ -44,22 +44,22 @@
 
 //   animate__fadeInRight.observe(document.querySelector('.form-container'));
 
-//animate__fadeIn
-const animate__fadeIn = new IntersectionObserver(entries => {
+//animate__zoomIn
+const animate__zoomIn = new IntersectionObserver(entries => {
   // Loop over the entries
   entries.forEach(entry => {
     // If the element is visible
     if (entry.isIntersecting) {
       // Add the animation class
       entry.target.classList.add('animate__animated');
-      entry.target.classList.add('animate__fadeIn');
+      entry.target.classList.add('animate__zoomIn');
     }
   });
 });
 
-animate__fadeIn.observe(document.querySelector('.container-ebook'));
-animate__fadeIn.observe(document.querySelector('.form-container'));
-animate__fadeIn.observe(document.querySelector('.form__button'));
+animate__zoomIn.observe(document.querySelector('.container-ebook'));
+animate__zoomIn.observe(document.querySelector('.form-container'));
+animate__zoomIn.observe(document.querySelector('.form__button'));
 
 //-------------------------------------------Sweet Alert en Accion-------------------------------------------
 

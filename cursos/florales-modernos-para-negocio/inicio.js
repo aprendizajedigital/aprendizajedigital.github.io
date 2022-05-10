@@ -256,7 +256,10 @@ for (let i = 0; i < document.querySelectorAll('.student').length; i++) {
   animate__zoomIn__no__loop.observe(document.querySelectorAll(".student")[i]);
 }
 
-animate__zoomIn__no__loop.observe(document.querySelector(".main--container-StudyPlan__item--container--description__img"));
+for (let i = 0; i < document.querySelectorAll('.main--container-StudyPlan__item--container--description__img').length; i++) {
+  animate__zoomIn__no__loop.observe(document.querySelectorAll(".main--container-StudyPlan__item--container--description__img")[i]);
+}
+
 animate__zoomIn__no__loop.observe(document.querySelector(".main--subtitle"));
 animate__zoomIn__no__loop.observe(document.querySelector(".main--repeatOffer--set--img"));
 animate__zoomIn__no__loop.observe(document.querySelector(".main--title--bonds"));
