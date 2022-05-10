@@ -9,6 +9,7 @@
     height:150px;
     background-color: #fff;
 
+    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 0 1px hsla(0deg,0%,0%,.075),0 1px 2px hsla(0deg,0%,0%,.075),1px 2px 4px hsla(0deg,0%,0%,.075),1px 3px 8px hsla(0deg,0%,0%,.075),2px 4px 16px hsla(0deg,0%,0%,.075);
 
@@ -292,7 +293,7 @@ img[src="img2.png"] {
 
 .main--title--bonds {
     font-family: Montserrat, sans-serif;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 28px;
     font-weight: 800;
     text-shadow: rgb(0 0 0 / 15%) 1px 1px 2px;
@@ -312,7 +313,7 @@ img[src="img2.png"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 .main--container--bonds__item--title {
