@@ -265,6 +265,8 @@ animate__zoomIn__no__loop.observe(document.querySelector(".main--offer--title"))
 animate__zoomIn__no__loop.observe(document.querySelector(".main--teacher--container--img"));
 animate__zoomIn__no__loop.observe(document.querySelector(".main--opinions--title"));
 animate__zoomIn__no__loop.observe(document.querySelector(".main--teacher--title"));
+animate__zoomIn__no__loop.observe(document.querySelector(".header--title"));
+
 //---------------------------------------------------------------------------------------
 
 //EFECTO auto_increment
