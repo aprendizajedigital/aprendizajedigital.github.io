@@ -1189,7 +1189,11 @@ del {
     }
 }
 
-@media (max-width: 541px) {}
+@media (max-width: 541px) {
+    .item-contenedor-del-dia{
+        padding: 0 10px;
+    }
+}
 
 /*CELULARES*/
 @media (max-width: 415px) {

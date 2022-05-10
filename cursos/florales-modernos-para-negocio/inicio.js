@@ -211,51 +211,31 @@ function randomUser() {
 }
 //---------------------------------------------------------------------------------------
 
-//animate__bounceIn LOOP
-const animate__bounceIn = new IntersectionObserver(entries => {
+//animate__zoomIn LOOP
+const animate__zoomIn__loop = new IntersectionObserver(entries => {
   // Loop over the entries
   entries.forEach(entry => {
     // If the element is visible
     if (entry.isIntersecting) {
       // Add the animation class
       entry.target.classList.add('animate__animated');
-      entry.target.classList.add('animate__bounceIn');
+      entry.target.classList.add('animate__zoomIn');
       return;
     }
 
     entry.target.classList.remove('animate__animated');
-    entry.target.classList.remove('animate__bounceIn');
+    entry.target.classList.remove('animate__zoomIn');
   });
 });
 
 for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--title').length; i++) {
-  animate__bounceIn.observe(document.querySelectorAll(".main--container--gifs__item--title")[i]);
+  animate__zoomIn__loop.observe(document.querySelectorAll(".main--container--gifs__item--title")[i]);
 }
 
-animate__bounceIn.observe(document.querySelector(".main--warranty--text__title"));
+animate__zoomIn__loop.observe(document.querySelector(".main--warranty--text__title"));
 
-//animate__bounceIn NO LOOP
-const animate__bounceIn__no__loop = new IntersectionObserver(entries => {
-  // Loop over the entries
-  entries.forEach(entry => {
-    // If the element is visible
-    if (entry.isIntersecting) {
-      // Add the animation class
-      entry.target.classList.add('animate__animated');
-      entry.target.classList.add('animate__bounceIn');
-    }
-  });
-});
-
-for (let i = 0; i < document.querySelectorAll('.student').length; i++) {
-  animate__bounceIn__no__loop.observe(document.querySelectorAll(".student")[i]);
-}
-
-animate__bounceIn__no__loop.observe(document.querySelector(".main--teacher--container--img"));
-
-
-//animate__zoomIn
-const animate__zoomIn = new IntersectionObserver(entries => {
+//animate__zoomIn NO LOOP
+const animate__zoomIn__no__loop = new IntersectionObserver(entries => {
   // Loop over the entries
   entries.forEach(entry => {
     // If the element is visible
@@ -269,13 +249,22 @@ const animate__zoomIn = new IntersectionObserver(entries => {
 });
 
 for (let i = 0; i < document.querySelectorAll('.main--frequentQuestions--title').length; i++) {
-  animate__zoomIn.observe(document.querySelectorAll(".main--frequentQuestions--title")[i]);
+  animate__zoomIn__no__loop.observe(document.querySelectorAll(".main--frequentQuestions--title")[i]);
 }
 
-animate__zoomIn.observe(document.querySelector(".main--repeatOffer--set--img"));
-animate__zoomIn.observe(document.querySelector(".main--title--bonds"));
-animate__zoomIn.observe(document.querySelector(".main--gifs--title"));
-animate__zoomIn.observe(document.querySelector(".main--offer--title"));
+for (let i = 0; i < document.querySelectorAll('.student').length; i++) {
+  animate__zoomIn__no__loop.observe(document.querySelectorAll(".student")[i]);
+}
+
+animate__zoomIn__no__loop.observe(document.querySelector(".main--container-StudyPlan__item--container--description__img"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--subtitle"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--repeatOffer--set--img"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--title--bonds"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--gifs--title"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--offer--title"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--teacher--container--img"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--opinions--title"));
+animate__zoomIn__no__loop.observe(document.querySelector(".main--teacher--title"));
 //---------------------------------------------------------------------------------------
 
 //EFECTO auto_increment
