@@ -212,27 +212,22 @@ function randomUser() {
 //---------------------------------------------------------------------------------------
 
 //animate__zoomIn LOOP
-const animate__zoomIn__loop = new IntersectionObserver(entries => {
-  // Loop over the entries
-  entries.forEach(entry => {
-    // If the element is visible
-    if (entry.isIntersecting) {
-      // Add the animation class
-      entry.target.classList.add('animate__animated');
-      entry.target.classList.add('animate__zoomIn');
-      return;
-    }
+setInterval(function () {
+  //.main--warranty--text__title .animate__animated .animate__zoomIn
+  document.querySelector(".main--warranty--text__title").classList.toggle('animate__animated');
+  document.querySelector(".main--warranty--text__title").classList.toggle('animate__zoomIn');
 
-    entry.target.classList.remove('animate__animated');
-    entry.target.classList.remove('animate__zoomIn');
-  });
-});
+  //main--warranty--text__description span
+  document.querySelector(".main--warranty--text__description").classList.toggle('animate__animated');
+  document.querySelector(".main--warranty--text__description").classList.toggle('animate__zoomIn');
 
-for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--title').length; i++) {
-  animate__zoomIn__loop.observe(document.querySelectorAll(".main--container--gifs__item--title")[i]);
-}
-
-animate__zoomIn__loop.observe(document.querySelector(".main--warranty--text__title"));
+  //.main--container--gifs__item--title .animate__animated .animate__zoomIn
+  for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--title').length; i++) {    
+    document.querySelectorAll(".main--container--gifs__item--title")[i].classList.toggle('animate__animated');
+    document.querySelectorAll(".main--container--gifs__item--title")[i].classList.toggle('animate__zoomIn');
+  }
+  
+}, 5000);
 
 //animate__zoomIn NO LOOP
 const animate__zoomIn__no__loop = new IntersectionObserver(entries => {
