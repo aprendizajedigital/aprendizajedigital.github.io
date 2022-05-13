@@ -814,26 +814,20 @@ del {
 /*BUTTON*/
 /* CSS */
 .button-pay {
-    align-items: center;
     appearance: none;
     background-image: radial-gradient(100% 100% at 100% 0, #ffc001 0, #f0473e 100%);
     border: 0;
     border-radius: 6px;
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #fff;
     cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono", monospace;
     height: auto;
-    justify-content: center;
     line-height: 1;
     list-style: none;
     overflow: hidden;
     padding-left: 16px;
     padding-right: 16px;
     position: relative;
-    text-align: left;
     text-decoration: none;
     transition: box-shadow .15s, transform .15s;
     user-select: none;
@@ -841,7 +835,18 @@ del {
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow, transform;
-    font-size: 90px;
+    font-family: Montserrat, sans-serif;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    width: 420px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+        /*centrar boton*/
 }
 
 .button-pay:focus {
@@ -862,25 +867,6 @@ del {
 
 /*---------------------------------------------*/
 
-.button-pay {
-    font-family: Montserrat, sans-serif;
-    color: #ffffff;
-    font-size: 26px;
-    font-weight: 700;
-    text-align: center;
-
-    width: 420px;
-    height: 115px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 auto
-        /*centrar boton*/
-    ;
-}
-
 .button-pay span {
     display: flex;
     flex-direction: column;
@@ -892,6 +878,73 @@ del {
 .button-pay small {
     margin-top: 10px;
 }
+
+/*BUTTON WHATSAPP*/
+/* CSS */
+.button-whatsapp {
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5cd464  0, #35b44c  100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: auto;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-family: Montserrat, sans-serif;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    width: 420px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+        /*centrar boton*/
+}
+
+.button-whatsapp:focus {
+    box-shadow: #35b44c  0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #35b44c  0 -3px 0 inset;
+}
+
+.button-whatsapp:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #35b44c  0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.button-whatsapp:active {
+    box-shadow: #35b44c  0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.button-whatsapp span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.button-whatsapp small {
+    margin-top: 10px;
+}
+/*---------------------------------------------*/
 
 .main--repeatOffer--container--img {
     display: flex;
@@ -1196,6 +1249,17 @@ del {
 }
 
 /*CELULARES*/
+@media (max-width: 468px){
+    .button-pay, .button-whatsapp {
+        width: 300px;
+        font-size: 23px;
+    }
+
+    .button-pay span, .button-whatsapp span {
+        margin-left: 10px;
+    }
+}
+
 @media (max-width: 415px) {
 
     .question::after {
@@ -1214,12 +1278,12 @@ del {
         font-size: 30px;
     }
 
-    .button-pay {
+    .button-pay, .button-whatsapp {
         width: 300px;
         font-size: 23px;
     }
 
-    .button-pay span {
+    .button-pay span, .button-whatsapp span {
         margin-left: 10px;
     }
 
@@ -1388,3 +1452,6 @@ del {
 .button-glow {
     animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
 }
+
+/*-------------------------------------------------------------*/
+
