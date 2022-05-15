@@ -1,3 +1,49 @@
+//Obtener pais del usuario
+let country_name = "";
+let country_code = "";
+
+const getCountry = function () {
+  let request = new XMLHttpRequest();
+
+  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code');
+
+  request.setRequestHeader('Accept', 'application/json');
+
+  request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      let ipdata = JSON.parse(this.responseText); 
+      // alert(myJSON.country_code);
+      country_name = ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
+      country_code = ipdata.country_code;
+    }
+  };
+
+  request.send();
+}
+
+getCountry();
+
+//Colocar tipo de moneda según el país
+country_name = !country_name ? "Estados Unidos" : country_name; //VALIDAMOS EL UNDEFINED
+country_code = !country_code ? "US" : country_code; //VALIDAMOS EL UNDEFINED
+
+// setTimeout(function () {alert(country_name + " " + country_code)}, 5000);
+
+const TIPO_DE_MONEDA = {
+  "PE" : ["s/400", "s/200", "s/100"],
+  "CL" : ["$108.001", "$54.001", "$27.001"],
+  "MX" : ["$2463,84", "$1231,92", "$615,96"],
+  "BR" : ["R$558", "R$279,00", "R$139,50"],
+  "CO" : ["$433.434,00", "$216.717,00", "$108.358,00"],
+  "AR" : ["$12388,00", "$6194,00", "$3097,00"],
+  "ES" : ["118,58€", "59,29€", "29,65€"],
+  "EC" : ["$99,98", "$49,99", "$25,00"],
+  "BO" : ["$99,98", "$49,99", "$25,00"],
+  "CR" : ["$99,98", "$49,99", "$25,00"],
+  "GT" : ["$99,98", "$49,99", "$25,00"]
+}
+
+//Usuarios Falsos
 setInterval(function () {
   openNotify();
 
@@ -222,11 +268,11 @@ setInterval(function () {
   document.querySelector(".main--warranty--text__description").classList.toggle('animate__zoomIn');
 
   //.main--container--gifs__item--title .animate__animated .animate__zoomIn
-  for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--title').length; i++) {    
+  for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--title').length; i++) {
     document.querySelectorAll(".main--container--gifs__item--title")[i].classList.toggle('animate__animated');
     document.querySelectorAll(".main--container--gifs__item--title")[i].classList.toggle('animate__zoomIn');
   }
-  
+
 }, 5000);
 
 //animate__zoomIn NO LOOP
@@ -324,7 +370,7 @@ question.forEach(question => {
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy,
-      dayMonth = "05/15/",
+      dayMonth = "05/16/",
       birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
@@ -364,3 +410,5 @@ question.forEach(question => {
         //seconds
       }, 0)
   }());
+
+
