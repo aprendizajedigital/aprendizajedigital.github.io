@@ -63,32 +63,32 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 
 //-------------------------------------------Sweet Alert en Accion-------------------------------------------
 
-document.querySelector(".form__button").addEventListener('click', function () {
+// document.querySelector(".form__button").addEventListener('click', function () {
 
-  let timerInterval;
-  if (true) {
-    Swal.fire({
-      title: 'Descargando Ebook...',
-      html: 'Por favor espere <strong></strong> segundos...',
-      imageUrl: './ebooks-sin-correos/florales-modernos-para-negocio/buscando-ebook.jpg',
-      imageWidth: 400,
-      timer: 4000,
-      timerProgressBar: true,
-      allowEscapeKey: false,
-      allowOutsideClick: false,
-      didOpen: () => {
-        Swal.showLoading();
-        const timer_strong = Swal.getHtmlContainer().querySelector('strong')
-        timerInterval = setInterval(() => {
-          timer_strong.textContent = (Swal.getTimerLeft() / 1000).toFixed(0);
-        }, 100);
-      },
-      willClose: () => {
-        clearInterval(timerInterval);
-        window.location.href = './gracias.html';
-      }
-    });
-    // document.querySelector(".form__button").setAttribute("disabled", "disabled");
-    // document.querySelector(".form__button").style.display = "none";
-  }
-})
+//   let timerInterval;
+//   if (true) {
+//     Swal.fire({
+//       title: 'Descargando Ebook...',
+//       html: 'Por favor espere <strong></strong> segundos...',
+//       imageUrl: './ebooks-sin-correos/florales-modernos-para-negocio/buscando-ebook.jpg',
+//       imageWidth: 400,
+//       timer: 4000,
+//       timerProgressBar: true,
+//       allowEscapeKey: false,
+//       allowOutsideClick: false,
+//       didOpen: () => {
+//         Swal.showLoading();
+//         const timer_strong = Swal.getHtmlContainer().querySelector('strong')
+//         timerInterval = setInterval(() => {
+//           timer_strong.textContent = (Swal.getTimerLeft() / 1000).toFixed(0);
+//         }, 100);
+//       },
+//       willClose: () => {
+//         clearInterval(timerInterval);
+//         window.location.href = './gracias.html';
+//       }
+//     });
+//     // document.querySelector(".form__button").setAttribute("disabled", "disabled");
+//     // document.querySelector(".form__button").style.display = "none";
+//   }
+// })
