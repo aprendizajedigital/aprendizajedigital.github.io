@@ -63,6 +63,10 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 
 //-------------------------------------------Sweet Alert en Accion-------------------------------------------
 
+document.querySelector(".form__button").addEventListener('click', function () {
+  window.location.href = './gracias.html';
+});
+
 // document.querySelector(".form__button").addEventListener('click', function () {
 
 //   let timerInterval;
@@ -91,4 +95,4 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 //     // document.querySelector(".form__button").setAttribute("disabled", "disabled");
 //     // document.querySelector(".form__button").style.display = "none";
 //   }
-// })
+// });
