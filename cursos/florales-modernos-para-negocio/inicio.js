@@ -1,36 +1,9 @@
 //Obtener pais del usuario
-let country_name = "";
-let country_code = "";
-
-const getCountry = function () {
-  let request = new XMLHttpRequest();
-
-  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code');
-
-  request.setRequestHeader('Accept', 'application/json');
-
-  request.onreadystatechange = function () {
-    if (this.readyState === 4) {
-      let ipdata = JSON.parse(this.responseText); 
-      // alert(myJSON.country_code);
-      country_name = ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
-      country_code = ipdata.country_code;
-    }
-  };
-
-  request.send();
-}
-
-getCountry();
-
-//Colocar tipo de moneda según el país
-country_name = !country_name ? "Estados Unidos" : country_name; //VALIDAMOS EL UNDEFINED
-country_code = !country_code ? "US" : country_code; //VALIDAMOS EL UNDEFINED
-
-// setTimeout(function () {alert(country_name + " " + country_code)}, 5000);
-
-const TIPO_DE_MONEDA = {
-  "PE" : ["s/400", "s/200", "s/100"],
+let COUNTRY_DEFAULT_NAME = "";
+let COUNTRY_DEFAULT_CODE = "";
+// let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$99,98", "$49,99", "$25,00"]};
+const TYPE_OF_CURRENCY = {
+  "PE" : ["s/.400", "s/.200", "s/.100"],
   "CL" : ["$108.001", "$54.001", "$27.001"],
   "MX" : ["$2463,84", "$1231,92", "$615,96"],
   "BR" : ["R$558", "R$279,00", "R$139,50"],
@@ -40,8 +13,53 @@ const TIPO_DE_MONEDA = {
   "EC" : ["$99,98", "$49,99", "$25,00"],
   "BO" : ["$99,98", "$49,99", "$25,00"],
   "CR" : ["$99,98", "$49,99", "$25,00"],
-  "GT" : ["$99,98", "$49,99", "$25,00"]
+  "GT" : ["$99,98", "$49,99", "$25,00"],
+  "PT" : ["120.54€", "60,27€", "30,14€"],
+  "DO" : ["$99,98", "$49,99", "$25,00"],
+  "SV" : ["$99,98", "$49,99", "$25,00"],
+  "HN" : ["$99,98", "$49,99", "$25,00"],
+  "UY" : ["$99,98", "$49,99", "$25,00"]
 }
+
+const getCountry = function () {
+  let request = new XMLHttpRequest();
+
+  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code');
+
+  request.setRequestHeader('Accept', 'application/json');
+
+  request.onreadystatechange = function () { //ESTO DEMORA UNOS SEGUNDOS EN EJECUTARSE, POR ESO LO PONGO TODO ADENTRO
+    if (this.readyState === 4) {
+      let ipdata = JSON.parse(this.responseText);
+
+      if(ipdata.country_code){
+        COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
+        COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code;
+
+        document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+        document.querySelectorAll(".regular-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+        document.querySelectorAll(".low-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+  
+        document.querySelectorAll(".high-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+        document.querySelectorAll(".regular-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+        document.querySelectorAll(".low-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+      }
+
+      // document.querySelectorAll(".high-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+      // document.querySelectorAll(".regular-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+      // document.querySelectorAll(".low-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+
+      // document.querySelectorAll(".high-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+      // document.querySelectorAll(".regular-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+      // document.querySelectorAll(".low-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+
+    }
+  };
+
+  request.send();
+}
+
+getCountry();
 
 //Usuarios Falsos
 setInterval(function () {
