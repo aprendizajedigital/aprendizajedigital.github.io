@@ -1,3 +1,6 @@
+//Enlace de afiliado
+const enlace_afiliado = function () {window.open("https://go.hotmart.com/Q70940830M?ap=3101&offDiscount=031016")}
+
 //Obtener pais del usuario
 let COUNTRY_DEFAULT_NAME = "";
 let COUNTRY_DEFAULT_CODE = "";
