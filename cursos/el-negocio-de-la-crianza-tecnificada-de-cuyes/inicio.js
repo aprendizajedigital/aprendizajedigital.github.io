@@ -6,7 +6,7 @@ let COUNTRY_DEFAULT_NAME = "";
 let COUNTRY_DEFAULT_CODE = "";
 // let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$99,98", "$49,99", "$25,00"]};
 const TYPE_OF_CURRENCY = {
-  "PE" : ["s/.399.50", "s/.199.50", "s/.99.50"],
+  "PE" : ["s/.390.00", "s/.195.00", "s/.97.50"],
   "CL" : ["$108.001", "$54.001", "$27.001"],
   "MX" : ["$2463,84", "$1231,92", "$615,96"],
   "BR" : ["R$558", "R$279,00", "R$139,50"],
@@ -391,7 +391,7 @@ question.forEach(question => {
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy,
-      dayMonth = "05/21/",
+      dayMonth = "06/02/",
       birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
