@@ -64,7 +64,7 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 //-------------------------------------------Sweet Alert en Accion-------------------------------------------
 
 document.querySelector(".form__button").addEventListener('click', function () {
-  window.location.href = './gracias.html';
+  window.location.href = './gracias-aqui-tienes-tu-libro-digital-de-cuyes.html';
 });
 
 // document.querySelector(".form__button").addEventListener('click', function () {

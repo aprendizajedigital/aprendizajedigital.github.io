@@ -87,9 +87,9 @@ setTimeout(function () {
 
   var link = document.createElement('a');
 
-  link.href = './ebooks-sin-correos/florales-modernos-para-negocio/los-10-secretos-que-las-floristas-NO-quieren-que-sepas.pdf';
+  link.href = './ebooks-sin-correos/el-negocio-de-la-crianza-tecnificada-de-cuyes/los-4-pasos-para-la-crianza-de-cuyes-que-debes-conocer.pdf';
 
-  link.download = 'los-10-secretos-que-las-floristas-NO-quieren-que-sepas.pdf';
+  link.download = 'los-4-pasos-para-la-crianza-de-cuyes-que-debes-conocer.pdf';
 
   link.dispatchEvent(new MouseEvent('click'));
 
