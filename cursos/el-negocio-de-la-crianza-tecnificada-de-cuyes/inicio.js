@@ -6,7 +6,7 @@ let COUNTRY_DEFAULT_NAME = "";
 let COUNTRY_DEFAULT_CODE = "";
 // let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$99,98", "$49,99", "$25,00"]};
 const TYPE_OF_CURRENCY = {
-  "PE" : ["s/ 388.00", "s/ 194.00", "s/ 97.00"],
+  "PE" : ["s/ 394.00", "s/ 197.00", "s/ 98.50"],
   "CL" : ["$103.272", "$51.636", "$25.818"],
   "MX" : ["$2463,84", "$1231,92", "$615,96"],
   "BR" : ["R$524,00", "R$262,00", "R$131,00"],
