@@ -392,7 +392,7 @@ question.forEach(question => {
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy,
-      dayMonth = "06/19/",
+      dayMonth = "06/20/",
       birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
