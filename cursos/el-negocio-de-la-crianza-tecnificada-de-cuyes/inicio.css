@@ -708,10 +708,39 @@ del {
     margin-top: 25px;
 }
 
+.main--certificate--img{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
 /*----------Acordeon------------*/
 .wrapper {
     width: 100%;
 }
+
+/*NUEVO*/
+
+.wrapper-content{
+    display: inline-block;
+}
+
+.container-question .question::after{
+    content: "\002B";
+    font-size: 1.5rem;
+    /*2.2rem*/
+    position: absolute;
+
+    left: 4px;
+    top: 17px;
+
+
+    transition: 0.2s;
+    color: rgba(109, 161, 255, 0.9);
+}
+
+/*---------*/
 
 .container-question {
     background-color: white;
