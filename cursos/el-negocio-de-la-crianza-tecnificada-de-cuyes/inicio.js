@@ -236,7 +236,7 @@ function randomUser() {
   let user101 = { name: "Cecilia", photo: "101.jpg", country: "Chile" }
   let user102 = { name: "Melanie", photo: "102.jpg", country: "Brasil" }
   let user103 = { name: "Soledad", photo: "103.jpg", country: "Ecuador" }
-  let user104 = { name: "Hilda", photo: "104.jpg", country: "España" }
+  let user104 = { name: "Manuel", photo: "104.jpg", country: "España" }
   let user105 = { name: "Mabel", photo: "105.jpg", country: "Estados Unidos" }
   let user106 = { name: "Lourdes", photo: "106.jpg", country: "Portugal" }
   let user107 = { name: "Teresa", photo: "107.jpg", country: "Canadá" }
@@ -281,13 +281,20 @@ function randomUser() {
 
 //animate__zoomIn LOOP
 setInterval(function () {
+
+  //-----------------------ESTO SIRVE PARA LA GARANTIA SE MUESTRE CADA 5 SEGUNDOS-----------------------
+
   //.main--warranty--text__title .animate__animated .animate__zoomIn
-  document.querySelector(".main--warranty--text__title").classList.toggle('animate__animated');
-  document.querySelector(".main--warranty--text__title").classList.toggle('animate__zoomIn');
+
+  //document.querySelector(".main--warranty--text__title").classList.toggle('animate__animated');
+  //document.querySelector(".main--warranty--text__title").classList.toggle('animate__zoomIn');
 
   //main--warranty--text__description span
-  document.querySelector(".main--warranty--text__description").classList.toggle('animate__animated');
-  document.querySelector(".main--warranty--text__description").classList.toggle('animate__zoomIn');
+
+  //document.querySelector(".main--warranty--text__description").classList.toggle('animate__animated');
+  //document.querySelector(".main--warranty--text__description").classList.toggle('animate__zoomIn');
+
+  //-------------------------------------------------------------------------------------------------------
 
   //.main--container--gifs__item--title .animate__animated .animate__zoomIn
   for (let i = 0; i < document.querySelectorAll('.main--container--gifs__item--title').length; i++) {
@@ -322,6 +329,14 @@ for (let i = 0; i < document.querySelectorAll('.student').length; i++) {
 for (let i = 0; i < document.querySelectorAll('.main--container-StudyPlan__item--container--description__img').length; i++) {
   animate__zoomIn__no__loop.observe(document.querySelectorAll(".main--container-StudyPlan__item--container--description__img")[i]);
 }
+
+/*ESTO SE ACTIVA CUANDO SE OCULTA LA GARANTÍA*/
+
+for (let i = 0; i < document.querySelectorAll('.main--warranty--text__title').length; i++) {
+  animate__zoomIn__no__loop.observe(document.querySelectorAll(".main--warranty--text__title")[i]);
+}
+
+/*--------------------------------------------*/
 
 animate__zoomIn__no__loop.observe(document.querySelector(".main--subtitle"));
 animate__zoomIn__no__loop.observe(document.querySelector(".main--repeatOffer--set--img"));
