@@ -75,7 +75,7 @@ setInterval(function () {
   setTimeout(function () {
     closeNotify();
   }, 10000)
-}, 600000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
+}, 15000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
 
 //----------------------
 
@@ -166,7 +166,7 @@ function randomUser() {
   let user28 = { name: "Abigail", photo: "28.jpg", country: "México" }
   let user29 = { name: "Alexandra", photo: "29.jpg", country: "Honduras" }
   let user30 = { name: "Lucia", photo: "30.jpg", country: "México" }
-  let user31 = { name: "Aprile", photo: "31.jpg", country: "Islandia" }
+  let user31 = { name: "Aprile", photo: "31.jpg", country: "Colombia" }
   let user32 = { name: "Ariana", photo: "32.jpg", country: "Indonesia" }
   let user33 = { name: "Berenisse", photo: "33.jpg", country: "Irlanda" }
   let user34 = { name: "Carol", photo: "34.jpg", country: "Italia" }
