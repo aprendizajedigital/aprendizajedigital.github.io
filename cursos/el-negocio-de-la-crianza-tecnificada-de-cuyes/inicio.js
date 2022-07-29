@@ -77,8 +77,9 @@ function autoupdate(){
       closeNotify();
       setTimeout(autoupdate, 50);//EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
     }, 10000);
-  }, 60000);
+  }, 5000);
 }
+
 
 setTimeout(autoupdate, 50); //EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
 
