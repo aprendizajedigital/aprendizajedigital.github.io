@@ -69,6 +69,21 @@ const getCountry = function () {
 getCountry();
 
 //Usuarios Falsos
+
+function autoupdate(){
+  setTimeout(() => {
+    openNotify();
+    setTimeout(() => {
+      closeNotify();
+      setTimeout(autoupdate, 50);//EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
+    }, 10000);
+  }, 300000);
+}
+
+
+setTimeout(autoupdate, 50); //EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
+
+/*
 setInterval(function () {
   openNotify();
 
@@ -76,6 +91,7 @@ setInterval(function () {
     closeNotify();
   }, 10000)
 }, 15000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
+*/
 
 //----------------------
 
