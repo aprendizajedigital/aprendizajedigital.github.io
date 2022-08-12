@@ -1,158 +1,5 @@
-//Enlace de afiliado
-const enlace_afiliado = function () {window.open("https://go.hotmart.com/Q70940830M?ap=3101&offDiscount=031016")}
-
-//Obtener pais del usuario
-let COUNTRY_DEFAULT_NAME = "";
-let COUNTRY_DEFAULT_CODE = "";
-// let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$99,98", "$49,99", "$25,00"]};
-
-//PERU -> ["s/ 388.00", "s/ 194.00", "s/ 97.00"] - ["s/ 394.00", "s/ 197.00", "s/ 98.50"] - ["s/ 398.00", "s/ 199.00", "s/ 99.50"] - ["s/ 410.00", "s/ 205.00", "s/ 102.50"] - ["s/ 414.00", "s/ 207.00", "s/ 103.50"] - ["s/ 418.00", "s/ 209.00", "s/ 104.50"] - ["s/ 420.00", "s/ 210.00", "s/ 105.00"] 
-//COLOMBIA -> ["$449.270,00", "$224.635,00", "$112.317,00"] - ["$452.470,00", "$226.235,00", "$113.117,00"] - ["$478.368,00", "$232.257,00", "$116.128,00"] - ["$478.368,00", "$239.184,00", "$119.592,00"]
-const TYPE_OF_CURRENCY = {
-  "PE" : ["s/ 410.00", "s/ 205.00", "s/ 102.50"],
-  "CL" : ["$452.470,00", "$223.247,00", "$111.623,00"],
-  "MX" : ["$2463,84", "$1231,92", "$615,96"],
-  "BR" : ["R$524,00", "R$262,00", "R$131,00"],
-  "CO" : ["$413.594,00", "$206.797,00", "$103.398,00"],
-  "AR" : ["$12594,00", "$6297,00", "$3148,50"],
-  "ES" : ["118,58€", "59,29€", "29,65€"],
-  "EC" : ["$99,98", "$49,99", "$25,00"],
-  "BO" : ["$99,98", "$49,99", "$25,00"],
-  "CR" : ["$99,98", "$49,99", "$25,00"],
-  "GT" : ["$99,98", "$49,99", "$25,00"],
-  "PT" : ["120.54€", "60,27€", "30,14€"],
-  "DO" : ["$99,98", "$49,99", "$25,00"],
-  "SV" : ["$99,98", "$49,99", "$25,00"],
-  "HN" : ["$99,98", "$49,99", "$25,00"],
-  "UY" : ["$99,98", "$49,99", "$25,00"],
-  "PY" : ["$99,98", "$49,99", "$25,00"]
-}
-
-const getCountry = function () {
-  let request = new XMLHttpRequest();
-
-  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code');
-
-  request.setRequestHeader('Accept', 'application/json');
-
-  request.onreadystatechange = function () { //ESTO DEMORA UNOS SEGUNDOS EN EJECUTARSE, POR ESO LO PONGO TODO ADENTRO
-    if (this.readyState === 4) {
-      let ipdata = JSON.parse(this.responseText);
-
-      if(ipdata.country_code){
-        COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
-        COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code;
-
-        document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-        document.querySelectorAll(".regular-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-        document.querySelectorAll(".low-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-  
-        document.querySelectorAll(".high-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-        document.querySelectorAll(".regular-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-        document.querySelectorAll(".low-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-      }
-
-      // document.querySelectorAll(".high-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-      // document.querySelectorAll(".regular-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-      // document.querySelectorAll(".low-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-
-      // document.querySelectorAll(".high-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-      // document.querySelectorAll(".regular-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-      // document.querySelectorAll(".low-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-
-    }
-  };
-
-  request.send();
-}
-
-getCountry();
-
-//Usuarios Falsos
-
-function autoupdate(){
-  setTimeout(() => {
-    openNotify();
-    setTimeout(() => {
-      closeNotify();
-      setTimeout(autoupdate, 50);//EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
-    }, 10000);
-  }, 300000);
-}
-
-
-setTimeout(autoupdate, 50); //EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
-
-/*
-setInterval(function () {
-  openNotify();
-
-  setTimeout(function () {
-    closeNotify();
-  }, 10000)
-}, 15000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
-*/
-
-//----------------------
-
-// let flag = true;
-
-// function wrapper() {
-//   if(flag) {
-//     openNotify();
-//   } else {
-//     closeNotify();
-//   }
-//   flag = !flag;
-// }
-
-// setInterval(wrapper, 10000);
-
-//----------------------
-
-// setInterval(function () {
-//   openNotify();
-// }, 10000); //TIEMPO PARA QUE APAREZCA LA NOTIFICACION
-
-// setInterval(function () {
-//   closeNotify();
-// }, 20000); //SUMAS EL TIEMPO PARA QUE APAREZCA + EL TIEMPO DE QUE DESAPAREZCA 
-
-function openNotify() {
-
-  randomUser();
-
-  document.querySelector('.notify__timerBar').style.display = '';
-  document.querySelector('.notify__timerBar').style.animationPlayState = 'running'
-
-  if (document.querySelector('.notify').style.display == 'none') {
-    document.querySelector('.notify').style.display = '';
-  }
-
-  if (!document.querySelector('animate__animated')) {
-    document.querySelector('.notify').classList.add('animate__animated');
-  }
-
-  if (!document.querySelector('animate__bounceOut')) {
-    document.querySelector('.notify').classList.remove('animate__bounceOut');
-  }
-
-  document.querySelector('.notify').classList.add('animate__bounceIn');
-}
-
-function closeNotify() {
-
-  document.querySelector('.notify__timerBar').style.display = 'none';
-  document.querySelector('.notify__timerBar').style.animationPlayState = 'paused'
-
-  document.querySelector('.notify').classList.remove('animate__bounceIn');
-  document.querySelector('.notify').classList.add('animate__bounceOut');
-}
-
-function randomUser() {
-  // let image = document.querySelector('.notify__img').src.substr(-6);
-
-  let user01 = { name: "John", photo: "01.jpg", country: "Perú" }
+//Usuarios Globales
+let user01 = { name: "John", photo: "01.jpg", country: "Perú" }
   let user02 = { name: "Vanessa", photo: "02.jpg", country: "Bolivia" }
   let user03 = { name: "Lidia", photo: "03.jpg", country: "Colombia" }
   let user04 = { name: "Andre", photo: "04.jpg", country: "Argentina" }
@@ -275,6 +122,162 @@ function randomUser() {
 
   let users = [user01, user02, user03, user04, user05, user06, user07, user08, user09, user10, user10, user10, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20, user21, user22, user23, user24, user25, user26, user27, user28, user29, user30, user31, user32, user33, user34, user35, user36, user37, user38, user39, user40, user41, user42, user43, user44, user45, user46, user47, user48, user49, user50, user51, user52, user53, user54, user55, user56, user57, user58, user59, user60, user61, user62, user63, user64, user65, user66, user67, user68, user69, user70, user71, user72, user73, user74, user75, user76, user77, user78, user79, user80, user81, user82, user83, user84, user85, user86, user87, user88, user89, user90, user91, user92, user93, user94, user95, user96, user97, user98, user99, user100, user101, user102, user103, user104, user105, user106, user107, user108, user109, user110, user111, user112, user113, user114, user115, user116, user117, user118, user119, user120]
 
+
+//Enlace de afiliado
+const enlace_afiliado = function () {window.open("https://go.hotmart.com/Q70940830M?ap=3101&offDiscount=031016")}
+
+//Obtener pais del usuario
+let COUNTRY_DEFAULT_NAME = "";
+let COUNTRY_DEFAULT_CODE = "";
+// let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$99,98", "$49,99", "$25,00"]};
+
+//PERU -> ["s/ 388.00", "s/ 194.00", "s/ 97.00"] - ["s/ 394.00", "s/ 197.00", "s/ 98.50"] - ["s/ 398.00", "s/ 199.00", "s/ 99.50"] - ["s/ 410.00", "s/ 205.00", "s/ 102.50"] - ["s/ 414.00", "s/ 207.00", "s/ 103.50"] - ["s/ 418.00", "s/ 209.00", "s/ 104.50"] - ["s/ 420.00", "s/ 210.00", "s/ 105.00"] 
+//COLOMBIA -> ["$449.270,00", "$224.635,00", "$112.317,00"] - ["$452.470,00", "$226.235,00", "$113.117,00"] - ["$478.368,00", "$232.257,00", "$116.128,00"] - ["$478.368,00", "$239.184,00", "$119.592,00"]
+const TYPE_OF_CURRENCY = {
+  "PE" : ["s/ 410.00", "s/ 205.00", "s/ 102.50"],
+  "CL" : ["$452.470,00", "$223.247,00", "$111.623,00"],
+  "MX" : ["$2463,84", "$1231,92", "$615,96"],
+  "BR" : ["R$524,00", "R$262,00", "R$131,00"],
+  "CO" : ["$413.594,00", "$206.797,00", "$103.398,00"],
+  "AR" : ["$12594,00", "$6297,00", "$3148,50"],
+  "ES" : ["118,58€", "59,29€", "29,65€"],
+  "EC" : ["$99,98", "$49,99", "$25,00"],
+  "BO" : ["$99,98", "$49,99", "$25,00"],
+  "CR" : ["$99,98", "$49,99", "$25,00"],
+  "GT" : ["$99,98", "$49,99", "$25,00"],
+  "PT" : ["120.54€", "60,27€", "30,14€"],
+  "DO" : ["$99,98", "$49,99", "$25,00"],
+  "SV" : ["$99,98", "$49,99", "$25,00"],
+  "HN" : ["$99,98", "$49,99", "$25,00"],
+  "UY" : ["$99,98", "$49,99", "$25,00"],
+  "PY" : ["$99,98", "$49,99", "$25,00"]
+}
+
+const getCountry = function () {
+  let request = new XMLHttpRequest();
+
+  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code');
+
+  request.setRequestHeader('Accept', 'application/json');
+
+  request.onreadystatechange = function () { //ESTO DEMORA UNOS SEGUNDOS EN EJECUTARSE, POR ESO LO PONGO TODO ADENTRO
+    if (this.readyState === 4) {
+      let ipdata = JSON.parse(this.responseText);
+
+      if(ipdata.country_code){
+        COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
+        COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code;
+
+        document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+        document.querySelectorAll(".regular-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+        document.querySelectorAll(".low-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+  
+        document.querySelectorAll(".high-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+        document.querySelectorAll(".regular-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+        document.querySelectorAll(".low-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+      }
+
+      // document.querySelectorAll(".high-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+      // document.querySelectorAll(".regular-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+      // document.querySelectorAll(".low-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+
+      // document.querySelectorAll(".high-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+      // document.querySelectorAll(".regular-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
+      // document.querySelectorAll(".low-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+
+    }
+  };
+
+  request.send();
+}
+
+getCountry();
+
+//Usuarios Falsos
+
+function autoupdate(){
+  setTimeout(() => {
+    openNotify();
+    setTimeout(() => {
+      closeNotify();
+      setTimeout(autoupdate, 50);//EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
+    }, 10000); //10000
+  }, 20000); //300000
+}
+
+
+setTimeout(autoupdate, 50); //EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
+
+/*
+setInterval(function () {
+  openNotify();
+
+  setTimeout(function () {
+    closeNotify();
+  }, 10000)
+}, 15000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
+*/
+
+//----------------------
+
+// let flag = true;
+
+// function wrapper() {
+//   if(flag) {
+//     openNotify();
+//   } else {
+//     closeNotify();
+//   }
+//   flag = !flag;
+// }
+
+// setInterval(wrapper, 10000);
+
+//----------------------
+
+// setInterval(function () {
+//   openNotify();
+// }, 10000); //TIEMPO PARA QUE APAREZCA LA NOTIFICACION
+
+// setInterval(function () {
+//   closeNotify();
+// }, 20000); //SUMAS EL TIEMPO PARA QUE APAREZCA + EL TIEMPO DE QUE DESAPAREZCA 
+
+function openNotify() {
+
+  randomUser();
+
+  document.querySelector('.notify__timerBar').style.display = '';
+  document.querySelector('.notify__timerBar').style.animationPlayState = 'running'
+
+  if (document.querySelector('.notify').style.display == 'none') {
+    document.querySelector('.notify').style.display = '';
+  }
+
+  if (!document.querySelector('animate__animated')) {
+    document.querySelector('.notify').classList.add('animate__animated');
+  }
+
+  if (!document.querySelector('animate__bounceOut')) {
+    document.querySelector('.notify').classList.remove('animate__bounceOut');
+  }
+
+  document.querySelector('.notify').classList.add('animate__bounceIn');
+}
+
+function closeNotify() {
+
+  document.querySelector('.notify__timerBar').style.display = 'none';
+  document.querySelector('.notify__timerBar').style.animationPlayState = 'paused'
+
+  document.querySelector('.notify').classList.remove('animate__bounceIn');
+  document.querySelector('.notify').classList.add('animate__bounceOut');
+}
+
+function randomUser() {
+  // let image = document.querySelector('.notify__img').src.substr(-6);
+
+  
   // let names = [];
   // let users = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg","09.jpg","10.jpg"]
 
