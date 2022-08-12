@@ -202,7 +202,7 @@ function autoupdate(){
       closeNotify();
       setTimeout(autoupdate, 50);//EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
     }, 10000); //10000
-  }, 20000); //300000
+  }, 60000); //300000
 }
 
 
