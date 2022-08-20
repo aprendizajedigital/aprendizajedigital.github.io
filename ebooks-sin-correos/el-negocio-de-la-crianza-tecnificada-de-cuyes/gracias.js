@@ -106,7 +106,7 @@ function actualizarTiempo(){
   
   if(contador == 0){
     header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩"
-    return;
+    clearTimeout(actualizarTiempo);
   }
   
   contador--;
