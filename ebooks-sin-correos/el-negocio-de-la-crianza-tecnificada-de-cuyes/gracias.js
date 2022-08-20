@@ -102,9 +102,7 @@ let contador = document.querySelector(".contador").innerText; //10
 let header__title = document.querySelector(".header__title");
 let time_out;
 
-function startCount(){
-
-}
+time_out = setTimeout(actualizarTiempo(), 1000);
 
 function actualizarTiempo(){
   header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
@@ -115,9 +113,5 @@ function actualizarTiempo(){
     return;
   }
   
-  contador--;
-  
-  time_out = setTimeout(actualizarTiempo(), 1000);
+  contador--;  
 }
-
-actualizarTiempo(); 
