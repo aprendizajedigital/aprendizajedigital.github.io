@@ -102,15 +102,14 @@ let contador = document.querySelector(".contador").innerText; //10
 let header__title = document.querySelector(".header__title");
 let set_interval;
 
-set_interval = setInterval(actualizarTiempo(), 1000);
+set_interval = setInterval(actualizarTiempo, 1000);
 
 function actualizarTiempo(){
   header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
   
   if(contador == 0){
-    header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩"
+    header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩";
     clearInterval(set_interval);
-    return;
   }
   
   contador--;  
