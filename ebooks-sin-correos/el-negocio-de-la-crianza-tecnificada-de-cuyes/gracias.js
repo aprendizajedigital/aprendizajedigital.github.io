@@ -43,7 +43,7 @@ const animate__zoomIn = new IntersectionObserver(entries => {
   });
 });
 
-animate__zoomIn.observe(document.querySelector('.header__title'));
+//animate__zoomIn.observe(document.querySelector('.header__title'));
 
 animate__zoomIn.observe(document.querySelector('.main__title'));
 animate__zoomIn.observe(document.querySelector('.main__subtitle'));
