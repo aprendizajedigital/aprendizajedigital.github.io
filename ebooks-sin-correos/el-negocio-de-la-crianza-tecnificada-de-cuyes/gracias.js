@@ -100,19 +100,24 @@ setTimeout(function () {
 //CONTADOR EBOOK
 let contador = document.querySelector(".contador").innerText; //10
 let header__title = document.querySelector(".header__title");
+let time_out;
+
+function startCount(){
+
+}
 
 function actualizarTiempo(){
   header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
   
   if(contador == 0){
     header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩"
-    clearTimeout(actualizarTiempo);
+    clearTimeout(time_out);
     return;
   }
   
   contador--;
   
-  setTimeout(actualizarTiempo(), 1000);
+  time_out = setTimeout(actualizarTiempo(), 1000);
 }
 
-actualizarTiempo();
+actualizarTiempo(); 
