@@ -105,12 +105,13 @@ let set_interval;
 set_interval = setInterval(actualizarTiempo, 1000);
 
 function actualizarTiempo(){
+  
+  contador--;
+  
   header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
   
   if(contador == 0){
     header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩";
     clearInterval(set_interval);
-  }
-  
-  contador--;  
+  }  
 }
