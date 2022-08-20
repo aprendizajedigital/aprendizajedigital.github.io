@@ -96,3 +96,22 @@ setTimeout(function () {
   link.dispatchEvent(new MouseEvent('click'));
 
 }, 10000);
+
+//CONTADOR EBOOK
+let contador = document.querySelector(".contador").innerText; //10
+let header__title = document.querySelector(".header__title");
+
+function actualizarTiempo(){
+  header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
+  
+  if(contador == 0){
+    header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩"
+    return
+  }
+  
+  contador--;
+  
+  setTimeout(actualizarTiempo(), 1000);
+}
+
+actualizarTiempo();
