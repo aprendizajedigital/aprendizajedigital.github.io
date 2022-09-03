@@ -43,6 +43,8 @@ const animate__zoomIn = new IntersectionObserver(entries => {
   });
 });
 
+//animate__zoomIn.observe(document.querySelector('.header__title'));
+
 animate__zoomIn.observe(document.querySelector('.main__title'));
 animate__zoomIn.observe(document.querySelector('.main__subtitle'));
 animate__zoomIn.observe(document.querySelector('.main__description'));
@@ -94,3 +96,22 @@ setTimeout(function () {
   link.dispatchEvent(new MouseEvent('click'));
 
 }, 10000);
+
+//CONTADOR EBOOK
+let contador = document.querySelector(".contador").innerText; //10
+let header__title = document.querySelector(".header__title");
+let set_interval;
+
+set_interval = setInterval(actualizarTiempo, 1000);
+
+function actualizarTiempo(){
+  
+  contador--;
+  
+  header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
+  
+  if(contador == 0){
+    header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩";
+    clearInterval(set_interval);
+  }  
+}
