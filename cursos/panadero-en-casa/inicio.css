@@ -413,6 +413,12 @@ img[src="img2.png"] {
     margin-bottom: 25px;
 }
 
+.main--container--gifs__item--img__personalizado{ /*usa esto en caso de que tengas una imagen vertical que se haya agrandado*/
+    width: 50%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
 .main--container--gifs__item--title {
     font-size: 22px;
     font-weight: 700;
