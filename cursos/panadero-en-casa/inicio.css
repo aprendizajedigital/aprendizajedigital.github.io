@@ -414,7 +414,7 @@ img[src="img2.png"] {
 }
 
 .main--container--gifs__item--img__personalizado{ /*usa esto en caso de que tengas una imagen vertical que se haya agrandado*/
-    width: 50%;
+    width: 60%;
     height: auto;
     margin-bottom: 25px;
 }
