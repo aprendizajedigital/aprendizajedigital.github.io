@@ -9,14 +9,14 @@
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-
-    text-decoration: underline; /*habia puesto este estilo solo en el responsive, si te gusta puedes dejarlo o quitarlo*/
 }
 
 .header__subtitle{
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+
+    text-decoration: underline; /*habia puesto este estilo solo en el responsive, si te gusta puedes dejarlo o quitarlo*/
 }
 
 .container-ebook{
