@@ -77,7 +77,7 @@ document.querySelector("#form").addEventListener('submit', function (e) {
     Subject : "Hola " + document.querySelector("#name_complete").value + ", aqui está tu EBOOK",
     Body : "Espero que te guste"
   }).then(
-  // message => alert(message),
+  message => alert(message),
   text_button.nodeValue = "Enviado"
   );
 });
