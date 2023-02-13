@@ -58,7 +58,7 @@
     font-weight: 500;
     margin-bottom: 2px;
 
-    text-align: left;
+    float: left; /*no pongo text-align: left porque el tamaño de las letras NO OCUPA TODO EL ANCHO DEL PADRE*/
 }
 
 .form-container{
@@ -66,8 +66,6 @@
     border: 5px dashed black;
     border-radius: 25px;
     padding: 37px 30px;
-
-    /* text-align: center; */
 }
 
 .main__icon{
