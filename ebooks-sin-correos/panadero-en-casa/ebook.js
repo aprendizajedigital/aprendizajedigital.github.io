@@ -74,11 +74,11 @@ document.querySelector("#form").addEventListener('submit', function (e) {
 
   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Enviado';
-      alert('Tu ebook fue enviado');
+      btn.nodeValue = 'Enviado';
+      // alert('Tu ebook fue enviado');
     }, (err) => {
-      btn.value = 'Enviado';
-      alert(JSON.stringify(err));
+      // btn.nodeValue = 'Enviado';
+      // alert(JSON.stringify(err));
     });
 });
 // -- FIN ENVIAR CORREO CON SMTPJS.COM
