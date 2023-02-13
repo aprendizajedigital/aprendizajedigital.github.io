@@ -62,11 +62,12 @@ animate__zoomIn.observe(document.querySelector('.form-container'));
 animate__zoomIn.observe(document.querySelector('.form__button'));
 
 // -- INICIO ENVIAR CORREO CON SMTPJS.COM
-document.querySelector(".form__button").addEventListener('submit', function (e) {
+// document.querySelector(".form__button").addEventListener('submit', function (e) {
   
-  e.preventDefault();
+  // e.preventDefault();
 
-  let text_button = document.querySelector(".form__button").firstChild
+  function sendEmail() {
+    let text_button = document.querySelector(".form__button").firstChild
 
   text_button.nodeValue = "Enviando..."
 
@@ -83,7 +84,11 @@ document.querySelector(".form__button").addEventListener('submit', function (e) 
   message => alert(message),
   text_button.nodeValue = "Enviado"
   );
-});
+  }
+
+  
+
+// });
 // -- FIN ENVIAR CORREO CON SMTPJS.COM
 
 //-------------------------------------------Sweet Alert en Accion-------------------------------------------
