@@ -71,7 +71,10 @@ document.querySelector("#form").addEventListener('submit', function (e) {
   text_button.nodeValue = "Enviando..."
 
   Email.send({
-    SecureToken : "177e6ec5-a930-4e6e-b5c7-b6c74af244d3",
+    // SecureToken : "177e6ec5-a930-4e6e-b5c7-b6c74af244d3",
+    Host : "smtp.elasticemail.com",
+    Username : "aprendizaje.digital.educacion@gmail.com",
+    Password : "155C03BC1AE1E801209BAEED708AD402F414",
     To : 'aprendizaje.digital.educacion@gmail.com',
     From : document.querySelector("#email").value,
     Subject : "Hola " + document.querySelector("#name_complete").value + ", aqui está tu EBOOK",
