@@ -62,8 +62,10 @@ animate__zoomIn.observe(document.querySelector('.form-container'));
 animate__zoomIn.observe(document.querySelector('.form__button'));
 
 // -- INICIO ENVIAR CORREO CON SMTPJS.COM
-document.querySelector(".form__button").addEventListener('click', function () {
+document.querySelector(".form__button").addEventListener('submit', function (e) {
   
+  e.preventDefault();
+
   let text_button = document.querySelector(".form__button").firstChild
 
   text_button.nodeValue = "Enviando..."
