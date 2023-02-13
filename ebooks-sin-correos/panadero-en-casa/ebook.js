@@ -61,11 +61,37 @@ animate__zoomIn.observe(document.querySelector('.container-ebook'));
 animate__zoomIn.observe(document.querySelector('.form-container'));
 animate__zoomIn.observe(document.querySelector('.form__button'));
 
+// -- INICIO ENVIAR CORREO CON SMTPJS.COM
+document.querySelector(".form__button").addEventListener('click', function () {
+  
+  let text_button = document.querySelector(".form__button").firstChild
+
+  text_button.nodeValue = "Enviando..."
+
+  Email.send({
+    SecureToken : "177e6ec5-a930-4e6e-b5c7-b6c74af244d3",
+    To : 'aprendizaje.digital.educacion@gmail.com',
+    From : document.querySelector("#email").value,
+    Subject : "Hola " + document.querySelector("#name_complete").value + ", aqui está tu EBOOK",
+    Body : "Espero que te guste"
+  }).then(
+  // message => alert(message),
+  text_button.nodeValue = "Enviado"
+  );
+});
+// -- FIN ENVIAR CORREO CON SMTPJS.COM
+
 //-------------------------------------------Sweet Alert en Accion-------------------------------------------
 
-document.querySelector(".form__button").addEventListener('click', function () {
-  window.location.href = './gracias-aqui-tienes-tu-libro-digital-de-cuyes.html';
-});
+// -- INICIO ENVIAR A OTRA PAGINA -- 
+
+// document.querySelector(".form__button").addEventListener('click', function () {
+//   window.location.href = './gracias-aqui-tienes-tu-libro-digital-de-cuyes.html';
+// });
+
+// -- FIN ENVIAR A OTRA PAGINA --
+
+// -- INICIO POP UP CON CONTADOR -- 
 
 // document.querySelector(".form__button").addEventListener('click', function () {
 
@@ -96,3 +122,5 @@ document.querySelector(".form__button").addEventListener('click', function () {
 //     // document.querySelector(".form__button").style.display = "none";
 //   }
 // });
+
+// -- FIN POP UP CON CONTADOR -- 
