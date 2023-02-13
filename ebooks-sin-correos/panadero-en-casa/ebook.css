@@ -66,7 +66,8 @@
     border: 5px dashed black;
     border-radius: 25px;
     padding: 37px 30px;
-    text-align: center;
+
+    /* text-align: center; */
 }
 
 .main__icon{
