@@ -73,8 +73,8 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 // -- INICIO ENVIAR CORREO CON EMAIL.JS
 
 let btn = document.querySelector(".form__button").firstChild;
-let first_name = document.querySelector("#first_name").value;
-let email = document.querySelector("#email").value;
+let first_name;
+let email;
 
 let valid_first_name = document.querySelector(".valid-first-name");
 let invalid_first_name = document.querySelector(".invalid-first-name");
@@ -105,8 +105,8 @@ function form_validate(param_first_name, param_email){
 document.querySelector("#form").addEventListener('submit', function (e) {
   e.preventDefault();
 
-  first_name = first_name.trim();
-  email = email.trim();
+  first_name = document.querySelector("#first_name").value.trim();
+  email = document.querySelector("#email").value.trim();
 
   //--INICIO VALIDANDO FORMULARIO--
     form_validate(first_name, email);
@@ -136,8 +136,8 @@ document.querySelector("#form").addEventListener('submit', function (e) {
 
 // VALIDAR CUANDO PRESIONAMOS UNA TECLA
 window.addEventListener("keyup", function (e){
-  first_name = first_name.trim();
-  email = email.trim();
+  first_name = document.querySelector("#first_name").value.trim();
+  email = document.querySelector("#email").value.trim();
   form_validate(first_name, email);
 });
 // -- FIN ENVIAR CORREO CON EMAIL.JS
