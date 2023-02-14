@@ -136,6 +136,8 @@ document.querySelector("#form").addEventListener('submit', function (e) {
 
 // VALIDAR CUANDO PRESIONAMOS UNA TECLA
 window.addEventListener("keyup", function (e){
+  first_name = first_name.trim();
+  email = email.trim();
   form_validate(first_name, email);
 });
 // -- FIN ENVIAR CORREO CON EMAIL.JS
