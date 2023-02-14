@@ -1,12 +1,12 @@
-function sleep(time) {
-  return new Promise(resolve => setTimeout(resolve, time));
-}
+// function sleep(time) {
+//   return new Promise(resolve => setTimeout(resolve, time));
+// }
 
-async function delay() {
-  console.log('Sleeping…');
-  await sleep(5000);
-  console.log('Awake…');
-}
+// async function delay() {
+//   console.log('Sleeping…');
+//   await sleep(5000);
+//   console.log('Awake…');
+// }
 
 // //animate__bounceIn
 // const animate__bounceIn = new IntersectionObserver(entries => {
@@ -132,9 +132,9 @@ document.querySelector("#form").addEventListener('submit', function (e) {
       // alert(JSON.stringify(err));
     });
 
-  delay();
-
-  window.location.href = './gracias-aqui-tienes-tu-libro-digital-de-cuyes.html';
+  setTimeout(() => {
+    window.location.href = './gracias-aqui-tienes-tu-libro-digital-de-cuyes.html';
+  }, 2000);
 });
 
 // VALIDAR CUANDO PRESIONAMOS UNA TECLA
