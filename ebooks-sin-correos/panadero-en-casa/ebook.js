@@ -1,12 +1,3 @@
-// function sleep(time) {
-//   return new Promise(resolve => setTimeout(resolve, time));
-// }
-
-// async function delay() {
-//   console.log('Sleeping…');
-//   await sleep(5000);
-//   console.log('Awake…');
-// }
 
 // //animate__bounceIn
 // const animate__bounceIn = new IntersectionObserver(entries => {

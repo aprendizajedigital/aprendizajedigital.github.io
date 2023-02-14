@@ -51,67 +51,35 @@ animate__zoomIn.observe(document.querySelector('.main__description'));
 animate__zoomIn.observe(document.querySelector('.main__icon'));
 // animate__zoomIn.observe(document.querySelector('.main__button'));
 
+//HOLA, VAMOS A COMENTAR TODO ESTO PORQUE YA NO NECESITAMOS DESCARGAR EL LIBRO NI EL CONTADOR
+
 //DESCARGAR EBOOK
-setTimeout(function () {
-  // alert("5 SEGUNDOS");
+// setTimeout(function () {
+//   var link = document.createElement('a');
 
-  // DownloadFile("gatillos-mentales.pdf");
+//   link.href = './ebooks-sin-correos/el-negocio-de-la-crianza-tecnificada-de-cuyes/los-4-pasos-para-la-crianza-de-cuyes-que-debes-conocer.pdf';
 
-  // function DownloadFile(fileName) {
-  //   //Set the File URL.
-  //   var url = "./ebooks-sin-correos/florales-modernos-para-negocio/" + fileName;
+//   link.download = 'los-4-pasos-para-la-crianza-de-cuyes-que-debes-conocer.pdf';
 
-  //   //Create XMLHTTP Request.
-  //   var req = new XMLHttpRequest();
-  //   req.open("GET", url, true);
-  //   req.responseType = "blob";
-  //   req.onload = function () {
-  //     //Convert the Byte Data to BLOB object.
-  //     var blob = new Blob([req.response], { type: "application/octetstream" });
+//   link.dispatchEvent(new MouseEvent('click'));
 
-  //     //Check the Browser type and download the File.
-  //     var isIE = false || !!document.documentMode;
-  //     if (isIE) {
-  //       window.navigator.msSaveBlob(blob, fileName);
-  //     } else {
-  //       var url = window.URL || window.webkitURL;
-  //       link = url.createObjectURL(blob);
-  //       var a = document.createElement("a");
-  //       a.setAttribute("download", fileName);
-  //       a.setAttribute("href", link);
-  //       document.body.appendChild(a);
-  //       a.click();
-  //       document.body.removeChild(a);
-  //     }
-  //   };
-  //   req.send();
-  // };
-
-  var link = document.createElement('a');
-
-  link.href = './ebooks-sin-correos/el-negocio-de-la-crianza-tecnificada-de-cuyes/los-4-pasos-para-la-crianza-de-cuyes-que-debes-conocer.pdf';
-
-  link.download = 'los-4-pasos-para-la-crianza-de-cuyes-que-debes-conocer.pdf';
-
-  link.dispatchEvent(new MouseEvent('click'));
-
-}, 10000);
+// }, 10000);
 
 //CONTADOR EBOOK
-let contador = document.querySelector(".contador").innerText; //10
-let header__title = document.querySelector(".header__title");
-let set_interval;
+// let contador = document.querySelector(".contador").innerText; //10
+// let header__title = document.querySelector(".header__title");
+// let set_interval;
 
-set_interval = setInterval(actualizarTiempo, 1000);
+// set_interval = setInterval(actualizarTiempo, 1000);
 
-function actualizarTiempo(){
+// function actualizarTiempo(){
   
-  contador--;
+//   contador--;
   
-  header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
+//   header__title.innerText = `EN ${contador} SEGUNDOS ESTARÁS RECIBIENDO EL EBOOK ...`
   
-  if(contador == 0){
-    header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩";
-    clearInterval(set_interval);
-  }  
-}
+//   if(contador == 0){
+//     header__title.innerText = "Tu Mini-Manual se acaba de descargar 🤩";
+//     clearInterval(set_interval);
+//   }  
+// }
