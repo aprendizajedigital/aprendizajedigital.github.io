@@ -75,6 +75,7 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 let btn = document.querySelector(".form__button").firstChild;
 let first_name;
 let email;
+let flag = 0;
 
 let valid_first_name = document.querySelector(".valid-first-name");
 let invalid_first_name = document.querySelector(".invalid-first-name");
@@ -104,6 +105,8 @@ function form_validate(param_first_name, param_email){
 // VALIDAR CUANDO PRESIONAMOS EL BOTON ENVIAR
 document.querySelector("#form").addEventListener('submit', function (e) {
   e.preventDefault();
+
+  flag = 1;
 
   first_name = document.querySelector("#first_name").value.trim();
   email = document.querySelector("#email").value.trim();
@@ -136,6 +139,10 @@ document.querySelector("#form").addEventListener('submit', function (e) {
 
 // VALIDAR CUANDO PRESIONAMOS UNA TECLA
 window.addEventListener("keyup", function (e){
+
+  if(flag==0)
+    return false;
+
   first_name = document.querySelector("#first_name").value.trim();
   email = document.querySelector("#email").value.trim();
   form_validate(first_name, email);
