@@ -73,7 +73,7 @@ animate__zoomIn.observe(document.querySelector('.form__button'));
 // -- INICIO ENVIAR CORREO CON EMAIL.JS
 
 let btn = document.querySelector(".form__button").firstChild;
-let first_name = document.querySelector("#name").value;
+let first_name = document.querySelector("#first_name").value;
 let email = document.querySelector("#email").value;
 
 let valid_first_name = document.querySelector(".valid-first-name");
