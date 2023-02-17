@@ -54,6 +54,10 @@ document.querySelector("#form").addEventListener('submit', function (e) {
  
   btn.nodeValue = "Enviando..."
 
+  setTimeout(() => {
+    btn.nodeValue = 'Listo!';
+  }, 1000);
+
   //INICIO EMAIL.JS
   const serviceID = 'default_service';
   const templateID = 'template_fc02x9n';  
@@ -64,15 +68,9 @@ document.querySelector("#form").addEventListener('submit', function (e) {
       // alert('Tu ebook fue enviado');
     }, (err) => {
       // btn.nodeValue = 'Enviado';
-      alert(JSON.stringify(err));
+      //alert(JSON.stringify(err));
   });
   //FIN EMAIL.JS
-
-  setTimeout(() => {
-    btn.nodeValue = 'Listo!';
-  }, 1000);
-
-  //AQUI IBA EL CODIGO DE EMAIL.JS
 
   setTimeout(() => {
     window.location.href = './gracias-aqui-tienes-tu-libro-digital-de-hacer-pan-paso-a-paso.html';
