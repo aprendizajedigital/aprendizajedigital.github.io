@@ -16,20 +16,5 @@ animate__zoomIn.observe(document.querySelector('.main__subtitle'));
 animate__zoomIn.observe(document.querySelector('.main__description'));
 animate__zoomIn.observe(document.querySelector('.main__icon'));
 
-setTimeout(() => {
-  //--INICIO ENVIANDO DATOS--
-
-  const serviceID = 'default_service';
-  const templateID = 'template_fc02x9n';
-
-  emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      // btn.nodeValue = 'Listo!';
-      // alert('Tu ebook fue enviado');
-    }, (err) => {
-      // btn.nodeValue = 'Enviado';
-      alert(JSON.stringify(err));
-  });
-
-  //--FIN ENVIANDO DATOS--
-}, 10000);
+//SI PENSASTE QUE SE ENVIE EL CORREO DESPUES DE 10 O MÁS SEGUNDOS, NO SE PUEDE, PORQUE NECESITAS PASAR UNA VARIABLE. NECESITAS CREAR UN INPUT TEXT EN EL FORM Y ENVIAR ESE DATO QUE COLOCA EL USUARIO
+//TAMPOCO SE PUEDE PROGRAMAR EL ENVIO DE UN CORREO, SE NECESITA PHP

@@ -51,9 +51,22 @@ document.querySelector("#form").addEventListener('submit', function (e) {
     if(invalid_email.style.display == "block")
       return false;
   //--FIN VALIDANDO FORMULARIO--
-
  
   btn.nodeValue = "Enviando..."
+
+  //INICIO EMAIL.JS
+  const serviceID = 'default_service';
+  const templateID = 'template_fc02x9n';  
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      // btn.nodeValue = 'Listo!';
+      // alert('Tu ebook fue enviado');
+    }, (err) => {
+      // btn.nodeValue = 'Enviado';
+      alert(JSON.stringify(err));
+  });
+  //FIN EMAIL.JS
 
   setTimeout(() => {
     btn.nodeValue = 'Listo!';
