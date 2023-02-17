@@ -73,7 +73,7 @@ window.addEventListener("keyup", function (e){
     return false;
 
   email = document.querySelector("#email").value.trim();
-  form_validate(first_name, email);
+  form_validate(email);
 });
 // -- FIN ENVIAR CORREO CON EMAIL.JS
 
