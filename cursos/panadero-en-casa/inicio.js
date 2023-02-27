@@ -1,3 +1,24 @@
+//Cantidad de usuarios
+let max = 99;
+let min = 70;
+let resultado = Math.round(Math.random() * (max - min) + min); // el resultado será entre 70 y 100
+let amount = document.querySelector(".amount");
+amount.innerText = resultado;
+
+//Barra de Ciudad
+let city = document.querySelector(".city");
+
+fetch("https://ipinfo.io/json")
+.then((response) => response.json())
+.then((data) => (city.innerText = data.city))
+
+//Costo del curso
+let precio = document.querySelector(".precio");
+
+fetch("https://ipwhois.app/json/")
+.then((response) => response.json())
+.then((data) => (precio.innerText = (data.currency_rates + 0.238) * 25))
+
 //Usuarios Globales
 let user01 = { name: "John", photo: "01.jpg", country: "Perú" }
 let user02 = { name: "Vanessa", photo: "02.jpg", country: "Bolivia" }
