@@ -1,7 +1,7 @@
 //Cantidad de usuarios
 let max = 99;
 let min = 70;
-let resultado = Math.round(Math.random() * (max - min) + min); // el resultado será entre 70 y 100
+let resultado = Math.round(Math.random() * (max - min) + min); // el resultado será entre 70 y 
 let amount = document.querySelector(".amount");
 amount.innerText = resultado;
 
@@ -17,7 +17,7 @@ let precio = document.querySelector(".precio");
 
 fetch("https://ipwhois.app/json/")
 .then((response) => response.json())
-.then((data) => (precio.innerText = (data.currency_rates + 0.238) * 25))
+.then((data) => (precio.innerText = data.currency_symbol + (data.currency_rates) * 25))
 
 //Usuarios Globales
 let user01 = { name: "John", photo: "01.jpg", country: "Perú" }
