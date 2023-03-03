@@ -1,9 +1,14 @@
 //Cantidad de usuarios
-let max = 99;
-let min = 70;
+let max = 120;
+let min = 80;
 let resultado = Math.round(Math.random() * (max - min) + min); // el resultado será entre 70 y 
 let amount = document.querySelector(".amount");
 amount.innerText = resultado;
+
+setInterval(() => {
+  resultado = Math.round(Math.random() * (max - min) + min);
+  amount.innerText = resultado;
+}, 5000);
 
 //Barra de Ciudad
 let city = document.querySelector(".city");
@@ -13,11 +18,11 @@ fetch("https://ipinfo.io/json")
 .then((data) => (city.innerText = data.city))
 
 //Costo del curso
-let precio = document.querySelector(".precio");
+// let precio = document.querySelector(".precio");
 
-fetch("https://ipwhois.app/json/")
-.then((response) => response.json())
-.then((data) => (precio.innerText = data.currency_symbol + (data.currency_rates) * 25))
+// fetch("https://ipwhois.app/json/")
+// .then((response) => response.json())
+// .then((data) => (precio.innerText = data.currency_symbol + (data.currency_rates) * 25))
 
 //Usuarios Globales
 let user01 = { name: "John", photo: "01.jpg", country: "Perú" }
@@ -144,7 +149,7 @@ let user120 = { name: "Hugo", photo: "120.jpg", country: "Colombia" }
 let users = [user01, user02, user03, user04, user05, user06, user07, user08, user09, user10, user10, user10, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20, user21, user22, user23, user24, user25, user26, user27, user28, user29, user30, user31, user32, user33, user34, user35, user36, user37, user38, user39, user40, user41, user42, user43, user44, user45, user46, user47, user48, user49, user50, user51, user52, user53, user54, user55, user56, user57, user58, user59, user60, user61, user62, user63, user64, user65, user66, user67, user68, user69, user70, user71, user72, user73, user74, user75, user76, user77, user78, user79, user80, user81, user82, user83, user84, user85, user86, user87, user88, user89, user90, user91, user92, user93, user94, user95, user96, user97, user98, user99, user100, user101, user102, user103, user104, user105, user106, user107, user108, user109, user110, user111, user112, user113, user114, user115, user116, user117, user118, user119, user120]
 
 //Enlace de afiliado
-const enlace_afiliado = function () {window.open("https://go.hotmart.com/Q70940830M?ap=3101&offDiscount=031016")}
+const enlace_afiliado = function () {window.open("https://go.hotmart.com/F76036230M?ap=00af&offDiscount=031016")}
 
 //Obtener pais del usuario
 let COUNTRY_DEFAULT_NAME = "";
@@ -154,7 +159,7 @@ let COUNTRY_DEFAULT_CODE = "";
 //PERU -> ["s/ 388.00", "s/ 194.00", "s/ 97.00"] - ["s/ 394.00", "s/ 197.00", "s/ 98.50"] - ["s/ 398.00", "s/ 199.00", "s/ 99.50"] - ["s/ 408.00", "s/ 204.00", "s/ 102.00"] - ["s/ 410.00", "s/ 205.00", "s/ 102.50"] - ["s/ 414.00", "s/ 207.00", "s/ 103.50"] - ["s/ 418.00", "s/ 209.00", "s/ 104.50"] - ["s/ 420.00", "s/ 210.00", "s/ 105.00"] 
 //COLOMBIA -> ["$449.270,00", "$224.635,00", "$112.317,00"] - ["$452.470,00", "$226.235,00", "$113.117,00"] - ["$478.368,00", "$232.257,00", "$116.128,00"] - ["$478.368,00", "$239.184,00", "$119.592,00"]
 const TYPE_OF_CURRENCY = {
-  "PE" : ["s/ 404.00", "s/ 202.00", "s/ 101.00"],
+  "PE" : ["s/ 400.00", "s/ 200.00", "s/ 100.00"],
   "CL" : ["$452.470,00", "$233.539,00", "$116.769,00"],
   "MX" : ["$2463,84", "$1231,92", "$615,96"],
   "BR" : ["R$524,00", "R$262,00", "R$131,00"],
