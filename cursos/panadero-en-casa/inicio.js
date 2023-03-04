@@ -220,53 +220,21 @@ getCountry();
 
 //Usuarios Falsos
 
-function autoupdate(){
-  setTimeout(() => {
-    openNotify();
-    setTimeout(() => {
-      closeNotify();
-      setTimeout(autoupdate, 50);//EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
-    }, 10000); //10000
-  }, 300000); //300000
-}
-
-
-setTimeout(autoupdate, 50); //EJECUTA LA FUNCION EN MENOS DE UN MILISEGUNDO
-
-/*
-setInterval(function () {
-  openNotify();
-
-  setTimeout(function () {
-    closeNotify();
-  }, 10000)
-}, 15000); //OJO: el setInterval se seguirá ejecutando aun asi ejecutes el setTimeout 
-*/
-
-//----------------------
-
-// let flag = true;
-
-// function wrapper() {
-//   if(flag) {
-//     openNotify();
-//   } else {
+// function autoupdate(){ => aqui es lo mismo que el codigo de abajo.
+//   openNotify();
+//   setTimeout(() => {
 //     closeNotify();
-//   }
-//   flag = !flag;
+//   }, 10000);
 // }
 
-// setInterval(wrapper, 10000);
+// setInterval(autoupdate, 10000);
 
-//----------------------
-
-// setInterval(function () {
-//   openNotify();
-// }, 10000); //TIEMPO PARA QUE APAREZCA LA NOTIFICACION
-
-// setInterval(function () {
-//   closeNotify();
-// }, 20000); //SUMAS EL TIEMPO PARA QUE APAREZCA + EL TIEMPO DE QUE DESAPAREZCA 
+setInterval(function() {
+  openNotify();
+  setTimeout(function() {
+    closeNotify();
+  }, 10000);
+}, 20000);
 
 function openNotify() {
 
