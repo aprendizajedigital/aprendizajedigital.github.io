@@ -240,12 +240,18 @@ getCountry();
 
 // setInterval(autoupdate, 10000);
 
-setInterval(function() {
+let intervalId;
+
+function showPopup() {
   openNotify();
   setTimeout(function() {
     closeNotify();
+    intervalId = setInterval(showPopup, 60000);
   }, 10000);
-}, 60000); //al inicio va a ser 30s y luego 20s, por qué 20? solo resta (30000  - 10000)
+  clearInterval(intervalId);
+}
+
+intervalId = setInterval(showPopup, 60000); //al inicio va a ser 30s y luego 20s, por qué 20? solo resta (30000  - 10000)
 
 function openNotify() {
 
