@@ -229,7 +229,7 @@ const getCountry = function () {
 
 getCountry();
 
-//Usuarios Falsos
+
 
 // function autoupdate(){ => aqui es lo mismo que el codigo de abajo.
 //   openNotify();
@@ -240,18 +240,24 @@ getCountry();
 
 // setInterval(autoupdate, 10000);
 
-let intervalId;
+//-------USUARIOS FALSOS-------
 
-function showPopup() {
-  openNotify();
-  setTimeout(function() {
-    closeNotify();
-    intervalId = setInterval(showPopup, 60000);
-  }, 10000);
-  clearInterval(intervalId);
+let intervalID;
+
+function startNotify() {
+  intervalID = setInterval(() => {
+    openNotify();
+    setTimeout(closeNotify, 10000);
+  }, 60000);
 }
 
-intervalId = setInterval(showPopup, 60000); //al inicio va a ser 30s y luego 20s, por qué 20? solo resta (30000  - 10000)
+function stopNotify() {
+  clearInterval(intervalID);
+}
+
+startNotify();
+
+//------------------------------
 
 function openNotify() {
 
