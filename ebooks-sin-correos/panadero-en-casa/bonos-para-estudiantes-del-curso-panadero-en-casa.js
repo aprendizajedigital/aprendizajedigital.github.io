@@ -32,5 +32,9 @@ for (let i = 0; i < document.querySelectorAll('.main__icon').length; i++) {
   animate__zoomIn.observe(document.querySelectorAll(".main__icon")[i]);
 }
 
+for (let i = 0; i < document.querySelectorAll('img').length; i++) {
+  animate__zoomIn.observe(document.querySelectorAll("img")[i]);
+}
+
 //SI PENSASTE QUE SE ENVIE EL CORREO DESPUES DE 10 O MÁS SEGUNDOS, NO SE PUEDE, PORQUE NECESITAS PASAR UNA VARIABLE. NECESITAS CREAR UN INPUT TEXT EN EL FORM Y ENVIAR ESE DATO QUE COLOCA EL USUARIO
 //TAMPOCO SE PUEDE PROGRAMAR EL ENVIO DE UN CORREO, SE NECESITA PHP

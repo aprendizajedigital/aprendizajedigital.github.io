@@ -64,7 +64,13 @@
     margin-top: 35px;
 }
 
-.main__image--1 img, .main__image--2 img, .main__image--3 img, .main__image--4 img, .main__image--5 img{
+.main__image--1 img, .main__image--2 img, .main__image--3 img{
+    width: 40%;
+    height: auto;
+    /* margin-bottom: 25px; */
+}
+
+.main__image--4 img, .main__image--5 img{
     width: 50%;
     height: auto;
     /* margin-bottom: 25px; */
