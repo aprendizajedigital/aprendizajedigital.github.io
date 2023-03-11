@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header{
+    background-color: rgb(237, 24, 0);
+    /* padding: 40px 0; */
+    padding: 25px 0;
+}
+
+.header__title{
+    /* font-size: 40px; */
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    margin: 0;
+}
+
+.main{
+    padding: 100px 0;
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000vmax rgba(0, 3, 42, 0.8); /*tiene que ser los mismos colores*/
+    background-blend-mode: luminosity;
+    background-color: rgb(0, 3, 42);
+}
+
+.main__title{
+    font-size: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: black;
+    /* color: #ffffff; */
+    background-color:#ffe357;
+    /* background-color: blue; */
+}
+
+.main__subtitle{
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    /* line-height: 60px; */
+}
+
+.main__description{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+}
+
+.main__image--1, .main__image--2, .main__image--3, .main__image--4, .main__image--5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+
+    margin-top: 35px;
+}
+
+.main__image--1 img, .main__image--2 img, .main__image--3 img, .main__image--4 img, .main__image--5 img{
+    width: 50%;
+    height: auto;
+    /* margin-bottom: 25px; */
+}
+
+.main__icon{
+    font-size: 80px;
+    color: rgb(237, 24, 0);
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    animation: mover 0.3s infinite alternate;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.main__button{
+    padding: 12px 40px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    background: rgb(237, 24, 0);
+    border: 1px solid rgb(237, 24, 0);
+    border-radius: 90px;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0px 0px 15px #000000;
+
+    transition: .4s ease 0s;
+    
+}
+
+.main__button:hover{
+    color: white;
+    box-shadow: 0px 0px 95px #000000;
+    transform: translateY(15px);
+    /* transform: scale(1.25); */
+}
+
+.footer{
+    background: black;
+    padding: 30px 30px;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    background-image: url(./background-footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center -480px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000vmax rgba(0, 0, 0, 0.7); /*tiene que ser los mismos colores*/
+    background-blend-mode: luminosity;
+    background-color: rgb(0, 0, 0);
+}
+
+/*------------------------------------------MEDIAQUERYS-----------------------------------------------*/
+@media (max-width: 1025px) {
+}
+@media (max-width: 913px) {
+}
+@media (max-width: 821px) {
+}
+@media (max-width: 769px) {
+    .main__title{
+        font-size:65px;
+    }
+
+    .main__subtitle{
+        font-size:30px;
+    }
+
+    .main__button{
+        font-size:25px;
+    }
+
+    .footer{
+        font-size:12px;
+    }
+}
+@media (max-width: 541px) {
+}
+@media (max-width: 415px) {
+    .header__title{
+        font-size:23px;
+    }
+
+    .main__title{
+        font-size:50px;
+    }
+
+    .main__subtitle{
+        font-size:25px;
+    }
+
+    .main__description{
+        font-size:20px;
+    }
+
+    .main__button{
+        font-size:20px;
+    }
+
+    .footer{
+        font-size:12px;
+    }
+}
+@media (max-width: 413px) {
+}
+@media (max-width: 394px) {
+}
+@media (max-width: 391px) {
+}
+@media (max-width: 376px) {
+}
+@media (max-width: 361px) {
+}
