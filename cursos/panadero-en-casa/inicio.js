@@ -1,6 +1,6 @@
 //Cantidad de usuarios
-let max = 120;
-let min = 80;
+let max = 150;
+let min = 101;
 let resultado = Math.round(Math.random() * (max - min) + min); // el resultado será entre 70 y 
 let amount = document.querySelector(".amount");
 amount.innerText = resultado;
@@ -304,7 +304,7 @@ function startNotify() {
   intervalID = setInterval(() => {
     openNotify();
     setTimeout(closeNotify, 10000);
-  }, 60000);
+  }, 180000);
 }
 
 function stopNotify() {
