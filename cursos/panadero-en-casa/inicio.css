@@ -170,6 +170,31 @@ header {
     color: rgb(255, 255, 0);
 }
 
+.header--warning{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
+    margin: 0;
+    /* margin-top: 50px; */
+    margin-top: 10px;
+    /* color: white; */
+    color: #000000;
+    text-align: center;
+    max-width: 1140px;
+    width: 100%;
+    height: auto;
+    line-height: 1.1;
+
+    background-color: rgb(255, 255, 0);
+
+    padding: 20px 20px;
+}
+
+.header--warning span{
+    color: rgb(255, 0, 0);
+}
+
 .header--subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
@@ -215,7 +240,13 @@ header {
 .header--question {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 900;
+
+    color: rgba(0, 0, 0);
+
+    background-color:  #FFEA00;
+
+    text-shadow: rgba(255, 255, 255) 2px 0px 2px;
 }
 
 .estudiante__img{
@@ -532,6 +563,101 @@ del {
     align-items: center;
 }
 
+/*-----------------RECAPITULAR-------------------*/
+
+.main--repeatOffer--recapitulate{
+    margin: 0 auto;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: rgba(29, 29, 29, 0.84);
+    line-height: 1.2em;
+    font-weight: 500;
+
+    margin-bottom: 50px;
+
+    padding: 0 20px;
+}
+
+.container__recapitulate{
+    border: 3px dashed white;    
+    border-radius: 10px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    margin-bottom: 40px;
+}
+
+.main--repeatOffer--recapitulate__title{
+    font-weight: 900;
+    font-size: 40px;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.25em;
+    letter-spacing: -0.3px;
+
+    text-align: center;
+
+    color: #212529;
+
+    margin: 0;
+}
+
+.main--repeatOffer--recapitulate__subtitle{
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: white;
+    letter-spacing: -0.3px;
+
+    text-align: center;
+
+    text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
+}
+
+hr{
+    border: 1px solid white;
+}
+
+.main--repeatOffer--recapitulate__price_1{
+    font-family: Montserrat, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.main--repeatOffer--recapitulate__price_1 span{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 10px;
+}
+
+.main--repeatOffer--recapitulate__price_2{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.main--repeatOffer--recapitulate__price_3{
+    color:rgb(17, 164, 0);
+
+    font-size: 72px;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+    text-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
+
+    text-align: center;
+}
+/*----------------------------------------------*/
+
 .main--offer--img,
 .main--img,
 .main--repeatOffer--img {
@@ -611,7 +737,7 @@ del {
     font-size: 18px;
     text-shadow: rgb(0 0 0 / 30%) 2px 0px 1px;
     font-family: Montserrat, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
 }
 
@@ -768,7 +894,41 @@ del {
     max-width: 800px;
     width: 100%;
     height: auto;
-    padding: 10px;
+    /* padding: 10px; */
+
+    margin-bottom: 0px;
+}
+
+.container-main__take-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__take-action{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
+    margin: 0;
+    /* margin-top: 50px; */
+    margin-top: 10px;
+    /* color: white; */
+    color: #000000;
+    text-align: center;
+    max-width: 1280px;
+    width: 100%;
+    height: auto;
+    line-height: 1.1;
+
+    background-color: rgb(255, 255, 0);
+
+    padding: 20px 20px;
+    
+}
+
+.main__take-action span{
+    color: rgb(255, 0, 0);
 }
 
 /*----------Acordeon------------*/
@@ -1305,7 +1465,8 @@ del {
     }
 
     .header--background {
-        height: 300px;
+        /* height: 300px; */
+        height: 550px;
     }
 
     .main--subtitle {
@@ -1313,7 +1474,16 @@ del {
     }
 
     .header--title {
-        font-size: 20px;
+        /* font-size: 20px; */
+        font-size: 25px;
+    }
+
+    .header--warning{
+        font-size: 15px;
+    }
+
+    .main__take-action{
+        font-size: 15px;
     }
 
     .header--subtitle {
@@ -1407,6 +1577,10 @@ del {
     .item-contenedor-del-dia{
         padding: 0 10px;
     }
+
+    .main--repeatOffer--recapitulate__price_1{
+        font-size: 50px;
+    }
 }
 
 /*CELULARES*/
@@ -1449,8 +1623,41 @@ del {
         font-size: 30px;
     }
 
+    .main__take-action{
+        font-size: 15px;
+    }
+
+    .main--repeatOffer--recapitulate__title{
+        font-size: 30px;
+    }
+
+    .main--repeatOffer--recapitulate__subtitle{
+        font-size: 20px;
+    }
+
+    .container__recapitulate p{
+        font-size: 18px;
+    }
+
+    .main--repeatOffer--recapitulate__price_1 span{
+        text-decoration-thickness: 5px;
+    }
+
+    .main--repeatOffer--recapitulate__price_1{
+        font-size: 35px;
+    }
+
+    .main--repeatOffer--recapitulate__price_2{
+        font-size: 25px;
+    }
+
+    .main--repeatOffer--recapitulate__price_3{
+        font-size: 60px;
+    }
+
+    /*----------------------------------------------*/
     .button-pay, .button-whatsapp, .button-facebook {
-        width: 300px;
+        width: 100%;
         font-size: 23px;
     }
 

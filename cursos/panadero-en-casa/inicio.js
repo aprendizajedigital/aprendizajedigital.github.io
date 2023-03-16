@@ -165,28 +165,30 @@ const enlace_afiliado = function () {window.open("https://go.hotmart.com/F760362
 //Obtener pais del usuario
 let COUNTRY_DEFAULT_NAME = "";
 let COUNTRY_DEFAULT_CODE = "";
-// let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$99,98", "$49,99", "$25,00"]};
+// let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$100.00", "$50.00", "$25.00"]}; (87% DESCUENTO SOLO EN DOLARES)
 
 //PERU -> ["s/ 388.00", "s/ 194.00", "s/ 97.00"] - ["s/ 394.00", "s/ 197.00", "s/ 98.50"] - ["s/ 398.00", "s/ 199.00", "s/ 99.50"] - ["s/ 408.00", "s/ 204.00", "s/ 102.00"] - ["s/ 410.00", "s/ 205.00", "s/ 102.50"] - ["s/ 414.00", "s/ 207.00", "s/ 103.50"] - ["s/ 418.00", "s/ 209.00", "s/ 104.50"] - ["s/ 420.00", "s/ 210.00", "s/ 105.00"] 
 //COLOMBIA -> ["$449.270,00", "$224.635,00", "$112.317,00"] - ["$452.470,00", "$226.235,00", "$113.117,00"] - ["$478.368,00", "$232.257,00", "$116.128,00"] - ["$478.368,00", "$239.184,00", "$119.592,00"]
 const TYPE_OF_CURRENCY = {
-  "PE" : ["s/ 400.00", "s/ 200.00", "s/ 100.00"],
+  
+  // PRECIO ALTO (0) | PRECIO MEDIO (1) | PRECIO BAJO (2) | MONEDA (3) | BONO 1 (4) | BONO 2 (5) | BONO 3 (6) | BONO 4 (7) | BONO 5 (8) | COMUNIDAD (9) | MEMBRESIA (10) | CERTIFICADO (11) | PROGRAMA COMPLETO (12)
+  "PE" : ["s/ 404.00", "s/ 202.00",    "s/ 101.00",          "SOLES",    "s/ 46.00", "s/ 47.00",  "s/ 50.00",  "s/ 45.00",   "s/ 45.00", "s/ 25.00",        "s/ 25.00",       "s/ 20.00",        "s/ 101.00"],
   "CL" : ["$452.470,00", "$233.539,00", "$116.769,00"],
   "MX" : ["$2463,84", "$1231,92", "$615,96"],
   "BR" : ["R$524,00", "R$262,00", "R$131,00"],
   "CO" : ["$413.594,00", "$206.797,00", "$103.398,00"],
   "AR" : ["$12594,00", "$6297,00", "$3148,50"],
   "ES" : ["118,58€", "59,29€", "29,65€"],
-  "EC" : ["$99,98", "$49,99", "$25,00"],
-  "BO" : ["$99,98", "$49,99", "$25,00"],
-  "CR" : ["$99,98", "$49,99", "$25,00"],
-  "GT" : ["$99,98", "$49,99", "$25,00"],
-  "PT" : ["120.54€", "60,27€", "30,14€"],
-  "DO" : ["$99,98", "$49,99", "$25,00"],
-  "SV" : ["$99,98", "$49,99", "$25,00"],
-  "HN" : ["$99,98", "$49,99", "$25,00"],
-  "UY" : ["$99,98", "$49,99", "$25,00"],
-  "PY" : ["$99,98", "$49,99", "$25,00"]
+  "EC" : ["$100.00", "$50.00", "$25.00"],
+  "BO" : ["$100.00", "$50.00", "$25.00"],
+  "CR" : ["$100.00", "$50.00", "$25.00"],
+  "GT" : ["$100.00", "$50.00", "$25.00"],
+  "PT" : ["$100.00", "$50.00", "$25.00"],
+  "DO" : ["$100.00", "$50.00", "$25.00"],
+  "SV" : ["$100.00", "$50.00", "$25.00"],
+  "HN" : ["$100.00", "$50.00", "$25.00"],
+  "UY" : ["$100.00", "$50.00", "$25.00"],
+  "PY" : ["$100.00", "$50.00", "$25.00"]
 }
 
 const getCountry = function () {
@@ -204,6 +206,8 @@ const getCountry = function () {
         COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
         COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code;
 
+        // LOS 3 PRECIOS PRINCIPALES
+
         document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
         document.querySelectorAll(".regular-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
         document.querySelectorAll(".low-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
@@ -211,6 +215,58 @@ const getCountry = function () {
         document.querySelectorAll(".high-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
         document.querySelectorAll(".regular-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
         document.querySelectorAll(".low-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+
+        // LOS PRECIOS EN LA SECCION BONOS
+
+        document.querySelectorAll(".currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][4];
+        document.querySelectorAll(".type-currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][5];
+        document.querySelectorAll(".type-currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][6];
+        document.querySelectorAll(".type-currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][7];
+        document.querySelectorAll(".type-currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][8];
+        document.querySelectorAll(".type-currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        // LOS PRECIOS EN LA SECCION RECAPITULANDO
+
+        document.querySelectorAll(".recapitulate_currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][12];
+        document.querySelectorAll(".recapitulate_type-currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+        
+        document.querySelectorAll(".recapitulate_currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][9];
+        document.querySelectorAll(".recapitulate_type-currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+        
+        document.querySelectorAll(".recapitulate_currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][10];
+        document.querySelectorAll(".recapitulate_type-currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+        
+        document.querySelectorAll(".recapitulate_currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][11];
+        document.querySelectorAll(".recapitulate_type-currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".recapitulate_currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][4];
+        document.querySelectorAll(".recapitulate_type-currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".recapitulate_currency")[5].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][5];
+        document.querySelectorAll(".recapitulate_type-currency")[5].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".recapitulate_currency")[6].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][6];
+        document.querySelectorAll(".recapitulate_type-currency")[6].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".recapitulate_currency")[7].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][7];
+        document.querySelectorAll(".recapitulate_type-currency")[7].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        document.querySelectorAll(".recapitulate_currency")[8].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][8];
+        document.querySelectorAll(".recapitulate_type-currency")[8].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
+
+        // LOS PRECIO TOTALES EN LA SECCION RECAPITULANDO
+
+        document.querySelector(".main--repeatOffer--recapitulate__price_1 span").innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
+        document.querySelector(".main--repeatOffer--recapitulate__price_3 span").innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
+
       }
 
       // document.querySelectorAll(".high-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
