@@ -1458,7 +1458,8 @@ hr{
     }
 
     .main--container--bonds:after {
-        top: 300px;
+        /* top: 300px; */
+        top: 360px;
     }
 
     .header--background {
