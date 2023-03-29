@@ -208,6 +208,10 @@ const getCountry = function () {
         COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
         COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code;
 
+        // OCULTAR RECAPITULACION DE PRECIOS PARA LOS PAISES
+        if(COUNTRY_DEFAULT_CODE != "PE")
+          document.querySelector(".main--repeatOffer--recapitulate").style.display = "none"; 
+
         // LOS 3 PRECIOS PRINCIPALES
 
         document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
