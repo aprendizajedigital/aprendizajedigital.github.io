@@ -1,7 +1,50 @@
 :root {
-    --primary-color: #f33e67;
-    --secondary-color: #e99e88;
+    --primary-color:#e99e88;
+    --secondary-color:#f33e67; 
     --tertiary-color: rgb(72, 180, 184);
+}
+
+.container__city_bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+
+    /* background-color: rgba(185, 31, 1, 0.9); */
+    padding: 20px 0;
+
+    z-index: 1000;
+}
+
+.city_bar{
+
+    border: 1px solid red;
+    background-color:#212529;
+    border-radius:10px;
+    padding: 15px 80px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city_bar p{
+    display: inline-block;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.city{
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+    text-decoration: underline;
 }
 
 .notify{
@@ -100,7 +143,7 @@ header {
     position: absolute;
     width: 100%;
     height: 667px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     /* background-image: linear-gradient(124deg, rgb(245, 180, 209) 0%, rgb(237, 136, 181) 100%); */
     z-index: -100;
     top: 0;
@@ -113,7 +156,8 @@ header {
     font-weight: 900;
     text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
     margin: 0;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    margin-top: 10px;
     color: white;
     text-align: center;
     max-width: 1140px;
@@ -124,6 +168,31 @@ header {
 
 .header--title span {
     color: rgb(255, 255, 0);
+}
+
+.header--warning{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
+    margin: 0;
+    /* margin-top: 50px; */
+    margin-top: 10px;
+    /* color: white; */
+    color: #000000;
+    text-align: center;
+    max-width: 1140px;
+    width: 100%;
+    height: auto;
+    line-height: 1.5;
+
+    /* background-color: rgb(255, 255, 0); */
+
+    padding: 20px 20px;
+}
+
+.header--warning span{
+    color: rgb(255, 0, 0);
 }
 
 .header--subtitle {
@@ -171,7 +240,31 @@ header {
 .header--question {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
+
+    color: rgba(0, 0, 0);
+
+    /* background-color:  #FFEA00; */
+
+    text-shadow: rgba(255, 255, 255) 2px 0px 2px;
+}
+
+.header--phrase{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+
+    font-style: italic;
+
+    color: rgba(0, 0, 0);
+
+    text-shadow: rgba(255, 255, 255) 2px 0px 2px;
+
+    text-align: center;
+}
+
+.header--phrase span{
+    color: #ff0000;
 }
 
 .estudiante__img{
@@ -197,17 +290,33 @@ img[src="img2.png"] {
     border-radius: 30px;
 }
 
-.main--title {
+.main--title:nth-child(1){
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.main--title:nth-child(2) {
     font-family: Montserrat, sans-serif;
     font-weight: 800;
     font-size: 25px;
+    color: #ff0000;
+
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .main--subtitle {
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
+    color: #ff0000;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    color: rgb(224, 77, 69)
+    text-align: center;
+
+    padding: 0 15px;
 }
 
 .main--container-StudyPlan {
@@ -407,8 +516,45 @@ img[src="img2.png"] {
     align-items: center;
 }
 
+/*esto se usa para imagenes horizontales*/
 .main--container--gifs__item--img {
-    height: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/*usa esto en caso de que tengas una imagen vertical que se haya agrandado*/
+.size_gif--1{ 
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/*aqui esta bien, la imagen no es vertical, es horizontal*/
+.size_gif--2{
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/*usa esto en caso de que tengas una imagen vertical que se haya agrandado*/
+.size_gif--3{
+    width: 70%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/*usa esto en caso de que tengas una imagen vertical que se haya agrandado*/
+.size_gif--4{
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/*usa esto en caso de que tengas una imagen vertical que se haya agrandado*/
+.size_gif--5{
+    width: 80%;
+    height: auto;
     margin-bottom: 25px;
 }
 
@@ -440,13 +586,7 @@ del {
     padding: 0 50px;
 }
 
-.main--subtitle {
-    color: rgb(224, 77, 69);
-    font-size: 30px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    text-align: center;
-}
+
 
 .main--offer {
     background-color: #f7f7f7;
@@ -474,6 +614,124 @@ del {
     justify-content: center;
     align-items: center;
 }
+
+/*-----------------RECAPITULAR-------------------*/
+
+.main--repeatOffer--tittle{
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 1px;
+    font-family: Montserrat, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+
+    text-decoration: underline;
+}
+
+.main--repeatOffer--subtittle{
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+    letter-spacing: -0.5px;
+    line-height: 1.2em;
+    color: rgb(255, 255, 255);
+    
+}
+
+.main--repeatOffer--recapitulate{
+    margin: 0 auto;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: rgba(29, 29, 29, 0.84);
+    line-height: 1.2em;
+    font-weight: 500;
+
+    margin-bottom: 50px;
+
+    padding: 0 20px;
+}
+
+.container__recapitulate{
+    border: 3px dashed white;    
+    border-radius: 10px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    margin-bottom: 40px;
+}
+
+.main--repeatOffer--recapitulate__title{
+    font-weight: 900;
+    font-size: 40px;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.25em;
+    letter-spacing: -0.3px;
+
+    text-align: center;
+
+    color: #212529;
+
+    margin: 0;
+}
+
+.main--repeatOffer--recapitulate__subtitle{
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: white;
+    letter-spacing: -0.3px;
+
+    text-align: center;
+
+    text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
+}
+
+hr{
+    border: 1px solid white;
+}
+
+.main--repeatOffer--recapitulate__price_1{
+    font-family: Montserrat, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.main--repeatOffer--recapitulate__price_1 span{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 10px;
+}
+
+.main--repeatOffer--recapitulate__price_2{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.main--repeatOffer--recapitulate__price_3{
+    color:rgb(17, 164, 0);
+
+    font-size: 72px;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+    text-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
+
+    text-align: center;
+}
+/*----------------------------------------------*/
 
 .main--offer--img,
 .main--img,
@@ -554,7 +812,7 @@ del {
     font-size: 18px;
     text-shadow: rgb(0 0 0 / 30%) 2px 0px 1px;
     font-family: Montserrat, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
 }
 
@@ -632,7 +890,7 @@ del {
 }
 
 .main--repeatOffer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 30px 0;
 }
 
@@ -698,7 +956,7 @@ del {
 
 .main--frequentQuestions--title {
     font-family: Montserrat, sans-serif;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     font-size: 28px;
     font-weight: 800;
     text-shadow: rgb(0 0 0 / 15%) 1px 1px 2px;
@@ -707,10 +965,73 @@ del {
     margin-top: 25px;
 }
 
+.main--certificate--img{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    /* padding: 10px; */
+
+    margin-bottom: 50px;
+}
+
+.container-main__take-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__take-action{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
+    margin: 0;
+    /* margin-top: 50px; */
+    margin-top: 10px;
+    /* color: white; */
+    color: #000000;
+    text-align: center;
+    max-width: 1280px;
+    width: 100%;
+    height: auto;
+    line-height: 1.1;
+
+    background-color: rgb(255, 255, 0);
+
+    padding: 20px 20px;
+    
+}
+
+.main__take-action span{
+    color: rgb(255, 0, 0);
+}
+
 /*----------Acordeon------------*/
 .wrapper {
     width: 100%;
 }
+
+/*NUEVO*/
+
+.wrapper-content{
+    display: inline-block;
+}
+
+.container-question .question::after{
+    content: "\002B";
+    font-size: 1.5rem;
+    /*2.2rem*/
+    position: absolute;
+
+    left: 4px;
+    top: 17px;
+
+
+    transition: 0.2s;
+    color: rgba(109, 161, 255, 0.9);
+}
+
+/*---------*/
 
 .container-question {
     background-color: white;
@@ -1206,20 +1527,47 @@ del {
 
 @media (max-width: 769px) {
 
+    .main--repeatOffer--tittle{
+        font-size: 25px;
+    }
+
+    .main--repeatOffer--subtittle{
+        font-size: 20px;
+    }
+
+    .city_bar{
+        padding: 15px 15px;
+    }
+
+    .city_bar p{
+        font-size:18px;
+    }
+
     .main--container--bonds:after {
-        top: 300px;
+        /* top: 300px; */
+        top: 360px;
     }
 
     .header--background {
-        height: 300px;
+        /* height: 300px; */
+        height: 550px;
     }
 
-    .main--subtitle {
+    .header--phrase{
         font-size: 25px;
     }
 
     .header--title {
-        font-size: 20px;
+        /* font-size: 20px; */
+        font-size: 25px;
+    }
+
+    .header--warning{
+        font-size: 15px;
+    }
+
+    .main__take-action{
+        font-size: 15px;
     }
 
     .header--subtitle {
@@ -1230,7 +1578,11 @@ del {
         font-size: 16px;
     }
 
-    .main--title {
+    .main--title:nth-child(1) {
+        font-size: 25px;
+    }
+
+    .main--title:nth-child(2) {
         font-size: 20px;
     }
 
@@ -1313,10 +1665,24 @@ del {
     .item-contenedor-del-dia{
         padding: 0 10px;
     }
+
+    .main--repeatOffer--recapitulate__price_1{
+        font-size: 50px;
+    }
 }
 
 /*CELULARES*/
 @media (max-width: 468px){
+
+    .container__city_bar{
+        background-color: initial;
+        padding: 0;
+    }
+
+    .city_bar{
+        border: 2px solid red;
+    }
+
     .button-pay, .button-whatsapp, .button-facebook {
         width: 300px;
         font-size: 23px;
@@ -1324,6 +1690,14 @@ del {
 
     .button-pay span, .button-whatsapp span, .button-facebook span {
         margin-left: 10px;
+    }
+
+    .main--subtitle {
+        font-size: 18px;
+    }
+
+    .question{
+        font-size:16px;
     }
 }
 
@@ -1345,6 +1719,39 @@ del {
         font-size: 30px;
     }
 
+    .main__take-action{
+        font-size: 15px;
+    }
+
+    .main--repeatOffer--recapitulate__title{
+        font-size: 30px;
+    }
+
+    .main--repeatOffer--recapitulate__subtitle{
+        font-size: 20px;
+    }
+
+    .container__recapitulate p{
+        font-size: 18px;
+    }
+
+    .main--repeatOffer--recapitulate__price_1 span{
+        text-decoration-thickness: 5px;
+    }
+
+    .main--repeatOffer--recapitulate__price_1{
+        font-size: 35px;
+    }
+
+    .main--repeatOffer--recapitulate__price_2{
+        font-size: 25px;
+    }
+
+    .main--repeatOffer--recapitulate__price_3{
+        font-size: 60px;
+    }
+
+    /*----------------------------------------------*/
     .button-pay, .button-whatsapp, .button-facebook {
         width: 300px;
         font-size: 23px;
@@ -1391,10 +1798,6 @@ del {
     }
 
     .main--title {
-        padding: 0 30px;
-    }
-
-    .main--subtitle {
         padding: 0 30px;
     }
 }
