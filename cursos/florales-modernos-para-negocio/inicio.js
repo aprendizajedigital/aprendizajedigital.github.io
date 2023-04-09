@@ -199,7 +199,7 @@ const TYPE_OF_CURRENCY = {
 const getCountry = function () {
   let request = new XMLHttpRequest();
 
-  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code');
+  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code'); //API QUE DETECTA EL PAIS (TIENE UN LIMITE PORQUE ESTAS EN LA VERSION GRATUITA) Y LE DIGO QUE ME TRAIGA EL "NOMBRE DEL PAIS" Y EL "CODIGO DEL PAIS"
 
   request.setRequestHeader('Accept', 'application/json');
 
