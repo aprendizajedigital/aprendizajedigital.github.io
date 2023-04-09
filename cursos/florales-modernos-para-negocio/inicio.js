@@ -167,8 +167,7 @@ const enlace_whatsapp = function () {window.open("https://wa.link/nghtsk")}
 //Obtener pais del usuario
 // let COUNTRY_DEFAULT_NAME = "";
 let COUNTRY_DEFAULT_CODE = "";
-// let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$100.00", "$50.00", "$25.00"]}; (87% DESCUENTO SOLO EN DOLARES)
-
+ 
 //PERU -> ["s/ 388.00", "s/ 194.00", "s/ 97.00"] - ["s/ 394.00", "s/ 197.00", "s/ 98.50"] - ["s/ 398.00", "s/ 199.00", "s/ 99.50"] - ["s/ 408.00", "s/ 204.00", "s/ 102.00"] - ["s/ 410.00", "s/ 205.00", "s/ 102.50"] - ["s/ 414.00", "s/ 207.00", "s/ 103.50"] - ["s/ 418.00", "s/ 209.00", "s/ 104.50"] - ["s/ 420.00", "s/ 210.00", "s/ 105.00"] 
 //COLOMBIA -> ["$449.270,00", "$224.635,00", "$112.317,00"] - ["$452.470,00", "$226.235,00", "$113.117,00"] - ["$478.368,00", "$232.257,00", "$116.128,00"] - ["$478.368,00", "$239.184,00", "$119.592,00"]
 const TYPE_OF_CURRENCY = {
@@ -317,15 +316,6 @@ const getCountry = function () {
         document.querySelector(".main--repeatOffer--recapitulate__price_3 span").innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
 
       }
-
-      // document.querySelectorAll(".high-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-      // document.querySelectorAll(".regular-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-      // document.querySelectorAll(".low-price")[0].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-
-      // document.querySelectorAll(".high-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][0] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-      // document.querySelectorAll(".regular-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][1] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-      // document.querySelectorAll(".low-price")[1].innerText = !TYPE_OF_CURRENCY ? TYPE_OF_CURRENCY_DEFAULT["US"][2] : TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-
     }
   };
 
