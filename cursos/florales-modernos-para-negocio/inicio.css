@@ -4,10 +4,6 @@
     --tertiary-color: rgb(72, 180, 184);
 }
 
-.vp-outro-videosTitle, .vp-outro-videoLink{
-    display: none;
-}
-
 .container__city_bar{
     display: flex;
     justify-content: center;

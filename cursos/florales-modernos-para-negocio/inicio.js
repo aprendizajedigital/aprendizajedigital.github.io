@@ -165,7 +165,7 @@ const enlace_afiliado = function () {window.open("https://hotm.art/florales-mode
 const enlace_whatsapp = function () {window.open("https://wa.link/nghtsk")}
 
 //Obtener pais del usuario
-let COUNTRY_DEFAULT_NAME = "";
+// let COUNTRY_DEFAULT_NAME = "";
 let COUNTRY_DEFAULT_CODE = "";
 // let TYPE_OF_CURRENCY_DEFAULT = {"US" : ["$100.00", "$50.00", "$25.00"]}; (87% DESCUENTO SOLO EN DOLARES)
 
@@ -177,22 +177,23 @@ const TYPE_OF_CURRENCY = {
   // ----VARIA----     ----VARIA----       ----VARIA----                ----VARIA---- ----VARIA---- ---VARIA--- ---VARIA--- ---VARIA---                                                          ----VARIA----
   // PRECIO ALTO (0) | PRECIO MEDIO (1) | PRECIO BAJO (2) | MONEDA (3) | BONO 1 (4) | BONO 2 (5) | BONO 3 (6) | BONO 4 (7) | BONO 5 (8) | COMUNIDAD (9) | MEMBRESIA (10) | CERTIFICADO (11) | PROGRAMA COMPLETO (12)
   "PE" : ["s/ 398.00", "s/ 199.00",    "s/ 99.50",          "SOLES",    "s/ 45.00", "s/ 45.00",  "s/ 50.00",  "s/ 45.00",   "s/ 45.00", "s/ 25.00",        "s/ 25.00",       "s/ 18.50",        "s/ 99.50"],
-  "CL" : ["$452.470,00", "$233.539,00", "$116.769,00"],
-  "MX" : ["$2231,84", "$1115,92", "$557,96"],
-  "BR" : ["R$524,00", "R$262,00", "R$131,00"],
-  "CO" : ["$413.594,00", "$206.797,00", "$103.398,00"],
-  "AR" : ["$12594,00", "$6297,00", "$3148,50"],
-  "ES" : ["118,58€", "59,29€", "29,65€"],
-  "EC" : ["$100.00", "$50.00", "$25.00"],
-  "BO" : ["$100.00", "$50.00", "$25.00"],
-  "CR" : ["$100.00", "$50.00", "$25.00"],
-  "GT" : ["$100.00", "$50.00", "$25.00"],
-  "PT" : ["$100.00", "$50.00", "$25.00"],
-  "DO" : ["$100.00", "$50.00", "$25.00"],
-  "SV" : ["$100.00", "$50.00", "$25.00"],
-  "HN" : ["$100.00", "$50.00", "$25.00"],
-  "UY" : ["$100.00", "$50.00", "$25.00"],
-  "PY" : ["$100.00", "$50.00", "$25.00"]
+  "CL" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "MX" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "BR" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "CO" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "AR" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "ES" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "EC" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "BO" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "CR" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "GT" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "PT" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],//(LUEGO LE CAMBIAS A ESTE) - SOLO LOS 3 PRIMEROS
+  "DO" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "SV" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "HN" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "UY" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "PY" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"],
+  "US" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"]
 }
 
 const getCountry = function () {
@@ -207,12 +208,52 @@ const getCountry = function () {
       let ipdata = JSON.parse(this.responseText);
 
       if(ipdata.country_code){
-        COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; //SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED
-        COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code;
+        // COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED (NO LO ESTAS USANDO EN EL CÓDIGO)
+        
+        //EN CASO DE QUE ARROJE "NULL O UNDEFINED" RECIBIRÁ EL VALOR "US" (PRIMERA FORMA)
+        // COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code; // (SI LO ESTAS USANDO EN EL CÓDIGO)
 
-        // OCULTAR RECAPITULACION DE PRECIOS PARA LOS PAISES
-        if(COUNTRY_DEFAULT_CODE != "PE")
-          document.querySelector(".main--repeatOffer--recapitulate").style.display = "none"; 
+        //EN CASO DE QUE ARROJE "NULL O UNDEFINED" RECIBIRÁ EL VALOR "US" (SEGUNDA FORMA)
+        if(!ipdata.country_code){
+          COUNTRY_DEFAULT_CODE = "US";
+        }
+        
+        //EN CASO DE QUE ARROJE OTRO PAIS QUE NO ESTE EN LA LISTA PARA QUE MUESTRE POR DEFECTO LA PAGINA EN DOLARES
+        if(ipdata.country_code != "PE" ||
+           ipdata.country_code != "CL" ||
+           ipdata.country_code != "MX" ||
+           ipdata.country_code != "BR" ||
+           ipdata.country_code != "CO" ||
+           ipdata.country_code != "AR" ||
+           ipdata.country_code != "ES" ||
+           ipdata.country_code != "EC" ||
+           ipdata.country_code != "BO" ||
+           ipdata.country_code != "CR" ||
+           ipdata.country_code != "GT" ||
+           ipdata.country_code != "PT" ||
+           ipdata.country_code != "DO" ||
+           ipdata.country_code != "SV" ||
+           ipdata.country_code != "HN" ||
+           ipdata.country_code != "UY" ||
+           ipdata.country_code != "PY" ||
+           ipdata.country_code != "US"){
+            COUNTRY_DEFAULT_CODE = "US";
+        }
+
+        // OCULTAR RECAPITULACION DE PRECIOS PARA TODOS LOS PAISES EXCEPTO PERÚ
+        // if(COUNTRY_DEFAULT_CODE != "PE") 
+        //   document.querySelector(".main--repeatOffer--recapitulate").style.display = "none";
+          
+        // OCULTAR RECAPITULACION DE PRECIOS PARA TODOS LOS PAISES QUE TENGAN LA MONEDA LOCAL EN EL CHECKOUT DE HOTMART - MENOS PERÚ (EN TOTAL SON 8 PAISES QUE TIENEN SU MONEDA LOCAL EN EL LOCAL DE HOTMART INCLUYENDO PERÚ)
+        // if(COUNTRY_DEFAULT_CODE == "CL" ||
+        //    COUNTRY_DEFAULT_CODE == "MX" ||
+        //    COUNTRY_DEFAULT_CODE == "BR" ||
+        //    COUNTRY_DEFAULT_CODE == "CO" ||
+        //    COUNTRY_DEFAULT_CODE == "AR" ||
+        //    COUNTRY_DEFAULT_CODE == "ES" ||
+        //    COUNTRY_DEFAULT_CODE == "PT")
+        // document.querySelector(".main--repeatOffer--recapitulate").style.display = "none";
+
 
         // LOS 3 PRECIOS PRINCIPALES
 
