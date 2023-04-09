@@ -164,9 +164,7 @@ const enlace_afiliado = function () {window.open("https://hotm.art/florales-mode
 
 const enlace_whatsapp = function () {window.open("https://wa.link/nghtsk")}
 
-//Obtener pais del usuario
-// let COUNTRY_DEFAULT_NAME = "";
-let COUNTRY_DEFAULT_CODE = "";
+let COUNTRY_CODE = "";
  
 //PERU -> ["s/ 388.00", "s/ 194.00", "s/ 97.00"] - ["s/ 394.00", "s/ 197.00", "s/ 98.50"] - ["s/ 398.00", "s/ 199.00", "s/ 99.50"] - ["s/ 408.00", "s/ 204.00", "s/ 102.00"] - ["s/ 410.00", "s/ 205.00", "s/ 102.50"] - ["s/ 414.00", "s/ 207.00", "s/ 103.50"] - ["s/ 418.00", "s/ 209.00", "s/ 104.50"] - ["s/ 420.00", "s/ 210.00", "s/ 105.00"] 
 //COLOMBIA -> ["$449.270,00", "$224.635,00", "$112.317,00"] - ["$452.470,00", "$226.235,00", "$113.117,00"] - ["$478.368,00", "$232.257,00", "$116.128,00"] - ["$478.368,00", "$239.184,00", "$119.592,00"]
@@ -195,145 +193,110 @@ const TYPE_OF_CURRENCY = {
   "US" : ["$100.00", "$50.00", "$25.00", "DÓLARES", "$10", "$10", "$10", "$10", "$10", "$10", "$10", "$5", "$25"]
 }
 
-const getCountry = function () {
-  let request = new XMLHttpRequest();
+const ALLOWED_COUNTRY_CODES = ["PE", "CL", "MX", "BR", "CO", "AR", "ES", "EC", "BO", "CR", "GT", "PT", "DO", "SV", "HN", "UY", "PY", "US"];
 
-  request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code'); //API QUE DETECTA EL PAIS (TIENE UN LIMITE PORQUE ESTAS EN LA VERSION GRATUITA) Y LE DIGO QUE ME TRAIGA EL "NOMBRE DEL PAIS" Y EL "CODIGO DEL PAIS"
+let request = new XMLHttpRequest();
 
-  request.setRequestHeader('Accept', 'application/json');
+request.open('GET', 'https://api.ipdata.co?api-key=68f019edbc34da3d63996660240e36314403d5b8f32da11475612ca9&fields=country_name,country_code'); //API QUE DETECTA EL PAIS (TIENE UN LIMITE PORQUE ESTAS EN LA VERSION GRATUITA) Y LE DIGO QUE ME TRAIGA EL "NOMBRE DEL PAIS" Y EL "CODIGO DEL PAIS"
 
-  request.onreadystatechange = function () { //ESTO DEMORA UNOS SEGUNDOS EN EJECUTARSE, POR ESO LO PONGO TODO ADENTRO
-    if (this.readyState === 4) {
-      let ipdata = JSON.parse(this.responseText);
+request.setRequestHeader('Accept', 'application/json');
 
+request.onreadystatechange = function () { //ESTO DEMORA UNOS SEGUNDOS EN EJECUTARSE, POR ESO LO PONGO TODO ADENTRO
+  if (this.readyState === 4) {
+    let ipdata = JSON.parse(this.responseText);
+
+      //EN CASO DE QUE ARROJE "NULL O UNDEFINED" RECIBIRÁ EL VALOR "US"
       if(ipdata.country_code){
-        // COUNTRY_DEFAULT_NAME = !ipdata.country_name ? "Estados Unidos" : ipdata.country_name; SI NO RECIBE UNA RESPUESTA, EL VALOR SERÁ UNDEFINED (NO LO ESTAS USANDO EN EL CÓDIGO)
-        
-        //EN CASO DE QUE ARROJE "NULL O UNDEFINED" RECIBIRÁ EL VALOR "US" (PRIMERA FORMA)
-        // COUNTRY_DEFAULT_CODE = !ipdata.country_code ? "US" : ipdata.country_code; // (SI LO ESTAS USANDO EN EL CÓDIGO)
-
-        //EN CASO DE QUE ARROJE "NULL O UNDEFINED" RECIBIRÁ EL VALOR "US" (SEGUNDA FORMA)
-        if(!ipdata.country_code){
-          COUNTRY_DEFAULT_CODE = "US";
-        }
-        
         //EN CASO DE QUE ARROJE OTRO PAIS QUE NO ESTE EN LA LISTA PARA QUE MUESTRE POR DEFECTO LA PAGINA EN DOLARES
-        if(ipdata.country_code != "PE" ||
-           ipdata.country_code != "CL" ||
-           ipdata.country_code != "MX" ||
-           ipdata.country_code != "BR" ||
-           ipdata.country_code != "CO" ||
-           ipdata.country_code != "AR" ||
-           ipdata.country_code != "ES" ||
-           ipdata.country_code != "EC" ||
-           ipdata.country_code != "BO" ||
-           ipdata.country_code != "CR" ||
-           ipdata.country_code != "GT" ||
-           ipdata.country_code != "PT" ||
-           ipdata.country_code != "DO" ||
-           ipdata.country_code != "SV" ||
-           ipdata.country_code != "HN" ||
-           ipdata.country_code != "UY" ||
-           ipdata.country_code != "PY" ||
-           ipdata.country_code != "US"){
-            COUNTRY_DEFAULT_CODE = "US";
-        }
-
-        // OCULTAR RECAPITULACION DE PRECIOS PARA TODOS LOS PAISES EXCEPTO PERÚ
-        // if(COUNTRY_DEFAULT_CODE != "PE") 
-        //   document.querySelector(".main--repeatOffer--recapitulate").style.display = "none";
-          
-        // OCULTAR RECAPITULACION DE PRECIOS PARA TODOS LOS PAISES QUE TENGAN LA MONEDA LOCAL EN EL CHECKOUT DE HOTMART - MENOS PERÚ (EN TOTAL SON 8 PAISES QUE TIENEN SU MONEDA LOCAL EN EL LOCAL DE HOTMART INCLUYENDO PERÚ)
-        // if(COUNTRY_DEFAULT_CODE == "CL" ||
-        //    COUNTRY_DEFAULT_CODE == "MX" ||
-        //    COUNTRY_DEFAULT_CODE == "BR" ||
-        //    COUNTRY_DEFAULT_CODE == "CO" ||
-        //    COUNTRY_DEFAULT_CODE == "AR" ||
-        //    COUNTRY_DEFAULT_CODE == "ES" ||
-        //    COUNTRY_DEFAULT_CODE == "PT")
-        // document.querySelector(".main--repeatOffer--recapitulate").style.display = "none";
-
-
-        // LOS 3 PRECIOS PRINCIPALES
-
-        document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-        document.querySelectorAll(".regular-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-        document.querySelectorAll(".low-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-  
-        document.querySelectorAll(".high-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-        document.querySelectorAll(".regular-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][1];
-        document.querySelectorAll(".low-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-
-        // LOS PRECIOS EN LA SECCION BONOS
-
-        document.querySelectorAll(".currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][4];
-        document.querySelectorAll(".type-currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][5];
-        document.querySelectorAll(".type-currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][6];
-        document.querySelectorAll(".type-currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][7];
-        document.querySelectorAll(".type-currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][8];
-        document.querySelectorAll(".type-currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        // LOS PRECIOS EN LA SECCION RECAPITULANDO
-
-        document.querySelectorAll(".recapitulate_currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][12];
-        document.querySelectorAll(".recapitulate_type-currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-        
-        document.querySelectorAll(".recapitulate_currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][9];
-        document.querySelectorAll(".recapitulate_type-currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-        
-        document.querySelectorAll(".recapitulate_currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][10];
-        document.querySelectorAll(".recapitulate_type-currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-        
-        document.querySelectorAll(".recapitulate_currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][11];
-        document.querySelectorAll(".recapitulate_type-currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".recapitulate_currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][4];
-        document.querySelectorAll(".recapitulate_type-currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".recapitulate_currency")[5].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][5];
-        document.querySelectorAll(".recapitulate_type-currency")[5].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".recapitulate_currency")[6].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][6];
-        document.querySelectorAll(".recapitulate_type-currency")[6].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".recapitulate_currency")[7].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][7];
-        document.querySelectorAll(".recapitulate_type-currency")[7].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        document.querySelectorAll(".recapitulate_currency")[8].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][8];
-        document.querySelectorAll(".recapitulate_type-currency")[8].innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][3];
-
-        // LOS PRECIO TOTALES EN LA SECCION RECAPITULANDO
-
-        document.querySelector(".main--repeatOffer--recapitulate__price_1 span").innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][0];
-        document.querySelector(".main--repeatOffer--recapitulate__price_3 span").innerText = TYPE_OF_CURRENCY[COUNTRY_DEFAULT_CODE][2];
-
+        if(!ALLOWED_COUNTRY_CODES.includes(ipdata.country_code)){
+              COUNTRY_CODE = "US";
+            }else{
+              COUNTRY_CODE = ipdata.country_code;
+            }
+      }else{
+        COUNTRY_CODE = "US";
       }
+
+      // OCULTAR RECAPITULACION DE PRECIOS PARA TODOS LOS PAISES EXCEPTO PERÚ
+      // if(COUNTRY_CODE != "PE") 
+      //   document.querySelector(".main--repeatOffer--recapitulate").style.display = "none";
+        
+      // OCULTAR RECAPITULACION DE PRECIOS PARA TODOS LOS PAISES QUE TENGAN LA MONEDA LOCAL EN EL CHECKOUT DE HOTMART - MENOS PERÚ (EN TOTAL SON 8 PAISES QUE TIENEN SU MONEDA LOCAL EN EL LOCAL DE HOTMART INCLUYENDO PERÚ)
+      // if(COUNTRY_CODE == "CL" ||
+      //    COUNTRY_CODE == "MX" ||
+      //    COUNTRY_CODE == "BR" ||
+      //    COUNTRY_CODE == "CO" ||
+      //    COUNTRY_CODE == "AR" ||
+      //    COUNTRY_CODE == "ES" ||
+      //    COUNTRY_CODE == "PT")
+      // document.querySelector(".main--repeatOffer--recapitulate").style.display = "none";
+
+
+      // LOS 3 PRECIOS PRINCIPALES
+
+      document.querySelectorAll(".high-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][0];
+      document.querySelectorAll(".regular-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][1];
+      document.querySelectorAll(".low-price")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][2];
+
+      document.querySelectorAll(".high-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][0];
+      document.querySelectorAll(".regular-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][1];
+      document.querySelectorAll(".low-price")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][2];
+
+      // LOS PRECIOS EN LA SECCION BONOS
+
+      document.querySelectorAll(".currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][4];
+      document.querySelectorAll(".type-currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][5];
+      document.querySelectorAll(".type-currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][6];
+      document.querySelectorAll(".type-currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][7];
+      document.querySelectorAll(".type-currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][8];
+      document.querySelectorAll(".type-currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      // LOS PRECIOS EN LA SECCION RECAPITULANDO
+
+      document.querySelectorAll(".recapitulate_currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][12];
+      document.querySelectorAll(".recapitulate_type-currency")[0].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+      
+      document.querySelectorAll(".recapitulate_currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][9];
+      document.querySelectorAll(".recapitulate_type-currency")[1].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+      
+      document.querySelectorAll(".recapitulate_currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][10];
+      document.querySelectorAll(".recapitulate_type-currency")[2].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+      
+      document.querySelectorAll(".recapitulate_currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][11];
+      document.querySelectorAll(".recapitulate_type-currency")[3].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".recapitulate_currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][4];
+      document.querySelectorAll(".recapitulate_type-currency")[4].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".recapitulate_currency")[5].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][5];
+      document.querySelectorAll(".recapitulate_type-currency")[5].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".recapitulate_currency")[6].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][6];
+      document.querySelectorAll(".recapitulate_type-currency")[6].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".recapitulate_currency")[7].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][7];
+      document.querySelectorAll(".recapitulate_type-currency")[7].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      document.querySelectorAll(".recapitulate_currency")[8].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][8];
+      document.querySelectorAll(".recapitulate_type-currency")[8].innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][3];
+
+      // LOS PRECIO TOTALES EN LA SECCION RECAPITULANDO
+
+      document.querySelector(".main--repeatOffer--recapitulate__price_1 span").innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][0];
+      document.querySelector(".main--repeatOffer--recapitulate__price_3 span").innerText = TYPE_OF_CURRENCY[COUNTRY_CODE][2];
+
     }
-  };
+  }
 
   request.send();
-}
-
-getCountry();
-
-
-
-// function autoupdate(){ => aqui es lo mismo que el codigo de abajo.
-//   openNotify();
-//   setTimeout(() => {
-//     closeNotify();
-//   }, 10000);
-// }
-
-// setInterval(autoupdate, 10000);
 
 //-------USUARIOS FALSOS-------
 
