@@ -1,6 +1,6 @@
 :root {
-    --primary-color:#e99e88;
-    --secondary-color:#f33e67; 
+    --primary-color: #A87026;
+    --secondary-color: #38491D;
     --tertiary-color: rgb(72, 180, 184);
 }
 
@@ -662,6 +662,14 @@ del {
     padding-right: 16px;
 
     margin-bottom: 40px;
+
+    color: white;
+
+    text-shadow: rgba(0, 0, 0, 1) 2px 2px 0px;
+}
+
+.container__recapitulate del {
+    text-decoration-thickness: 2px;
 }
 
 .main--repeatOffer--recapitulate__title{
@@ -727,7 +735,7 @@ hr{
     font-size: 72px;
     font-weight: 800;
     font-family: Montserrat, sans-serif;
-    text-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
+    text-shadow: rgb(0 0 0 / 30%) 2px 2px 1px;
 
     text-align: center;
 }
@@ -1351,6 +1359,8 @@ hr{
     font-family: Montserrat, sans-serif;
     text-shadow: rgb(0 0 0 / 0%) 0px 0px 0px;
     text-align: center;
+
+    text-shadow: rgb(0 0 0 / 30%) 2px 2px 1px;
 }
 
 .main--repeatOffer--price span:nth-child(1),
