@@ -53,7 +53,7 @@
 </head>
 
 <body>
-    <a href="https://bit.ly/contactar-con-un-asesor-personal" class="float button-glow" target="">
+    <a href="javascript:enlace_whatsapp()" class="float button-glow" target="">
         <i class="bi bi-whatsapp"></i>
     </a>
 
@@ -72,10 +72,26 @@
         <div class="notify__timerBar"></div>
     </div>
 
+    <div class="container__city_bar">
+        <!--container__city_bar -> es el abuelo, city_bar -> es el papa, <p> -> es el nieto-->
+        <div class="city_bar">
+            <p><span class="amount">70</span> personas en <span class="city">tu ciudad</span> están viendo esta oferta
+                AHORA.</p>
+        </div>
+    </div>
+
     <div class="header--background"></div>
     <header class="">
         <p class="header--title">¿SABÍAS QUE LA CRIANZA DE <span>CUYES</span> ES UNO DE LOS NEGOCIOS MÁS <span>RENTABLES
                 Y EXITOSOS</span> QUE ESTÁ AYUDANDO A VARIOS EMPRENDEDORES COMO TÚ?</p>
+        <!-- <p class="header--warning"><span>ADVERTENCIA 🚨✋🤚🖐️🛑:</span> ¡Estas a un paso de descubrir el método innovador que te permitirá crear panes irresistibles paso a paso como un profesional desde casa de manera fácil y rápida!</p>     -->
+        <p class="header--warning"><mark><span>ADVERTENCIA 🚨🖐️:</span> ¡Estas a un paso de descubrir el método
+                innovador que
+                te permitirá <span>GENERAR INGRESOS</span> 🤑<br>criando tu <span>PROPIA GRANJA TECNIFICADA DE
+                    CUYES</span> 🐹, y
+                eso
+                no es todo 👀, también te
+                permitirá emprender un negocio rentable de alta demanda 🤩!</p></mark>
         <p class="header--subtitle">Mira el Video Hasta el Final👇</p>
         <div class="header--container">
             <div class="embed-responsive embed-responsive-16by9 header--video" style="border: none;">
@@ -83,15 +99,65 @@
                     src="https://player.vimeo.com/video/711413529?h=de56aa6906&portrait=0&byline=0&title=0"
                     frameborder="0" allowfullscreen></iframe>
             </div>
-            <p class="header--question">👉¿Quieres aprender a implementar tu propia granja de cuyes de forma rápida y
-                paso a paso sin ser
-                un experto?</p>
-            <p class="header--question">👉¿Te gustaría tener tu propio negocio de cuyes, pero no sabes como empezar?</p>
-            <p class="header--question">👉¿Quieres generar ingresos extras y tener tu emprendimiento?</p>
+
+            <p class="header--phrase">"La crianza de <span>cuyes</span> <span style="font-style: normal;">🐹</span> le
+                abre las puertas a emprendedores como tú a un <span>negocio rentable</span> y <span>sostenible</span>
+                <span>asegurando</span> un futuro próspero para ti y <span>tu familia</span>" <span
+                    style="font-style: normal;">🥰</span>
+            </p>
+
+            <p class="header--question">❌¿Tienes dificultad con la sarna y hongos en tus cuyes?</p>
+            <p class="header--question">❌¿No sabes como combatir la salmonella en tus cuyes?</p>
+            <p class="header--question">❌¿Tienes problemas para identificar que tipo de enfermedades presentan tus
+                cuyes?</p>
+            <!-- <p class="header--question">❌¿No sabes que dosis se aplica de ivermectina y cada qué tiempo se da el tratamiento?</p> -->
+            <p class="header--question">❌¿No sabes por qué varios de tus cuyes se te están muriendo?</p>
+            <p class="header--question">❌¿Se le cae el pelo a tus cuyes?</p>
+            <p class="header--question">❌¿No sabes con qué medicamentos tratarlos?</p>
+            <p class="header--question">❌¿Tus cuyes hembras abortan muy seguido?</p>
+            <p class="header--question">❌¿Tus cuyes se pelean muy seguido, se quedan pelados y se mueren?</p>
+            <p class="header--question">❌¿No sabes cómo proteger a tus cuyes de sus enemigos naturales?</p>
+            <p class="header--question">❌¿No sabes cómo desparasitar o vacunar a tus cuyes periódicamente?</p>
+            <p class="header--question">❌¿No sabes qué tipo de alimentación balanceada puedes darles a tus cuyes?</p>
+            <p class="header--question">❌¿No sabes cuál es la mejor opción para alimentar a tus cuyes?</p>
+            <p class="header--question">❌¿La húmeda y las altas o bajas temperaturas en tu granja afecta la salud de tus
+                cuyes?</p>
+            <p class="header--question">❌¿Quieres aprender a implementar tu propia granja de cuyes de forma rápida y
+                paso a paso sin ser un experto pero no sabes por donde empezar?</p>
+            <p class="header--question">❌¿Te gustaría destacarte en el mercado y aprender a comercializar tus propios
+                cuyes?</p>
+            <p class="header--question">❌¿Quieres generar ingresos extras y tener tu propio emprendimiento?</p>
+            <p class="header--question">❌¿Quieres un negocio que sea rentable en cada epoca del año y...</p>
+
+            <div style="display: flex; justify-content: center; align-content: center;">
+                <p class="header--question">💵 lograr tener <span style="text-decoration: underline;">INGRESOS
+                        EXTRAS</span>?
+                </p>
+            </div>
+            <div style="display: flex; justify-content: center; align-content: center;">
+                <p class="header--question">👩‍🏫 que sea <span style="text-decoration: underline;">FÁCIL DE
+                        APRENDER</span>?</p>
+            </div>
+            <div style="display: flex; justify-content: center; align-content: center;">
+                <p class="header--question">🐹 que sea <span style="text-decoration: underline;">FÁCIL DE VENDER</span>?
+                </p>
+            </div>
+            <div style="display: flex; justify-content: center; align-content: center;">
+                <p class="header--question">🤩 que te permita empezar con un <span
+                        style="text-decoration: underline;">BAJO COSTO</span>?</p>
+            </div>
+
         </div>
     </header>
     <main>
-        <p class="main--title text-center">ENTONCES ESTE CURSO ES PARA TI!</p>
+        <p class="main--title text-center">¿TE SIENTES IDENTIFICADA CON ALGUNA FRASE? <span
+                style="font-style: normal;">😮</span></p>
+
+        <p class="main--title text-center">ENTONCES ESTE CURSO ES PARA TI! <span style="font-style: normal;">😉</span>
+        </p>
+
+        <p class="header--subtitle" style="color: black; padding: 0 30px;">REALIZA TU SUEÑO DE EMPRENDER EN EL MERCADO
+            DE CUYES Y DALE A TU FAMILIA, AMIGOS Y CLIENTES LO MEJOR 🤩 (SE LO MERECEN) 💪</p>
 
         <!-- ESTA ZONA ES RECICLADA - SE PUEDE ELIMINAR SIN NINGUN PROBLEMA (TAMBIEN ACUERDATE DE ELIMINAR O DE RECICLAR LAS CLASES) -->
 
@@ -112,6 +178,23 @@
         </div>
 
         <!------------------------------------------->
+
+        <p class="main--subtitle text-center" style="color: black;">¡TU TAMBIÉN APRENDERÁS TODO ESTO Y MUCHO MÁS! 😁</p>
+
+        <p class="main--subtitle text-center" style="color: black;">¿PERO ES DIFÍCIL? 🤔</p>
+
+        <p class="main--subtitle text-center" style="color: black;">¡NO! TODOS NOS HAN HECHO CREER ESTO, PERO NO ES
+            DIFÍCIL 💁‍♀️</p>
+
+        <p class="main--subtitle text-center" style="color: black;">APRENDERÁS PASO A PASO DE MANERA FÁCIL Y ACCESIBLE
+            🧐,</p>
+
+        <p class="main--subtitle text-center" style="color: black;">INCLUSO SI ERES UN(A) PRINCIPIANTE EN LA CRIANZA DE
+            CUYES
+            🐹,</p>
+
+        <p class="main--subtitle text-center" style="color: black;">Y SIN LA NECESIDAD DE TENER HABILIDADES TÉCNICAS Y
+            PRÁCTICAS 😉</p>
 
         <p class="main--subtitle text-center">IMPORTANTE: Leer la información hasta el final</p>
 
@@ -189,6 +272,21 @@
                                 el modelo canvas, con la finalidad de tener una ventaja competitiva en el mercado.
                             </p>
                         </div>
+                        <div class="main--container-StudyPlan__item--container--description__container--item">
+                            <i
+                                class="bi bi-check-circle-fill main--container-StudyPlan__item--container--description__container--item--icon"></i>
+                            <p class="main--container-StudyPlan__item--container--description__container--item--text">
+                                Tendrás una excelente oportunidad para <span>montar tu propio emprendimiento en el mundo
+                                    de los cuyes</span>.
+                            </p>
+                        </div>
+                        <div class="main--container-StudyPlan__item--container--description__container--item">
+                            <i
+                                class="bi bi-check-circle-fill main--container-StudyPlan__item--container--description__container--item--icon"></i>
+                            <p class="main--container-StudyPlan__item--container--description__container--item--text">
+                                Y mucho <span>más...</span>
+                            </p>
+                        </div>
                         <div class="main--container-StudyPlan__item--container--description__container--img">
                             <img src="./img1.png" class="main--container-StudyPlan__item--container--description__img"
                                 alt="">
@@ -219,7 +317,8 @@
                             <i
                                 class="bi bi-check-circle-fill main--container-StudyPlan__item--container--description__container--item--icon"></i>
                             <p class="main--container-StudyPlan__item--container--description__container--item--text">
-                                <span>RECUPERA TU INVERSIÓN</span> rapidamente ofreciendo tus cuyes de alta calidad y
+                                <span>RECUPERA TU INVERSIÓN</span> rapidamente ofreciendo tus propios arreglos florales
+                                y
                                 creando tu propio emprendimiento.
                             </p>
                         </div>
@@ -237,7 +336,7 @@
                         </div>
                         <p class="main--container-StudyPlan__item--container--description__text"><em><u>Inicia el 2023
                                     aumentando tus ingresos.</u></em> ¡Imagínate aprender este negocio de cuyes para
-                            sorprender y enamorar a tus clientes, y de esta manera generar ganancias!</p>
+                            sorprender y enamorar a tus clientes, y de esta manera generar ganancias!🤑</p>
                     </div>
                 </div>
             </div>
@@ -252,31 +351,32 @@
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                         <div class="main--container--bonds__item">
                             <i class="bi bi-people-fill main--container--bonds__item--icon"></i>
-                            <p class="main--container--bonds__item--title">BONO #1 - ACCESO AL SISTEMA DE PREGUNTAS Y
+                            <p class="main--container--bonds__item--title">BONO #1 - ACCESO AL ÁREA DE PREGUNTAS Y
                                 RESPUESTAS (TIPO FORO)</p>
                             <p class="main--container--bonds__item--description">Tendrás acceso permanente al sistema de
                                 preguntas y respuestas tipo foro, donde podrás resolver tus dudas, compartir y recibir
-                                ideas para
-                                mejorar la crianza de tus cuyes y mejorar tu emprendimiento.</p>
+                                ideas con tus compañeros para
+                                mejorar la crianza de tus cuyes y la de tu emprendimiento.</p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                         <div class="main--container--bonds__item">
                             <i class="bi bi-arrow-repeat main--container--bonds__item--icon"></i>
-                            <p class="main--container--bonds__item--title">BONO #2- ACCESO A LAS ACTUALIZACIONES Y DE
-                                POR VIDA</p>
-                            <p class="main--container--bonds__item--description">Tendrás acceso a todas las
-                                actualizaciones que le hagamos al curso en futuro de manera TOTALMETE GRATIS, además de
-                                tener acceso para toda la vida.</p>
+                            <p class="main--container--bonds__item--title">BONO #2 - ACCESO DE POR VIDA +
+                                ACTUALIZACIONES</p>
+                            <p class="main--container--bonds__item--description">Tendrás acceso de por vida a nuestro
+                                curso y a todas las respectivas
+                                actualizaciones que realicemos en el futuro de manera TOTALMENTE GRATIS 🤩.</p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                         <div class="main--container--bonds__item">
                             <i class="bi bi-award-fill main--container--bonds__item--icon"></i>
                             <p class="main--container--bonds__item--title">BONO #3 - CERTIFICADO DE FINALIZACIÓN</p>
-                            <p class="main--container--bonds__item--description">Una vez completes y finalices el curso,
-                                podrá descargar e imprimir un certificado de finalización para comenzar tu propio
-                                emprendimiento.</p>
+                            <p class="main--container--bonds__item--description">Una vez que completes y finalices el
+                                curso,
+                                podrás descargar e imprimir tu propio certificado de finalización que avala que has
+                                culminado el curso con éxito.</p>
                         </div>
                     </div>
                 </div>
@@ -294,11 +394,11 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                             <div class="main--container--gifs__item">
                                 <div class="main--container--gifs__item--container--img">
-                                    <img class="main--container--gifs__item--img img-fluid" src="./img3.PNG" alt="">
+                                    <img class="size_gif--1" src="./img3.PNG" alt="">
                                 </div>
                                 <p class="main--container--gifs__item--title">REGALO #1 EXCEL - REGISTRO DE MANEJO
-                                    SANITARIO (<del>$10
-                                        DÓLARES</del> - GRATIS)</p>
+                                    SANITARIO <br>(<del><span class="currency">$10</span>
+                                        <span class="type-currency">DÓLARES</span></del> - GRATIS)</p>
                                 <p class="main--container--gifs__item--description">Aprenderás a llevar un manejo
                                     sanitario de tus cuyes de una manera muy práctica.
                                 </p>
@@ -307,10 +407,11 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                             <div class="main--container--gifs__item">
                                 <div class="main--container--gifs__item--container--img">
-                                    <img class="main--container--gifs__item--img img-fluid" src="./img4.PNG" alt="">
+                                    <img class="size_gif--2" src="./img4.PNG" alt="">
                                 </div>
                                 <p class="main--container--gifs__item--title">REGALO #2 EXCEL - REGISTRO DE OCURRENCIA
-                                    DIARIA (<del>$50 DÓLARES</del> - GRATIS)</p>
+                                    DIARIA <br>(<del><span class="currency">$10</span>
+                                        <span class="type-currency">DÓLARES</span></del> - GRATIS)</p>
                                 <p class="main--container--gifs__item--description">Aprenderás a llevar un registros de
                                     ocurrencias diarias de tus cuyes de una manera muy práctica.</p>
                             </div>
@@ -318,21 +419,23 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                             <div class="main--container--gifs__item">
                                 <div class="main--container--gifs__item--container--img">
-                                    <img class="main--container--gifs__item--img img-fluid" src="./img5.PNG" alt="">
+                                    <img class="size_gif--3" src="./img5.PNG" alt="">
                                 </div>
                                 <p class="main--container--gifs__item--title">REGALO #3 EXCEL - REGISTRO DIARIO DE
-                                    MORTALIDAD (<del>$50 DÓLARES</del> - GRATIS)</p>
+                                    MORTALIDAD <br>(<del><span class="currency">$10</span>
+                                        <span class="type-currency">DÓLARES</span></del> - GRATIS)</p>
                                 <p class="main--container--gifs__item--description">Aprenderás a llevar un registro
-                                    diario de mortalidad de tus cuyes de una manera muy práctica.</p>
+                                    diario de mortalidad de tus cuyes de una manera muy práctica.
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                             <div class="main--container--gifs__item">
                                 <div class="main--container--gifs__item--container--img">
-                                    <img class="main--container--gifs__item--img img-fluid" src="./img6.PNG" alt="">
+                                    <img class="size_gif--4" src="./img6.PNG" alt="">
                                 </div>
                                 <p class="main--container--gifs__item--title">REGALO #4 EXCEL - REGISTRO MENSUAL DE
-                                    POBLACIÓN (<del>$50 DÓLARES</del> - GRATIS)</p>
+                                    POBLACIÓN <br>(<del><span class="currency">$10</span>
+                                        <span class="type-currency">DÓLARES</span></del> - GRATIS)</p>
                                 <p class="main--container--gifs__item--description">Aprenderás a llevar un registro
                                     mensual de población de tus cuyes de una manera muy práctica.
                                 </p>
@@ -341,10 +444,11 @@
                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                             <div class="main--container--gifs__item">
                                 <div class="main--container--gifs__item--container--img">
-                                    <img class="main--container--gifs__item--img img-fluid" src="./img7.PNG" alt="">
+                                    <img class="size_gif--5" src="./img7.PNG" alt="">
                                 </div>
                                 <p class="main--container--gifs__item--title">REGALO #5 EXCEL - REGISTRO SEMANAL DE
-                                    MOVIMIENTOS (<del>$50 DÓLARES</del> - GRATIS)</p>
+                                    MOVIMIENTOS <br>(<del><span class="currency">$10</span>
+                                        <span class="type-currency">DÓLARES</span></del> - GRATIS)</p>
                                 <p class="main--container--gifs__item--description">Aprenderás a llevar un registro
                                     semanal de movimientos de tus cuyes de una manera muy práctica.
                                 </p>
@@ -379,8 +483,8 @@
                 </div>
             </div>
             <p class="main--offer--description">UN SÓLO Y ÚNICO PAGO PARA TODA LA VIDA (SIN COBROS POSTERIORES)</p>
-            <p class="main--offer--price"><span class="high-price">$99.98</span> <span
-                    class="regular-price">$49.99</span> <span class="low-price">$25.00</span></p>
+            <p class="main--offer--price"><span class="high-price">$100.00</span> <span
+                    class="regular-price">$50.00</span> <span class="low-price">$25.00</span></p>
             <p class="main--offer--description">LA PÁGINA DE PAGOS CONVIERTE AUTOMATICAMENTE A TU
                 MONEDA LOCAL</p>
             <div class="cssProgress">
@@ -401,6 +505,20 @@
             <div class="main--offer--containerPay">
                 <i class="bi bi-lock-fill main--offer--containerPay--icon"></i>
                 <p class="main--offer--containerPay--description">Compra 100% Segura</p>
+            </div>
+            <div class="container-main__take-action">
+                <p class="main__take-action"><span>IMPORTANTE:👉</span> En las próximas horas el curso aumentará de
+                    precio y lo seguirá haciendo cuando el contador llegue a cero 😱,<br><span>No es broma Ni estrategia
+                        de Marketing ❌.</span><br>Creemos y premiamos
+                    a los
+                    que tomen acción
+                    rápida 💪, así que si crees que nuestro curso <span>EL NEGOCIO DE LA CRIANZA TECNIFICADA DE
+                        CUYES</span> puede
+                    ayudarte a
+                    comenzar o
+                    escalar tu
+                    futuro negocio 🤩, <span>TOMA ACCIÓN AHORA</span> 🏃‍♂, porque vas a perder la oferta 😬.</p>
+
             </div>
         </div>
 
@@ -428,9 +546,12 @@
                 <div class="row">
                     <div
                         class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex flex-column justify-content-center align-items-center">
-                        <p class="main--warranty--text__title text-center">CONOCE NUESTRA <span>MALLA CURRICULAR</span> 🤩
+                        <p class="main--warranty--text__title text-center">CONOCE NUESTRA <span>MALLA CURRICULAR</span>
+                            🤩
                         </p>
-                        <p class="main--warranty--text__description">Aprenderás paso a paso desde cero a realizar tu propia granja de cuyes. <br> Estudia a tu ritmo con una metodología fácil, práctica y profesionalmente. 🐹✨</p>
+                        <p class="main--warranty--text__description text-center">Aprenderás paso a paso desde cero a
+                            realizar tu propia granja de cuyes.
+                            Estudia a tu ritmo con una metodología fácil, práctica y profesionalmente. 🐹✨
                     </div>
                     <div
                         class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center">
@@ -573,7 +694,9 @@
                         <div class="main--warranty--text text-center">
                             <p class="main--warranty--text__title">ESTE SERÁ TU <span>CERTIFICADO</span> 🤩
                             </p>
-                            <p class="main--warranty--text__description">RECOMPENSAMOS TU ESFUERZO 💪 <br> Una vez que termines todo el curso te brindaremos un certificado digital que avala que has culminado con éxito todo el curso. 🧑‍🎓👩‍🎓 
+                            <p class="main--warranty--text__description">RECOMPENSAMOS TU ESFUERZO 💪 <br> Una vez que
+                                termines todo el curso te brindaremos un certificado digital que avala que has culminado
+                                con éxito todo el curso. 🧑‍🎓👩‍🎓
                             </p>
                         </div>
                     </div>
@@ -588,12 +711,13 @@
                         <div class="main--warranty--text text-center">
                             <p class="main--warranty--text__title">MIRA COMO ES NUESTRO <span>CURSO</span> POR DENTRO 😉
                             </p>
-                            <p class="main--warranty--text__description">El curso se actualiza siempre y tendrás acceso de por vida a nuestra aula virtual. 👨‍🏫
+                            <p class="main--warranty--text__description">El curso se actualiza siempre y tendrás acceso
+                                de por vida a nuestra aula virtual. 👨‍🏫
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex flex-column justify-content-center align-items-center"
+                        style="padding: 0;">
                         <img src="./curso-por-dentro.png" class="main--certificate--img" alt="">
                     </div>
                 </div>
@@ -608,11 +732,11 @@
                         <div class="card">
                             <div class="card-header d-flex flex-column justify-content-center align-items-center">
                                 <img src="./t1.jpg" class="rounded-circle" alt="">
-                                <p>Reyna Fernandez</p>
+                                <p>Hector Navarro</p>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Desde que entre al curso "El Negocio de la crianza técnificada de cuyes", aprendí a
+                                    Desde que entre al curso de la crianza de cuyes, aprendí a
                                     tratar las enfermedades que tenian mis cuyes y logré brindarles una muy buena
                                     alimentación para manternerlos muy sanos, y además puedo vender cada vez más mis
                                     cuyes. <br><br>
@@ -620,7 +744,9 @@
                                     tranquilamente puedo disponer de dinero para lo que me hace falta y hace que mi
                                     marido valore más mi trabajo. <br><br>
                                     Ahora él voluntariamente decide apoyarme en lo que estoy haciendo, me anima a seguir
-                                    adelante
+                                    adelante <br><br>
+                                    Mil gracias <strong>maestro Rolly</strong><br><br>
+                                    Miren mis resultados 👇
                                 </p>
                             </div>
                             <img src="./img10.jpg" class="card-img-bottom img-fluid" alt="">
@@ -630,19 +756,19 @@
                         <div class="card">
                             <div class="card-header d-flex flex-column justify-content-center align-items-center">
                                 <img src="./t2.jpg" class="rounded-circle" alt="">
-                                <p>Wilder Alvarado</p>
+                                <p>Claudia Ramírez</p>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Ingrese hace una semana al curso "El Negocio de la crianza técnificada de cuyes" y
+                                    Ingrese hace una semana al curso de la crianza de cuyes y
                                     lo recomiendo al 100%.<br><br>
-                                    Yo siempre converso con mis amigos y les digo que vale la pena dedicarse a la
-                                    crianza de cuyes porque es rentable y sostenible. <br><br>
+                                    Yo siempre converso con mis amigos y les digo que vale la pena dedicarse a este
+                                    rubro porque es rentable y sostenible. <br><br>
                                     Cuando nos reunimos les planteo que debemos aprovechar esta oportunidad para
                                     capacitarnos más y así mejorar nuestra crianza, elevar la calidad de nuestros
-                                    animales y conseguir un mercado fijo para poder vender de forma permanente nuestros
-                                    animales.<br><br>
-                                    ¡Gracias profesor ROLLY MUÑOZ!
+                                    animales y conseguir un mercado fijo para poder vender de forma permanente.<br><br>
+                                    Gracias por este increible curso <strong>maestro Rolly</strong><br><br>
+                                    Les comparto un poco de mi trabajo que logré gracias al curso 👇
                                 </p>
                             </div>
                             <img src="./img11.jpg" class="card-img-bottom img-fluid" alt="">
@@ -652,7 +778,7 @@
                         <div class="card">
                             <div class="card-header d-flex flex-column justify-content-center align-items-center">
                                 <img src="./t3.jpg" class="rounded-circle" alt="">
-                                <p>Elvira Ruiz</p>
+                                <p>Lorena Risco</p>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">
@@ -661,10 +787,12 @@
                                     casa.<br><br>
                                     Así logramos sustentar el costoso tratamiento.<br><br>
                                     Felizmente, estos animalitos que criamos salvaron mi vida.<br><br>
-                                    Gracias al curso "El Negocio de la crianza técnificada de cuyes" empecé a tomarme
+                                    Gracias al curso de la crianza de cuyes, empecé a tomarme
                                     enserio este negocio, ya que es exageradamente muy rentable.<br><br>
                                     Por eso crío a mis cuyes con mucha dedicación para ofrecerles una excelente calidad
-                                    a mis clientes.
+                                    a mis clientes.<br><br>
+                                    Muchas gracias <strong>maestro Rolly</strong><br><br>
+                                    Por aquí les dejo una foto de mis resultados 👇
                                 </p>
                             </div>
                             <img src="./img12.jpg" class="card-img-bottom img-fluid" alt="">
@@ -681,7 +809,7 @@
                     <div class="row d-flex justify-content-between align-items-center">
                         <div
                             class="col-sm-12 col-md-12 col-lg-5 col-xl-5 d-flex justify-content-center align-items-center">
-                            <img src="img13.PNG" class="main--teacher--container--img" alt="">
+                            <img src="./img13.png" class="main--teacher--container--img" alt="">
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p class="main--teacher--container--description">Desarrollado por ROLLY CALVO MUÑOZ,
@@ -689,25 +817,123 @@
                                 Universidad Nacional Agraria La Molina, Perú. <br><br>
                                 Orientado a la producción, innovación y comercialización de productos ecológicos. Cuenta
                                 con más de 5 años de experiencia en producción de animales menores y con un amplio
-                                conocimiento de herramientas de capacitación dirigido a productores pecuarios. </p>
+                                conocimiento de herramientas de capacitación dirigido a productores pecuarios.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ESTA ZONA ES RECICLADA - SE PUEDE ELIMINAR SIN NINGUN PROBLEMA (TAMBIEN ACUERDATE DE ELIMINAR O DE RECICLAR LAS CLASES) -->
+        <header>
+            <div class="header--container">
+                <div class="embed-responsive embed-responsive-16by9 header--video" style="border: none;">
+                    <!-- //SCRIPT DEL VIDEO QUE ESTA EN WISTIA (SE ELIMINO ALGUNOS ESTILOS QUE VENIAN EN EL ENLACE YA QUE NO SE ADAPTABA BIEN EL DISEÑO) -->
+                    <!-- NOTA: EN WISTIA NO EXISTE LOS VIDEOS RELACIONADOS, NO ES COMO VIMEO QUE APARECE AL FINAL VARIOS VIDEOS RELACIONADOS -->
+                    <div class="wistia_responsive_padding">
+                        <div class="wistia_responsive_wrapper"
+                            style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                            <div class="wistia_embed wistia_async_ktjb3ig0te videoFoam=true"
+                                style="height:100%;position:relative;width:100%">
+                                <div class="wistia_swatch"
+                                    style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                    <img src="https://fast.wistia.com/embed/medias/ktjb3ig0te/swatch"
+                                        style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt=""
+                                        aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------------------------------------------------->
+
         <div class="main--repeatOffer">
             <div class="container">
                 <div class="row">
+                    <div class="main--repeatOffer--recapitulate">
+                        <p class="main--repeatOffer--recapitulate__title">¡RECAPITULEMOS 😍🐹!</p>
+                        <p class="main--repeatOffer--recapitulate__subtitle">¡TODO ESTO TE LLEVARÁS EL DÍA DE HOY CON TU
+                            INSCRIPCIÓN 👇!</p>
+                        <div class="container__recapitulate">
+                            <div>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>El
+                                    programa completo de "EL NEGOCIO DE LA CRIANZA TECNIFICADA DE CUYES"
+                                    (<del><span class="recapitulate_currency">$25</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="bi bi-chevron-right" style="color: white"></i> clases de contenido (+6
+                                    horas en video HD)</p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Acceso a nuestra área de PREGUNTAS Y RESPUESTAS
+                                    (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)</p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Membresía con ACCESO PARA TODA LA VIDA (<del><span
+                                            class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)</p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>CERTIFICADO de participación en el programa
+                                    (<del><span class="recapitulate_currency">$5</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)</p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #1: Excel - Registro de Manejo
+                                    Sanitario
+                                    (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)
+                                </p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #2: Excel - Registro de Ocurrencia
+                                    Diaria (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)</p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #3: Excel - Registro Diario de
+                                    Mortalidad (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)</p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #4: Excel - Registro Mensual de
+                                    Población
+                                    (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)
+                                </p>
+                                <hr>
+                                <p><i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #5: Excel - Registro Semanal de
+                                    Movimientos (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)</p>
+
+                            </div>
+                        </div>
+                        <p class="main--repeatOffer--recapitulate__price_1">TOTAL <span>$200USD</span></p>
+                        <p class="main--repeatOffer--recapitulate__price_2">PERO HOY PODRÁS ACCEDER POR:</p>
+                        <p class="main--repeatOffer--recapitulate__price_3"><span>$25 USD</span></p>
+                    </div>
+
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <p class="main--repeatOffer--tittle">¿QUÉ ESTÁS ESPERANDO?</p>
+                        <p class="main--repeatOffer--subtittle">¡Más de 4000 alumnos de todo el mundo han transformado
+                            sus vidas gracias a la crianza de cuyes!🐹<br><br> ¡Con nuestro programa, tú también puedes
+                            iniciar
+                            tu camino hacia una nueva pasión!<br><br> ¡No hay nada más poderoso que esto! Accede ahora
+                            mismo y
+                            descubre todo lo que necesitas para comenzar. 👇</p>
                         <div class="main--repeatOffer--container--set--img">
                             <img src="./img14.png" class="main--repeatOffer--set--img" alt="">
                         </div>
-                        <p class="main--repeatOffer--description">Imagina ¿Cómo sería tu vida si dominaras el negocio de
-                            la crianza de cuyes?</p>
+                        <p class="main--repeatOffer--description">Imagina ¿Cómo sería tu vida si dominaras el arte de la
+                            crianza de cuyes? 🤩</p>
                         <div class="main--repeatOffer--linear"></div>
                         <p class="main--repeatOffer--description">¿Qué pasaría si, además, consigues tener la habilidad
-                            para aprender a comercializar tus propios cuyes de alta calidad y tener un negocio rentable?
+                            para aprender a comercializar tus propios cuyes de alta calidad y tener un
+                            negocio rentable? 🙊
                         </p>
                         <div class="main--repeatOffer--linear"></div>
                         <p class="main--repeatOffer--description">¿Cuánto vale para ti conseguir todo esto? <br> No
@@ -736,15 +962,16 @@
                             </div>
                         </div>
                         <p class="main--repeatOffer--text">PAGO ÚNICO, SIN COBROS POSTERIORES</p>
-                        <p class="main--repeatOffer--price"><span class="high-price">$99.98</span> <span
-                                class="regular-price">$49.99</span> <span class="low-price">$25.00</span>
+                        <p class="main--repeatOffer--price"><span class="high-price">$100.00</span> <span
+                                class="regular-price">$50.00</span> <span class="low-price">$25.00</span>
                         </p>
                         <p class="main--repeatOffer--text">LA PÁGINA DE PAGOS CONVIERTE
                             AUTOMATICAMENTE A TU MONEDA LOCAL</p>
                         <div class="main--repeatOffer--container--img">
-                            <img src="./img8.png" class="main--repeatOffer--img" alt="">
+                            <img src="./img8.PNG" class="main--repeatOffer--img" alt="">
                         </div>
                         <p class="main--repeatOffer--progressBar--description"></p>
+
                         <a href="javascript:enlace_afiliado()" class="main--repeatOffer--button button-pay"><i
                                 class="bi bi-box-arrow-in-up-left"></i><span>INSCRÍBETE AL <br>PROGRAMA AQUÍ
                                 <small>CUPOS LIMITADOS</small></span></a>
@@ -785,6 +1012,42 @@
                             frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img20.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img21.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img22.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img23.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img24.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img25.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img26.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img27.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img28.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img29.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img30.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 student">
+                    <img class="estudiante__img" src="./img31.png" alt="">
+                </div>
             </div>
         </div>
 
@@ -803,7 +1066,7 @@
                                 <div class="answercont">
                                     <div class="answer">
                                         No te preocupes el pago es realizado de forma 100% segura por medio de Hotmart,
-                                        la plataforma de venta de productos digitales más grande y segura del habla
+                                        la plataforma de venta de productos digitales más grande y segura de habla
                                         hispana. El pago se lo haces directamente a ellos y son ellos los encargados de
                                         enviarte de inmediato el acceso para ver el curso en la misma plataforma de
                                         Hotmart, así que no hay riesgo alguno. Inmediatamente haces el pago te llega al
@@ -823,8 +1086,8 @@
                                     <div class="answer">
                                         Claro que sí, todas las técnicas son muy sencillas de realizar y el curso está
                                         diseñado para que puedas aprender desde casa perfectamente por medio de videos
-                                        paso a paso. Además cuentas con apoyo y soporte para siempre en nuestro sistema
-                                        de preguntas y respuestas (tipo foro).<br><br>
+                                        paso a paso. Además cuentas con el apoyo y soporte del profesor ROLLY en
+                                        nuestra área de preguntas y respuestas 😉.<br><br>
                                         Puedes inscribirte ahora haciendo click aquí >> <a
                                             href="javascript:enlace_afiliado()">Si
                                             quiero inscribirme</a>
@@ -966,7 +1229,7 @@
         </div>
 
         <div class="main--container--img">
-            <img src="./img8.png" class="main--img" alt="">
+            <img src="./img8.PNG" class="main--img" alt="">
         </div>
 
         <a href="javascript:enlace_afiliado()" class="main--button button-pay"><i
@@ -982,15 +1245,15 @@
 
         <p class="main--frequentQuestions--title mb-4">¿TIENES MÁS PREGUNTAS? <br> ¡CONTÁCTANOS!</p>
 
-        <a href="https://bit.ly/contactar-con-un-asesor-personal" class="main--button button-whatsapp"><i
+        <a href="javascript:enlace_whatsapp()" class="main--button button-whatsapp"><i
                 class="bi bi-whatsapp"></i><span>TE
                 AYUDAREMOS
                 <br>CON TUS DUDAS <small>¡CLICK AQUÍ!</small></span></a>
 
         <p class="main--frequentQuestions--title mb-4">SÍGUENOS EN <br> FACEBOOK!</p>
 
-        <a href="https://web.facebook.com/aprende.crianza.de.cuyes" class="main--button button-facebook"><i
-                class="bi bi-facebook"></i><span>
+        <a href="https://web.facebook.com/aprende.crianza.de.cuyes" target="_blank"
+            class="main--button button-facebook"><i class="bi bi-facebook"></i><span>
                 MIRA TODAS LAS
                 <br>PUBLICACIONES <small>¡CLICK AQUÍ!</small></span></a>
 
@@ -999,36 +1262,20 @@
 
     <footer>
         <p class="footer--description">
-            © 2022 – DESCARGOS DE RESPONSABILIDAD IMPORTANTES - TODOS LOS DERECHOS RESERVADOS <br> Este sitio no es
+            © 2023 – DESCARGOS DE RESPONSABILIDAD IMPORTANTES - TODOS LOS DERECHOS RESERVADOS <br> Este sitio no es
             parte del sitio web de Facebook o Facebook, Inc. Además, este sitio no está respaldado por Facebook de
             ninguna manera. <br> FACEBOOK es una marca registrada de FACEBOOK, Inc.
         </p>
     </footer>
 
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '540409214268132');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=540409214268132&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-
-
-
     <script src="../../librerias/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="./inicio.js"></script>
+
+    <!-- SCRIPT PARA QUE FUNCIONE WISTIA -->
+
+    <!-- ESTE SCRIPT ES DEL VIDEO QUE SE ESTA USANDO, SI SON 2 VIDEOS, POR ENDE DEBEN HABER 2 DE ESTOS SCRIPTS  -->
+    <script src="https://fast.wistia.com/embed/medias/ktjb3ig0te.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 </body>
 
 </html>
