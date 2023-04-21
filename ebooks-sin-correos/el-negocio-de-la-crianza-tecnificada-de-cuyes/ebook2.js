@@ -58,7 +58,7 @@ const animate__zoomIn = new IntersectionObserver(entries => {
     }, 1000);
   
     //INICIO EMAIL.JS
-    const serviceID = 'default_service';
+    const serviceID = 'service_741jh8j';
     const templateID = 'template_fc02x9n';  
   
     emailjs.sendForm(serviceID, templateID, this)
