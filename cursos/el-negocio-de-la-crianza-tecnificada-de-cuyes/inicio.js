@@ -310,7 +310,7 @@ function startNotify() {
   intervalID = setInterval(() => {
     openNotify();
     setTimeout(closeNotify, 10000);
-  }, 180000);
+  }, 900000);//15 minutos
 }
 
 function stopNotify() {
