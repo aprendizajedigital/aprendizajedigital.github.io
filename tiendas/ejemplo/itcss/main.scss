@@ -1,0 +1,32 @@
+
+/*=======================RESPETA EL ORDEN=======================*/
+
+/*SETTINGS*/
+@import url("settings/_settings.css");
+
+/*TOOLS - (FUNCS - MIXINS)*/
+@import url("tools/_functions.css");
+@import url("tools/_mixins.css");
+
+/*GENERIC*/
+@import url("generic/_generic.css");
+
+/*TAGS*/
+@import url("tags/_tags.css");
+
+/*TAGS*/
+@import url("keyframes/_keyframes.css");
+
+/*OBJECTS*/
+@import url("objects/_color.css");
+@import url("objects/_cotainer.css");
+
+/*COMPONENTS*/ /*el componente tiene mas fuerza que OBJECTS por cascada*/
+@import url("components/_footer.css");
+@import url("components/_tabs.css");
+
+//SCOPES
+@import "scopes/scopes.scss";
+
+/*UTILITIES*/
+@import url("utilities/_utilities.css");

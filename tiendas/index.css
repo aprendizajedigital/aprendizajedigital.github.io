@@ -1,0 +1,296 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    /* font-family: AlicorpSans-Regular,Helvetica,Arial,sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+header{
+    top:0;
+    position: sticky;
+
+    width: 100%;
+    height: 72px;
+    background-color:#f9f9fb;
+}
+
+header button{
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    outline: none;
+    appearance: button;
+    text-transform: none;
+    overflow: visible;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border-radius: 0;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+}
+
+.header__icons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} 
+
+/*------------------------los hijos del header-icon----------------------------*/
+
+.header__icons__burguer{
+    margin: 20px 32px;
+}
+
+.header__icons__burguer svg{
+    /* display: flex; */
+    width: 2rem;
+    height: 2rem;    
+}
+
+.header__icons__logo__mobile{
+    display: none;
+
+}
+
+.header__icons__logo{
+    margin: 20px 0;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.header__search-group{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0.25rem;
+    height: 2.5rem;
+    width: 60%;
+    max-width: 68.25rem;
+}
+
+/*------------------------los hijos del header__search-group----------------------------*/
+
+.search-group-container{
+    width: 100%;
+    background: #f9f9fb;
+    border: 1px solid #babdcc;
+    border-radius: 4px;
+    padding: 0 16px;
+    overflow: clip;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.search-group-container input{
+    width: 100%;
+    caret-color: #3e28d1;
+    border: none;
+    color: #0d1226;
+    padding: 0 1rem;
+    height: 2.438rem;
+    background: none;
+    font-size: .875rem;
+
+}
+
+.search-group-container input:focus{
+    outline: none;
+}
+
+.header__cart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: auto;
+    padding-right: 0.6rem;
+    border: 0;
+    background: none;
+    outline: none;
+}
+
+/*------------------------los hijos del header__search-group----------------------------*/
+
+.header__cart__block{
+    display: flex;
+    align-items: center;
+    grid-gap: 4px;
+    gap: 4px;
+    width: -webkit-max-content;
+    width: max-content;
+}
+
+.header__cart__block__computed{
+    font-weight: 500;
+    color: #0d1226;
+    margin: 0;
+    min-width: 56px;
+    text-align: right;
+}
+
+.header__cart__block__badge{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.3rem;
+    position: relative;
+}
+
+.header__cart__block__badge__counter{
+    background-color: #3e28d1;
+    min-width: 1rem;
+    border-radius: 32px;
+    position: absolute;
+    top: -16px;
+    right: -12px;
+    padding: 2px 4px;
+    color: #fff2f2;
+    font-size: .75rem;
+    line-height: 1;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+nav{
+    top: 72px;
+    position: sticky;
+
+    width: 100%;
+    height: 67.8px;
+    background-color: #fff;
+    border-bottom: 0.063rem solid #babdcc;
+}
+
+.entries-container{
+    top: 4.563rem;
+    position: sticky;
+    /* top: 4rem; */
+    z-index: 2;
+}
+
+.entries-menu{
+    border-bottom: 0.063rem solid #babdcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+.entries-menu__content{
+    /* justify-content: space-between;
+    font-size: 1rem;
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4.1875rem; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3.5rem;
+    font-size: .875rem;
+    overflow-x: auto;
+}
+
+.entries-menu__content__entry{
+    /* margin-right: 1rem;
+    height: 4.1875rem; */
+    
+    height: 3.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.entries-menu__content__entry__inner__on{
+    cursor: pointer;
+    padding-top: 1rem;
+    color: #e6261e;
+}
+
+.dl-btn-content-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entries-menu__content__entry__inner__icon{
+    margin-right: 0.5rem;
+    color: #e6261e;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+main{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container__main{
+
+}
+
+.banner__img{
+
+    width: 100%;
+    height: 340.96px;
+    background-color: blanchedalmond;
+}
+
+.banner__dots{
+    width: 100%;
+    height:48px;
+    background-color: yellowgreen;
+}
+
+.promociones, .alimentos, .bebidas, .cuidado_personal, .cuidado_hogar, .golosinas_snacks, .librería_oficinas, .mascotas{
+    margin-top:32px;
+}
+
+.carousel__header{
+    width: 100%;
+    height:30.712px;
+    background-color: violet;
+}
+
+.carousel__content{
+    width: 100%;
+    height:368px;
+    background-color: tomato;
+}
+
+footer{
+    width: 100%;
+    height:280px;
+    background-color:#0d1226;
+}
