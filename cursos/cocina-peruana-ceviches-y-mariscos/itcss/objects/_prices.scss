@@ -1,0 +1,41 @@
+.o-prices{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__text{
+        color: #212529;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    &__group-prices{
+        font-size: 60px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 0%) 0px 0px 0px;
+        text-align: center;
+    }
+
+    &__price:nth-child(1){
+        color: RGB(0, 0, 126);
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-thickness: 12px;
+    }
+
+    &__price:nth-child(2){
+        color: RGB(241, 118, 0);
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-thickness: 12px;
+    }
+
+    &__price:nth-child(3){
+        color: RGB(17, 164, 0);    
+    }
+}

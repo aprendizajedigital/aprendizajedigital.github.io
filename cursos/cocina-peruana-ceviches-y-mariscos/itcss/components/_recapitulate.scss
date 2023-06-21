@@ -1,0 +1,124 @@
+.c-recapitulate{
+
+    padding: 40px 0;
+    background-color: #e99e88;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__title{
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 1.25em;
+        letter-spacing: -0.3px;
+        text-align: center;
+        color: #212529;
+    }
+
+    &__table{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border: 3px dashed white;
+        border-radius: 10px;
+
+        width: 100%;
+    }
+
+    &__table-text{
+        font-size: 20px;
+        color: RGBA(29, 29, 29, 0.84);
+        line-height: 1.2em;
+        font-weight: 500;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__icon{
+        width: 20px;
+    }
+
+    &__img{
+        width:100%;
+    }
+
+    &__span{
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-thickness: 3px;
+    }
+
+    &__hours{
+        font-size: 20px;
+        color: RGBA(29, 29, 29, 0.84);
+        line-height: 1.2em;
+        font-weight: 500;
+    }
+
+    &__text-1{
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.25em;
+        color: white;
+        letter-spacing: -0.3px;
+        text-align: center;
+        text-shadow: RGB(0 0 0 / 30%) 2px 0px 2px;
+    }
+
+    &__text-2{
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+        color: RGBA(29, 29, 29, 0.84)
+    }
+
+    &__text-3{
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        color: RGBA(29, 29, 29, 0.84)
+    }
+
+    &__text-4{
+        color: RGB(17, 164, 0);
+        font-size: 72px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 0%) 0px 0px 0px;
+        text-align: center;
+    }
+
+    &__text-5{
+        font-size: 40px;
+        font-weight: 900;
+        text-shadow: RGBA(0, 0, 0, 0.3) 2px 2px 1px;
+        color: RGB(255, 255, 255);
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    &__text-6{
+        font-size: 30px;
+        font-weight: 500;
+        text-shadow: RGBA(0, 0, 0, 0.5) 2px 2px 2px;
+        letter-spacing: -0.5px;
+        line-height: 1.2em;
+        color: RGB(255, 255, 255);
+    }
+
+    &__text-7, &__text-8, &__text-9, &__text-10{
+        font-size: 40px;
+        font-weight: 900;
+        text-shadow: RGB(0 0 0 / 30%) 2px 2px 2px;
+        text-align: center;
+        color: RGB(255, 255, 255)
+    }
+}

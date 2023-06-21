@@ -1,0 +1,43 @@
+.c-study-plan{
+
+    background-color: #e99e88;
+    padding: 40px 0;
+
+    &__container{
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__span{
+        text-decoration: underline;
+        text-decoration-color: rgb(72, 180, 184);
+        text-decoration-thickness: 10px;
+    }
+
+    &__title{
+        text-shadow: RGB(0 0 0 / 30%) 2px 0px 1px;
+        font-size: 30px;
+        color: #fdfdfd;
+        font-weight: 700;
+    }
+
+    &__text{
+        font-size: 25px;
+        text-shadow: RGB(0 0 0 / 30%) 2px 0px 1px;
+        font-weight: 600;
+        color: white;
+    }
+
+    &__img-certification{
+        width: 100%;
+    }
+
+    &__img-course-inside{
+        width: 100%;
+    }
+}

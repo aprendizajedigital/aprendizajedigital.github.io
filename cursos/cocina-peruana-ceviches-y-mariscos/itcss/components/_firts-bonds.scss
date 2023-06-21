@@ -1,0 +1,71 @@
+.c-firts-bonds{
+
+    line-height: 1.5;
+    color: #212529;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text{
+        color: #e99e88;
+        font-size: 28px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
+        text-align: center;
+    }
+    
+    &__group-bonds{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; //solo sirve para la segunda fila, ya que la primera fila el gap los separa
+        gap: 15px;
+
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+
+        //se resta el gap del padre
+        // -ms-flex: 0 0 calc(33.333333% - 15px);
+        // flex: 0 0 calc(33.333333% - 15px);
+        // max-width: calc(33.333333% - 15px)
+        
+        flex: 1 1 0; //esto reemplaza a lo de arriba que esta comentado
+
+        @include max-rwd(lg){
+            -ms-flex: 0 0 calc(50% - 7.5px);
+            flex: 0 0 calc(50% - 7.5px);
+            max-width: calc(50% - 7.5px);
+        }
+
+        @include max-rwd(md){
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__icon{
+        width:100%;
+        max-width:120px;
+    }
+
+    &__title{
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__description{
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

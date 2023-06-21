@@ -1,15 +1,33 @@
-//====================================================
-//* TAGS *
-//====================================================
+/*====================================================*/
+/*TAGS*/
+/*====================================================*/
 
 h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
 }
 
 body{
-    background-color: tomato;
+    font-family: Montserrat, sans-serif;
+    // width: 90%;
+    // margin: 0 auto;
+
+    background-image: url(../../img/background.png);
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-//====================================================
-//* END TAGS *
-//====================================================
+mark{
+    background-color: #ffe357;
+    padding: 4px;
+}
+
+hr{
+    width: 100%;
+    border-color: #fff;
+    border-width: 2px;
+    border-style: dotted;
+}
+/*====================================================*/
+/*END TAGS*/
+/*====================================================*/

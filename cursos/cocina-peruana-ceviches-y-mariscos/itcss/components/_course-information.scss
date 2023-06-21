@@ -1,0 +1,98 @@
+.c-course-information{
+
+    line-height: 1.5;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;    
+    }
+
+    &__icon{
+        width: 30px;
+    }
+
+    &__group-learning-and-benefits{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+
+        @include max-rwd(lg){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    
+    &__group-learning, &__group-benefits{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__text{
+        font-size: 30px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
+        text-align: center;
+    }
+
+    &__text--color-red{
+        color: #ff0000;
+    }
+
+    &__text--color-tonys-pink{
+        color: #ff9999;
+    }
+
+    &__text--color-tonys-cinder{
+        color: #212529;
+    }
+
+    &__text--color-flamingo{
+        color: #E04D45;
+    }
+
+    &__learning-title, &__benefits-title{
+        font-size: 28px;
+        font-weight: 800;
+        color: RGB(72, 180, 184);
+        text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
+        text-align: center;
+    }
+
+    &__learning-text, &__benefits-text{
+        font-size: 18px;
+        font-weight: 600;
+        color: #212529;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    } 
+
+    &__learning-text-span{
+        font-weight: 700;
+        color: RGB(72, 180, 184);
+    }
+
+    &__benefits-last-text{
+        font-size: 20px;
+        font-weight: 700;
+        color: #212529;
+    }
+
+    &__benefits-last-text-span{
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    &__benefits-img{
+        // max-width: 512px;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    &__learning-img{
+        width: 100%;
+    }
+}

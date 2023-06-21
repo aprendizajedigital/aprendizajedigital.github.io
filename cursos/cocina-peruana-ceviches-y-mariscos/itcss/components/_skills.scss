@@ -1,0 +1,45 @@
+.c-skills{
+
+    padding: 40px 0;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__title{
+        color: #212529;
+        font-size: 28px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
+        text-align: center;
+    }
+
+    &__group-img{
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__img{
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: RGB(0 0 0 / 45%) 0px 4px 8px -1px;
+        padding: 5px;
+    }
+
+    @include max-rwd(lg){
+        &__group-img{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include max-rwd(md){
+        &__group-img{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

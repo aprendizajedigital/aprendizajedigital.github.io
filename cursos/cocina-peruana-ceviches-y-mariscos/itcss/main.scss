@@ -74,33 +74,56 @@ Donde @breakpoint será la media query que tú decidas.
 
 /*=======================RESPETA EL ORDEN=======================*/
 
-/*SETTINGS*/
+//SETTINGS
 @import "settings/_settings";
 
-/*TOOLS - (FUNCS - MIXINS)*/
+//TOOLS - (FUNCS - MIXINS)
 @import "tools/_mixins";
 @import "tools/_functions";
 
-/*GENERIC*/
+//GENERIC
 @import "generic/_generic";
 @import "generic/_normalize";
 
-/*TAGS*/
+//TAGS
 @import "tags/_tags";
 
-/*KEYFRAMES*/
+//KEYFRAMES
 @import "keyframes/_keyframes";
 
-/*OBJECTS*/
+//OBJECTS
 @import "objects/_color";
 @import "objects/_container";
+@import "objects/_breakpoint";
+@import "objects/_button-pay";
+@import "objects/_accordion";
+@import "objects/_button-facebook";
+@import "objects/_button-whatsapp";
+@import "objects/_counter";
+@import "objects/_prices";
+@import "objects/_progress-bar";
 
-/*COMPONENTS*/ /*el componente tiene mas fuerza que OBJECTS por cascada*/
+//COMPONENTS el componente tiene mas fuerza que OBJECTS por cascada
+@import "components/_header";
 @import "components/_footer";
 @import "components/_tabs";
+@import "components/_main";
+@import "components/_course-information";
+@import "components/_our-students";
+@import "components/_prices";
+@import "components/_problems";
+@import "components/_recapitulate";
+@import "components/_teacher";
+@import "components/_firts-bonds";
+@import "components/_seconds-bonds";
+@import "components/_important";
+@import "components/_study-plan";
+@import "components/_students";
+@import "components/_skills";
+@import "components/_frequent-questions";
 
-/*SCOPES*/
+//SCOPES
 @import "scopes/_scopes";
 
-/*UTILITIES*/
+//UTILITIES
 @import "utilities/_utilities";

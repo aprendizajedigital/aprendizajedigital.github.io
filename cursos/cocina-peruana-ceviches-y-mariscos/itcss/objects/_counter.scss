@@ -1,0 +1,69 @@
+.o-counter{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__title{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        gap: 10px;
+    }
+
+    &__title-number{
+        font-size: 55px;
+        font-weight: 900;
+        color: #1c1c1c;
+    }
+
+    &__title-text{
+        font-size: 24px;
+        font-weight: 700;
+        font-family: Montserrat, sans-serif;
+        color: #1c1c1c; //#484848;
+        text-align: center;
+    }
+
+    &__subtitle{
+        font-weight: 800;
+        text-align: center;
+        text-shadow: RGB(0 0 0 / 30%) 1px 1px 1px;
+        font-size: 30px;
+        color: RGB(224, 77, 69);
+    }
+
+    &__group{
+        background-color: RGB(255, 244, 128);
+        padding: 20px;
+    }
+
+    &__group-title{
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);       
+    }
+
+    &__grid-time{
+        font-size: 60px;
+        font-weight: 800;
+        text-align: center;
+
+    }
+
+    &__grid-subtime{
+        font-size: 16px;
+        font-weight: 800;
+        text-align: center;
+
+    }
+}

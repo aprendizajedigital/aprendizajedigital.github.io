@@ -1,7 +1,67 @@
-//====================================================
-//* TOOLS - MIXINS *
-//====================================================
+/*====================================================*/
+/* TOOLS - MIXINS */
+/*====================================================*/
+@mixin min-rwd($bp){
+    @if map-has-key($breakpoints, $bp){
+        @media screen and (min-width: map-get($breakpoints, $bp)){
+            @content;
+        }
+    }
+    
+    @else{
+        @media screen and (min-width: $bp){
+            @content;
+        }
+    }
+}
 
-//====================================================
-//* END TOOLS - MIXINS *
-//====================================================
+@mixin max-rwd($bp){
+    @if map-has-key($breakpoints, $bp){
+        @media screen and (max-width: map-get($breakpoints, $bp)){
+            @content;
+        }
+    }
+    
+    @else{
+        @media screen and (max-width: $bp){
+            @content;
+        }
+    }
+}
+
+@mixin ratio($w, $h){ //Esto se coloca al primer container de <iframe> o <video> (NO FUNCIONA SI ESTA DENTRO DE OTRO GRID)
+    display: grid;
+    grid-template-columns: repeat($w, 1fr);
+    grid-template-rows: repeat($h, 1fr);
+    position: relative;
+    background-color: red;
+
+    &::before{
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+// EJEMPLO
+// .primer-container-iframe{
+//     @include ratio(16,9);
+
+//     > iframe, video{ ->ESTO SIEMPRE SE COLOCA AL IFRAME
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+
+// .segundo-container-iframe{
+//     width: 75%;
+//     max-width: 960px;
+//     min-width: 320px;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+/*====================================================*/
+/* END TOOLS - MIXINS */
+/*====================================================*/

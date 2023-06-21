@@ -1,0 +1,23 @@
+.c-important{
+
+    background-color: RGB(255, 255, 0);
+
+    &__container{
+
+    }
+    
+    &__span{
+        color:rgb(255, 0, 0);
+    }
+
+    &__paragraph{
+        font-size: 17px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 30%) 2px 0px 2px;
+        color: #000000;
+        text-align: center;
+        line-height: 1.7;
+
+        padding: 20px 0;
+    }
+}
