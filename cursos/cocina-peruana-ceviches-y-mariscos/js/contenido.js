@@ -373,3 +373,258 @@ const contentAnswers = [
 updateAllElementsContent(".answer", contentAnswers);
 //FIN - answer
 
+//INICIO certificacion__title
+updateElementContent(".certificacion__title", `ESTE SERÁ TU <span>CERTIFICADO</span> 🤩`);
+//FIN main--warranty--text__title
+
+//INICIO certificacion__description
+updateElementContent(".certificacion__description", `RECOMPENSAMOS TU ESFUERZO 💪 <br> Una vez que termines todo el curso te brindaremos un certificado digital que avala que has culminado con éxito todo el curso. 🧑‍🎓👩‍🎓`);
+//FIN certificacion__description
+
+//INICIO - certification__img
+updateElementImage(".certification__img", "./img/certificado.jpg")
+//FIN - certification__img
+
+//INICIO course-inside__title
+updateElementContent(".course-inside__title", `MIRA COMO ES NUESTRO <span>CURSO</span> POR DENTRO 😉`);
+//FIN main--warranty--text__title
+
+//INICIO course-inside__description
+updateElementContent(".course-inside__description", `El curso se actualiza siempre y tendrás acceso de por vida a nuestra aula virtual. 👨‍🏫`);
+//FIN certificacion__description
+
+//INICIO - course-inside__img
+updateElementImage(".course-inside__img", "./img/curso-por-dentro.png")
+//FIN - course-inside__img
+
+//INICIO main--opinions--title
+updateElementContent(".main--opinions--title", `¿QUE DICEN NUESTROS ESTUDIANTES SOBRE EL CURSO?`);
+//FIN main--opinions--title
+
+//INICIO - contentsCustomerName
+const contentsCustomerName = [
+  `Hector Navarro`,
+  `Claudia Ramírez`,
+  `Lorena Risco`
+];
+
+updateAllElementsContent(".customer__name", contentsCustomerName);
+//FIN - contentsCustomerName
+
+//INICIO - contentsCustomerName
+const contentsCustomerDescription = [
+  `Antes de tomar el curso de arreglos florales, siempre tenía problemas para
+  seleccionar las flores adecuadas para cada tipo de arreglo.<br><br>Pero gracias a lo
+  que
+  aprendí en el curso, ahora sé cómo reconocer las características de cada flor y
+  elegir las más adecuadas para cada ocasión.<br><br>Ya no tengo miedo de crear
+  arreglos
+  florales impresionantes para cualquier evento.<br><br>
+  Mil gracias <strong>maestra Jenny</strong> <br><br>
+  Miren mis resultados 👇`,
+
+  `Siempre me ha encantado trabajar con flores, pero no sabía cómo cortar y cuidarlas
+  para que duraran más tiempo.<br><br>Después de tomar el curso de arreglos florales,
+  aprendí
+  los trucos para cortar las flores en el ángulo adecuado y para hidratarlas
+  correctamente.<br><br>Ahora puedo disfrutar de arreglos florales frescos y hermosos
+  durante
+  mucho más tiempo.<br><br>
+  Gracias por este maravilloso curso <strong>maestra Jenny</strong> <br><br>
+  Les comparto un poco de mi trabajo que logré gracias al curso 👇`,
+
+  `Siempre había querido tener mi propio negocio floral, pero no sabía cómo
+  empezar.<br><br>
+  Gracias al curso de arreglos florales, aprendí a crear arreglos de diferentes
+  tamaños y formas, a utilizar las herramientas necesarias y a presentar los arreglos
+  de manera atractiva.<br><br>Ahora tengo mi propio negocio floral y genero ingresos
+  extras
+  en cada época del año.<br><br>Aprender a crear arreglos florales ha sido una
+  experiencia
+  increíble que me ha permitido hacer realidad mi sueño de tener mi propio
+  negocio.<br><br>
+  Muchas gracias <strong>maestra Jenny</strong> <br><br>
+  Por aqui les dejo una foto de mis resultados 👇`
+];
+
+updateAllElementsContent(".customer__description", contentsCustomerDescription);
+//FIN - contentsCustomerName
+
+//INICIO - customer__picture
+const contentsCustomerProfileIMG = [
+  `./img/t1.jpg`,
+  `./img/t2.jpg`,
+  `./img/t3.jpg`
+];
+
+updateAllElementsImages(".customer__picture", contentsCustomerProfileIMG);
+//FIN - customer__picture
+
+//INICIO - customer__picture
+const contentsCustomerResultIMG = [
+  `./img/img10.jpg`,
+  `./img/img11.jpg`,
+  `./img/img12.jpg`
+];
+
+updateAllElementsImages(".customer__result", contentsCustomerResultIMG);
+//FIN - customer__picture
+
+//INICIO main--opinions--title
+updateElementContent(".main--teacher--title", `¿CON QUIÉN APRENDERÁS?`);
+//FIN main--opinions--title
+
+//INICIO main--opinions--title
+updateElementContent(".main--teacher--container--description", `Desarrollado por JENNY PAOLA BECERRA,
+florista experta hace 5 años, creadora de una reconocida marca floral a nivel local, la
+cual ha obtenido gran éxito debido a su trabajo visualmente armonioso acompañando las
+flores con los chocolates como plus en sus composiciones florales.`);
+//FIN main--opinions--title
+
+//INICIO main--teacher--container--img
+updateElementImage(".main--teacher--container--img", "./img/img13.png")
+//FIN main--teacher--container--img
+
+//INICIO main--repeatOffer--recapitulate__title
+updateElementContent(".main--repeatOffer--recapitulate__title", `¡RECAPITULEMOS 😍!`);
+//FIN main--repeatOffer--recapitulate__title
+
+//INICIO main--repeatOffer--recapitulate__subtitle
+updateElementContent(".main--repeatOffer--recapitulate__subtitle", `¡TODO ESTO TE LLEVARÁS EL DÍA DE HOY CON TU INSCRIPCIÓN 👇!`);
+//FIN main--repeatOffer--recapitulate__subtitle
+
+//INICIO - recapitulate__item
+const contentsRecapitulateItem = [
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+  style="color: white;"></i>El
+programa completo de "FLORALES MODERNOS PARA NEGOCIO"
+(<del><span class="recapitulate_currency">$25</span> <span
+      class="recapitulate_type-currency">DÓLARES</span></del>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+  class="bi bi-chevron-right" style="color: white"></i> clases de contenido (+6
+horas en video HD)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+  style="color: white;"></i>Grupo Privado de Estudiantes (<del><span
+      class="recapitulate_currency">$10</span> <span
+      class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+  style="color: white;"></i>Membresía con acceso para toda la vida (<del><span
+      class="recapitulate_currency">$10</span> <span
+      class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Certificado de participación en el programa
+                                    (<del><span class="recapitulate_currency">$5</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #1: Módulo introducción y recomendaciones para cubrir fresas con chocolate
+                                    (<del><span class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+                                        style="color: white;"></i>Regalo adicional #2: Módulo técnica para fundir el chocolate (<del><span
+                                            class="recapitulate_currency">$10</span> <span
+                                            class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+  style="color: white;"></i>Regalo adicional #3: Módulo técnica de color y toppings para fresas (<del><span
+      class="recapitulate_currency">$10</span> <span
+      class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+  style="color: white;"></i>Regalo adicional #4: Módulo fresas doradas
+(<del><span class="recapitulate_currency">$10</span> <span
+      class="recapitulate_type-currency">DÓLARES</span></del>)`,
+
+  `<i class="bi bi-check-circle main--container-StudyPlan__item--container--description__container--item--icon"
+  style="color: white;"></i>Regalo adicional #5: Módulo osa de chocolate rellena de brownie (<del><span
+      class="recapitulate_currency">$10</span> <span
+      class="recapitulate_type-currency">DÓLARES</span></del>)`
+
+];
+
+updateAllElementsContent(".recapitulate__item", contentsRecapitulateItem);
+//FIN - contentsCustomerName
+
+//INICIO - main--repeatOffer--recapitulate__price
+const contentsRecapitulatePrice = [
+  `TOTAL <span>$200USD</span>`,
+  `PERO HOY PODRAS ACCEDER POR:`,
+  `<span>$25 USD</span>`
+];
+
+updateAllElementsContent(".main--repeatOffer--recapitulate__price", contentsRecapitulatePrice);
+//FIN - main--repeatOffer--recapitulate__price
+
+//INICIO main--repeatOffer--tittle
+updateElementContent(".main--repeatOffer--tittle", `¿QUÉ ESTÁS ESPERANDO?`);
+//FIN main--repeatOffer--tittle
+
+//INICIO main--repeatOffer--subtittle
+updateElementContent(".main--repeatOffer--subtittle", `¡Más de 4000 alumnos de todo el mundo han transformado
+sus vidas gracias a los arreglos florales!💐<br><br> ¡Con nuestro programa, tú también puedes iniciar
+tu camino hacia una nueva pasión!<br><br> ¡No hay nada más poderoso que eso! Accede ahora mismo y
+descubre todo lo que necesitas para comenzar. 👇`);
+//FIN main--repeatOffer--subtittle
+
+//INICIO main--repeatOffer--set--img
+updateElementImage(".main--repeatOffer--set--img", "./img/img14.png")
+//FIN main--repeatOffer--set--img
+
+//INICIO main--repeatOffer--tittle
+updateElementContent(".main--repeatOffer--tittle", `¿QUÉ ESTÁS ESPERANDO?`);
+//FIN main--repeatOffer--tittle
+
+//INICIO - main--repeatOffer--description
+const contentsRepeatOfferDescription = [
+  `Imagina ¿Cómo sería tu vida si dominaras el arte de la florería? 🤩`,
+  `¿Qué pasaría si, además, consigues tener la habilidad para aprender a comercializar tus propios arreglos florales de alta calidad y tener un negocio rentable? 🙊`,
+  `¿Cuánto vale para ti conseguir todo esto? <br> No esperes más…`,
+  `¡COMIENZA HOY MISMO!`
+];
+
+updateAllElementsContent(".main--repeatOffer--description", contentsRepeatOfferDescription);
+//FIN - main--repeatOffer--description
+
+//INICIO main--repeatOffer__item
+const contentsMainRepeatOfferItem = [
+  `PAGO ÚNICO, SIN COBROS POSTERIORES`,
+  `<span class="high-price">$100.00</span> <span class="regular-price">$50.00</span> <span class="low-price">$25.00</span>`,
+  `LA PÁGINA DE PAGOS CONVIERTE AUTOMATICAMENTE A TU MONEDA LOCAL`            
+];
+
+updateAllElementsContent(".main--repeatOffer__item", contentsMainRepeatOfferItem);
+//FIN main--repeatOffer__item
+
+//INICIO main--repeatOffer--img
+updateElementImage(".main--repeatOffer--img", "./img/img8.png")
+//FIN main--repeatOffer--img
+
+//INICIO main--repeatOffer--containerPay--description
+updateElementContent(".main--repeatOffer--containerPay--description", `Compra 100% Segura`);
+//FIN main--repeatOffer--containerPay--description
+
+//INICIO main--frequentQuestions--title
+updateElementContent(".main--frequentQuestions--title", `¿TE IMAGINAS ADQUIRIR ESTAS HABILIDADES?`);
+//FIN main--frequentQuestions--title
+
+//INICIO - estudiante__img
+const contentsEstudianteIMG = [
+  `./img/img20.png`,
+  `./img/img21.png`,
+  `./img/img22.png`,
+  `./img/img23.png`,
+  `./img/img24.png`,
+  `./img/img25.png`,
+  `./img/img26.png`,
+  `./img/img27.png`,
+  `./img/img28.png`,
+  `./img/img29.png`,
+  `./img/img30.png`,
+  `./img/img31.png`
+];
+
+updateAllElementsImages(".student__img", contentsEstudianteIMG);
+//FIN - estudiante__img
