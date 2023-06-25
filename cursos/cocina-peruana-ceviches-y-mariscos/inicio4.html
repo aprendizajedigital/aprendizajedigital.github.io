@@ -7,68 +7,111 @@
     <title>Document</title>
 </head>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body{
+    font-family: Montserrat, sans-serif;
 }
 
-.c-header__container-video {
-        width: 80%;
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        margin: 0 auto;
-        border: 5px solid blue;   
-    }
-
-    .c-header__video {
-    position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-   } 
-
-    /* .container{
-        display: grid;
-  place-items: center;
-
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-    }
-
-    .c-header__container-video {
-        position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-    }
-
+.c-header {
+  background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 55%, RGBA(243, 62, 103, 0) 65% 100%);
+  padding: 85px 0;
+  position: relative;
+  overflow: hidden; }
+  .c-header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; }
+  .c-header__title {
+    font-weight: 900;
+    text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
+    font-size: 50px;
+    color: white; }
+  .c-header__title-span {
+    color: RGB(255, 255, 0); }
+  .c-header__subtitle {
+    font-weight: 700;
+    text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
+    font-size: 18px;
+    color: black;
+    line-height: 1.5; }
+  .c-header__subtitle-span {
+    color: RGB(255, 0, 0); }
+  .c-header__paragraph {
+    font-weight: 800;
+    text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
+    font-size: 30px;
+    color: white; }
+  .c-header__container-video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; }
   .c-header__video {
     position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-   } */
-
-/* img{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
     width: 100%;
-    max-width: 100%;
-    height: auto;
-} */
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 5px 10px 30px #000000; }
 
 </style>
 
 <body>
-    <div class="container">
-        <div class="c-header__container-video">
-            <iframe class="c-header__video"
-                src="https://player.vimeo.com/video/706660059?h=757d719681&portrait=0&byline=0&title=0"
-                frameborder="0" allowfullscreen></iframe>
+    <header class="c-header">
+        <div class="c-header__container o-breakpoint">
+            <p class="c-header__title js-header__title">COMIENZA TU <span class="c-header__title-span">PROPIO NEGOCIO</span> FLORAL SIN ALTAS INVERSIONES DE DINERO Y DOMINA LAS TÉCNICAS FLORALES SIN NECESIDAD DE SER <span class="c-header__title-span">UNA EXPERTA</span>🤩</p>
+            <p class="c-header__subtitle">
+                <mark>
+                    <span class="c-header__subtitle-span">ADVERTENCIA 🚨🖐️:</span> ¡Estas a un paso de descubrir el método innovador que te permitirá <span class="c-header__subtitle-span">GENERAR INGRESOS</span> 🤑<br>
+                    creando <span class="c-header__subtitle-span">LUJOSOS ARREGLOS FLORALES</span> 💐, y eso no es todo 👀,<br>también te permitirá emprender un negocio rentable de alta demanda 🤩!
+                </mark>
+            </p>
+            <p class="c-header__paragraph">Mira el Video Hasta el Final👇</p>
+            <div class="c-header__container-video">
+                <iframe class="c-header__video"
+                        src="https://player.vimeo.com/video/706660059?h=757d719681&portrait=0&byline=0&title=0"
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <script>
+        const variable = document.querySelector(".c-header__title");
+// variable.style.setProperty('--animate-duration', '10s');
+
+const verificarVisibilidad = (entries) => { //devuelve una lista, por eso se usa el foreach, no importa que sea uno
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("animate__animated");
+            entry.target.classList.add("animate__zoomIn");
+        }
+        else{
+            // entry.target.classList.remove("animate__zoomIn")
+            // entry.target.classList.add("c-header__title--visible")
+        }
+    })
+}
+
+const observador = new IntersectionObserver(verificarVisibilidad, {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 1.0
+});
+
+if(variable !== null) observador.observe(variable); //Esta es una entrada
+    </script>
 </body>
 </html>
