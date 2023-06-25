@@ -435,10 +435,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: Montserrat, sans-serif;
-  background-image: url(../../img/background.png);
-  background-repeat: repeat;
-  background-position: center center;
-  background-size: cover; }
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/background.png); }
 
 mark {
   background-color: #ffe357;
@@ -469,6 +466,33 @@ hr {
     background-position: 0 0; }
   100% {
     background-position: 50px 0px; } }
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px #c4a300; }
+  40% {
+    box-shadow: 0 0 20px #c4a300; }
+  60% {
+    box-shadow: 0 0 20px #c4a300; }
+  100% {
+    box-shadow: 0 0 -10px #c4a300; } }
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(5px); }
+  50% {
+    transform: translateY(-5px); }
+  75% {
+    transform: translateY(5px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes roundtime {
+  to {
+    /* More performant than `width` */
+    transform: scaleX(0); } }
 
 /*====================================================*/
 /* END KEYFRAMES */
@@ -839,18 +863,110 @@ hr {
     justify-content: center;
     align-items: center; }
 
+.o-round-button-whatsapp__img {
+  animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 30px;
+  fill: #ffffff;
+  padding: 10px;
+  border: 2.5px solid #25d366; }
+
+.o-round-button-whatsapp__img:hover {
+  fill: #25d366;
+  background-color: #ffffff;
+  border: 2.5px solid #25d366;
+  transition: fill ease-in-out 0.3s, border ease-in-out 0.3s; }
+
+.o-round-button-whatsapp__img:not(:hover) {
+  transition: fill ease-in-out 0.3s, border ease-in-out 0.3s; }
+
+.o-notify {
+  position: fixed;
+  bottom: 10px;
+  left: 10px; }
+  .o-notify__container {
+    width: 350px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .o-notify__group {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px; }
+  .o-notify__container-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .o-notify__description {
+    flex: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .o-notify__img {
+    width: 100%;
+    border-radius: 100%; }
+  .o-notify__time-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #e99e88;
+    transform-origin: left center;
+    animation: roundtime 10s linear forwards;
+    animation-iteration-count: infinite; }
+  .o-notify__title {
+    font-weight: bold; }
+
+.o-city-bar {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10; }
+  .o-city-bar__container {
+    display: inline-block;
+    border: 1px solid red;
+    background-color: #212529;
+    border-radius: 10px;
+    padding: 15px 80px; }
+  .o-city-bar__paragraph {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center; }
+  .o-city-bar__city {
+    font-weight: bold;
+    color: RGB(255, 255, 0);
+    text-decoration: underline; }
+
 /*====================================================*/
 /* COMPONENT - HEADER */
 /*====================================================*/
 .c-header {
   background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 55%, RGBA(243, 62, 103, 0) 65% 100%);
-  padding-bottom: 40px; }
+  padding: 85px 0;
+  position: relative;
+  overflow: hidden; }
   .c-header__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    overflow: hidden; }
   .c-header__title {
     font-weight: 900;
     text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
@@ -1410,9 +1526,11 @@ hr {
     justify-content: flex-start;
     align-items: center;
     box-shadow: 5px 10px 20px #363a3d;
-    border-radius: 40px; }
+    border-radius: 40px;
+    background-color: #ffffff; }
   .c-students__img-profile {
-    border-radius: 50%; }
+    border-radius: 50%;
+    background-color: #e2e2e2; }
   .c-students__name {
     font-weight: 700; }
   .c-students__text {
@@ -1556,7 +1674,7 @@ hr {
 /*====================================================*/
 /* UTILITIES */
 /*====================================================*/
-.none {
+.u-none {
   display: none; }
 
 /*====================================================*/

@@ -4,14 +4,21 @@
 .c-header{
     // background-color: #f33e67;
     background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 55%, RGBA(243, 62, 103, 0) 65% 100%);
-    padding-bottom: 40px;    
+    // padding-bottom: 40px;
+    padding: 85px 0;   
+
+    position: relative;
+    overflow: hidden;
 
     &__container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        text-align: center;    
+        text-align: center;
+
+        position: relative;
+        overflow: hidden;
     }    
 
     &__title{
@@ -50,7 +57,7 @@
 
         position: relative;
 
-        padding-bottom: 56.25%;
+        padding-bottom: 56.25%;//es en el contenedor el chiste
     }
 
     &__video{

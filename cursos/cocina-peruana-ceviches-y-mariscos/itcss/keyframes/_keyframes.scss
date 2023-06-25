@@ -21,6 +21,53 @@
       background-position: 50px 0px;
     }
   }
+
+  @keyframes glowing {
+    0% {
+        box-shadow: 0 0 -10px #c4a300;
+    }
+
+    40% {
+        box-shadow: 0 0 20px #c4a300;
+    }
+
+    60% {
+        box-shadow: 0 0 20px #c4a300;
+    }
+
+    100% {
+        box-shadow: 0 0 -10px #c4a300;
+    }
+}
+
+@keyframes horizontal-shaking {
+    0% {
+        transform: translateY(0)
+    }
+
+    25% {
+        transform: translateY(5px)
+    }
+
+    50% {
+        transform: translateY(-5px)
+    }
+
+    75% {
+        transform: translateY(5px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes roundtime {
+    to {
+      /* More performant than `width` */
+      transform: scaleX(0);
+    }
+}
 /*====================================================*/
 /* END KEYFRAMES */
 /*====================================================*/
