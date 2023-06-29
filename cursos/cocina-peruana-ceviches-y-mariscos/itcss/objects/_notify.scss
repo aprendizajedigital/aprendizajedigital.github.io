@@ -1,8 +1,13 @@
 .o-notify{
 
+    //no se coloca el visibility hidden porque javascript no reconoce el valor
+
     position: fixed;
     bottom: 10px;
     left: 10px;
+    z-index: 2000;
+
+    //animation-fill-mode: forwards; //forwards sirve para que la animacion termine en el estado en donde quedo y no se resetee
 
     &__container{
         width: 350px;
@@ -54,7 +59,7 @@
         background-color:#e99e88;
 
         transform-origin: left center;
-        animation: roundtime 10s linear forwards;
+        animation: roundtime 10s linear; // forwards;
 
         animation-iteration-count:infinite;
     }

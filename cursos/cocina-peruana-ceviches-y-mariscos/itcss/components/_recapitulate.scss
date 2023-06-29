@@ -57,6 +57,12 @@
         text-decoration-thickness: 3px;
     }
 
+    &__span-text-2{
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-thickness: 6px;
+    }
+
     &__hours{
         font-size: 20px;
         color: RGBA(29, 29, 29, 0.84);

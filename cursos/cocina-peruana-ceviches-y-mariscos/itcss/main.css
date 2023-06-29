@@ -638,10 +638,7 @@ hr {
     font-size: 18px;
     font-weight: 500;
     color: RGB(125, 125, 125);
-    line-height: 1.5rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; }
+    line-height: 1.5rem; }
 
 .o-button-facebook__container {
   display: flex;
@@ -888,7 +885,8 @@ hr {
 .o-notify {
   position: fixed;
   bottom: 10px;
-  left: 10px; }
+  left: 10px;
+  z-index: 2000; }
   .o-notify__container {
     width: 350px;
     height: 150px;
@@ -922,7 +920,7 @@ hr {
     height: 5px;
     background-color: #e99e88;
     transform-origin: left center;
-    animation: roundtime 10s linear forwards;
+    animation: roundtime 10s linear;
     animation-iteration-count: infinite; }
   .o-notify__title {
     font-weight: bold; }
@@ -956,17 +954,14 @@ hr {
 /*====================================================*/
 .c-header {
   background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 55%, RGBA(243, 62, 103, 0) 65% 100%);
-  padding: 85px 0;
-  position: relative;
-  overflow: hidden; }
+  padding-top: 85px;
+  padding-bottom: 20px; }
   .c-header__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden; }
+    text-align: center; }
   .c-header__title {
     font-weight: 900;
     text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
@@ -1257,6 +1252,10 @@ hr {
     text-decoration: line-through;
     text-decoration-color: red;
     text-decoration-thickness: 3px; }
+  .c-recapitulate__span-text-2 {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 6px; }
   .c-recapitulate__hours {
     font-size: 20px;
     color: RGBA(29, 29, 29, 0.84);
@@ -1394,57 +1393,50 @@ hr {
     font-size: 18px;
     font-weight: 500; }
 
-.c-seconds-bonds__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 20px; }
-
-.c-seconds-bonds__text {
-  font-size: 28px;
-  font-weight: 800;
-  text-shadow: RGB(0 0 0/15%) 1px 1px 2px;
-  text-align: center; }
-
-.c-seconds-bonds__text--color-tonys-pink {
-  color: #e99e88; }
-
-.c-seconds-bonds__text--color-cinder {
-  color: #212529; }
-
-.c-seconds-bonds__text--color-flamingo {
-  color: RGB(224, 77, 69); }
-
-.c-seconds-bonds__group-bonds {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 20px; }
-
-.c-seconds-bonds__group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 0 0 calc(33.33% - 20px); }
-  @media screen and (max-width: 768px) {
-    .c-seconds-bonds__group {
-      flex: 0 0 calc(50% - 20px); } }
-  @media screen and (max-width: 576px) {
-    .c-seconds-bonds__group {
-      flex: 0 0 100%; } }
-
-.c-seconds-bonds__title {
-  font-size: 22px;
-  font-weight: 700;
-  text-align: center; }
-
-.c-seconds-bonds__description {
-  font-size: 18px;
-  font-weight: 400; }
-
-.c-seconds-bonds__img {
-  width: 100%; }
+.c-seconds-bonds {
+  padding: 40px 0; }
+  .c-seconds-bonds__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px; }
+  .c-seconds-bonds__text {
+    font-size: 28px;
+    font-weight: 800;
+    text-shadow: RGB(0 0 0/15%) 1px 1px 2px;
+    text-align: center; }
+  .c-seconds-bonds__text--color-tonys-pink {
+    color: #e99e88; }
+  .c-seconds-bonds__text--color-cinder {
+    color: #212529; }
+  .c-seconds-bonds__text--color-flamingo {
+    color: RGB(224, 77, 69); }
+  .c-seconds-bonds__group-bonds {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px; }
+  .c-seconds-bonds__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 calc(33.33% - 20px); }
+    @media screen and (max-width: 768px) {
+      .c-seconds-bonds__group {
+        flex: 0 0 calc(50% - 20px); } }
+    @media screen and (max-width: 576px) {
+      .c-seconds-bonds__group {
+        flex: 0 0 100%; } }
+  .c-seconds-bonds__title {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center; }
+  .c-seconds-bonds__description {
+    font-size: 18px;
+    font-weight: 400; }
+  .c-seconds-bonds__img {
+    width: 100%; }
 
 .c-important {
   background-color: RGB(255, 255, 0); }
