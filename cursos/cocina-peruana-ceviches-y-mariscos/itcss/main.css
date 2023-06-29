@@ -638,7 +638,8 @@ hr {
     font-size: 18px;
     font-weight: 500;
     color: RGB(125, 125, 125);
-    line-height: 1.5rem; }
+    line-height: 1.5rem;
+    text-align: left; }
 
 .o-button-facebook__container {
   display: flex;
@@ -967,6 +968,9 @@ hr {
     text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
     font-size: 50px;
     color: white; }
+    @media screen and (max-width: 768px) {
+      .c-header__title {
+        font-size: 25px; } }
   .c-header__title-span {
     color: RGB(255, 255, 0); }
   .c-header__subtitle {

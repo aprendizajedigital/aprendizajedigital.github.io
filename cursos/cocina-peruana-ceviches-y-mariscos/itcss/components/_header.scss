@@ -19,6 +19,10 @@
         text-shadow: RGB(0 0 0 / 30%) 2px 0px 2px;
         font-size: 50px;
         color: white;
+
+        @include max-rwd(md){
+            font-size: 25px;
+        }
     }
 
     &__title-span{
