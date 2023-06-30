@@ -36,6 +36,8 @@
         padding: 20px;
         outline: none;
 
+        text-align: left;
+
         // transition: transform .5s ease;
         transition: background-color .3s;
 
@@ -45,6 +47,10 @@
 
         &:hover{
             background-color:rgb(235, 235, 235);
+        }
+
+        @include max-rwd(md){
+            font-size: 16px;
         }
 
     }
@@ -63,6 +69,10 @@
         line-height: 1.5rem;
 
         text-align: left;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
 
         // display: flex;
         // justify-content: flex-start;

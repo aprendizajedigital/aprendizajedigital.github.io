@@ -1,4 +1,5 @@
 .c-problems{
+    line-height: 1.5;
     
     padding: 25px 0;
     
@@ -15,6 +16,10 @@
         color: RGBA(0, 0, 0);
         text-shadow: RGBA(255, 255, 255) 2px 0px 2px;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 25px;
+        }
     }
 
     &__title-span{
@@ -30,6 +35,10 @@
         font-weight: 600;
         color: RGBA(0, 0, 0);
         text-shadow: RGBA(255, 255, 255) 2px 0px 2px;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
     }
 
     &__text--text-align-center{

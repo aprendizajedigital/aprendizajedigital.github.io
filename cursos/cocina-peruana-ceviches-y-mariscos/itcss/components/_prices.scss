@@ -18,6 +18,10 @@
         font-weight: 900;
         color: #212529;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
     }
 
     &__text-2{
@@ -25,6 +29,10 @@
         font-size: 30px;
         font-weight: 800;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
     }
 
     &__text-3{
@@ -32,5 +40,9 @@
         font-size: 20px;
         font-weight: 700;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
     }
 }

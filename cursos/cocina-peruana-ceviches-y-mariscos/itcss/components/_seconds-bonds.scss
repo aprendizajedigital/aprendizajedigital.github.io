@@ -2,6 +2,8 @@
 
     padding: 40px 0;
 
+    line-height: 1.5;
+
     &__container{
         display: flex;
         flex-direction: column;
@@ -15,6 +17,10 @@
         font-weight: 800;
         text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
 
     &__text--color-tonys-pink{
@@ -41,6 +47,8 @@
         flex-direction: column;
         justify-content: center;
 
+        gap: 15px;
+
         flex: 0 0 calc(33.33% - 20px);
 
         @include max-rwd(md){
@@ -56,11 +64,15 @@
         font-size: 22px;
         font-weight: 700;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
     }
 
     &__description{
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     &__img{

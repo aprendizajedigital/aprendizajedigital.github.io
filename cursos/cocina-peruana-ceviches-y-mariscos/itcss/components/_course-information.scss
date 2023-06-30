@@ -1,5 +1,7 @@
 .c-course-information{
 
+    padding: 20px 0;
+
     line-height: 1.5;
 
     &__container{
@@ -33,6 +35,10 @@
         font-weight: 800;
         text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
 
     &__text--color-red{
@@ -57,9 +63,13 @@
         color: RGB(72, 180, 184);
         text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 23px;
+        }
     }
 
-    &__learning-text, &__benefits-text{
+    &__learning-text, &__benefits-text{ //contenedor de &__learning-paragraph
         font-size: 18px;
         font-weight: 600;
         color: #212529;
@@ -68,7 +78,13 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: 10px;
-    } 
+    }
+    
+    &__learning-paragraph, &__benefits-paragraph{
+        @include max-rwd(md){
+            font-size: 16px;
+        }
+    }
 
     &__learning-text-span{
         font-weight: 700;

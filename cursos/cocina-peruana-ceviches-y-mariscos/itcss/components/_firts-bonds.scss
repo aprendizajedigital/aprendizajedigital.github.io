@@ -1,6 +1,7 @@
 .c-firts-bonds{
 
     line-height: 1.5;
+
     color: #212529;
 
     &__container{
@@ -15,6 +16,10 @@
         font-weight: 800;
         text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
     
     &__group-bonds{
@@ -62,10 +67,18 @@
         font-size: 24px;
         font-weight: 700;
         text-align: center;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
 
     &__description{
         font-size: 18px;
         font-weight: 500;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
     }
 }

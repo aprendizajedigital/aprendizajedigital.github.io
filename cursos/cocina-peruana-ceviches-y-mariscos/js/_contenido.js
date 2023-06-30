@@ -115,7 +115,7 @@ updateAllElementsContent(".c-problems__text", contentsQuestions);
 const contentsMainTitle = [
   `¿TE SIENTES IDENTIFICADA CON ALGUNA FRASE? <span class="c-our-students__emoji">😮</span>`,
   `ENTONCES ESTE CURSO ES PARA TI! <span class="c-our-students__emoji">😉</span>`,
-  `REALIZA EXTRAORDINARIOS ARREGLOS FLORALES CON NUESTRAS CLASES PASO A PASO Y DALE A TU FAMILIA, AMIGOS Y CLIENTES LO MEJOR 🤩 (SE LO MERECEN) 💪`,
+  `REALIZA EXTRAORDINARIOS ARREGLOS FLORALES CON NUESTRAS CLASES PASO A PASO Y DALE A TU FAMILIA, AMIGOS Y CLIENTES LO MEJOR 🤩<br>(SE LO MERECEN) 💪`,
   `ARREGLOS FLORALES HECHOS POR NUESTROS ESTUDIANTES`,
   `¡TU TAMBIÉN APRENDERÁS TODO ESTO Y MUCHO MÁS! 😁`,
   `¿PERO ES DIFÍCIL? 🤔`,
@@ -221,7 +221,6 @@ const contentsDescriptionsGifs = [
   `Aprenderás la técnica para fundir el chocolate y que te quede perfecto.<br><br>También aprenderás a elegir el tipo de chocolate adecuado.`,
   `Aprenderás a aplicarle color a las coberturas de chocolate y así poder cubrir todas tus fresas con aquellas coberturas.<br><br>Además, en este módulo utilizaremos coco y trozos de maní para poder acompañar nuestras fresas.`,
   `Aprenderemos a decorar y a realizar mezclas para poder darle el color dorado a nuestras fresas con la mejores técnicas.`,
-  `<p class="c-seconds-bonds__title">REGALO #5 MÓDULO OSA DE CHOCOLATE RELLENA DE BROWNIE<br>(s/ 45.00 SOLES - GRATIS)</p>`,
   `Aprenderás a realizar una osa de chocolate con relleno de brownie que le dará un gran valor agregado a tus trabajos.`
 ]
 

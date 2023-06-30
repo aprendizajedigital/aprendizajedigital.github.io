@@ -1,5 +1,8 @@
 .c-our-students{
 
+    padding: 25px 0;
+
+    line-height: 1.5;
 
     &__container{
         display: flex;
@@ -21,6 +24,10 @@
         text-decoration: underline;
         font-style: italic;
         color: #212529;
+
+        @include max-rwd(md){
+            font-size: 25px;
+        }
     }
 
     &__text:nth-child(2){  
@@ -29,6 +36,10 @@
         color: #ff0000;
         text-decoration: underline;
         font-style: italic;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
 
     &__text:nth-child(3){
@@ -36,6 +47,10 @@
         text-shadow: RGBA(0 0 0 / 30%) 2px 0px 2px;
         color: black;
         font-weight: 800;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
     }
 
     &__text:nth-child(4){
@@ -43,12 +58,20 @@
         font-size: 30px;
         font-weight: 800;
         padding: 0 15px;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
 
     &__text:nth-child(n + 5){
         font-size: 30px;
         color: #212529;
         font-weight: 800;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
     }
 
     &__group-img{

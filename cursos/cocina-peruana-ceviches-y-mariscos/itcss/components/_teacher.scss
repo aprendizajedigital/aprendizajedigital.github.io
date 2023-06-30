@@ -15,6 +15,10 @@
         font-size: 28px;
         font-weight: 800;
         text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
     }
 
     &__container-profile{

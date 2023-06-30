@@ -74,16 +74,28 @@
     &__span:nth-child(1){
         font-size: 26px;
         font-weight: 700;
+
+        @include max-rwd(md){
+            font-size: 23px;
+        }
     }
 
     &__span:nth-child(2){
         font-size: 20.8px;
         font-weight: 400;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
     }
 
     &__text{
         font-size: 26px;
         font-weight: 400;
         color: RGBA(29, 29, 29, 0.84);
+
+        @include max-rwd(md){
+            font-size: 23px;
+        }
     }
 }
