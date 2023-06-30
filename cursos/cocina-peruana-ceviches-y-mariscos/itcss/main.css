@@ -547,7 +547,8 @@ hr {
   align-items: center;
   gap: 10px;
   color: #ffffff;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .o-button-pay__btn {
     display: flex;
     justify-content: center;
@@ -568,7 +569,8 @@ hr {
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: box-shadow, transform;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
     height: 115px;
     color: #ffffff; }
   .o-button-pay__btn:focus {
@@ -641,113 +643,107 @@ hr {
     line-height: 1.5rem;
     text-align: left; }
 
-.o-button-facebook__container {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+.o-button-facebook {
+  width: 100%; }
+  .o-button-facebook__container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .o-button-facebook__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #3b5b9b 0, #24448c 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, RGBA(58, 65, 111, 0.5) 0 -3px 0 inset;
+    cursor: pointer;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: box-shadow, transform;
+    max-width: 420px;
+    width: 100%;
+    height: 115px;
+    color: #ffffff; }
+  .o-button-facebook__btn:focus {
+    box-shadow: #24448c 0 0 0 1.5px inset, RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #24448c 0 -3px 0 inset; }
+  .o-button-facebook__btn:hover {
+    box-shadow: RGBA(45, 35, 66, 0.4) 0 4px 8px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #24448c 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #ffffff;
+    text-decoration: none; }
+  .o-button-facebook__btn:active {
+    box-shadow: #24448c 0 3px 7px inset;
+    transform: translateY(2px); }
+  .o-button-facebook__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .o-button-facebook__btn-title {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center; }
 
-.o-button-facebook__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #3b5b9b 0, #24448c 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, RGBA(58, 65, 111, 0.5) 0 -3px 0 inset;
-  cursor: pointer;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  text-decoration: none;
-  transition: box-shadow .15s, transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  will-change: box-shadow, transform;
-  width: 420px;
-  height: 115px;
-  color: #ffffff; }
-
-.o-button-facebook__btn:focus {
-  box-shadow: #24448c 0 0 0 1.5px inset, RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #24448c 0 -3px 0 inset; }
-
-.o-button-facebook__btn:hover {
-  box-shadow: RGBA(45, 35, 66, 0.4) 0 4px 8px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #24448c 0 -3px 0 inset;
-  transform: translateY(-2px);
-  color: #ffffff;
-  text-decoration: none; }
-
-.o-button-facebook__btn:active {
-  box-shadow: #24448c 0 3px 7px inset;
-  transform: translateY(2px); }
-
-.o-button-facebook__group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.o-button-facebook__btn-title {
-  color: #ffffff;
-  font-size: 26px;
-  font-weight: 700;
-  text-align: center; }
-
-.o-button-whatsapp__container {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.o-button-whatsapp__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5cd464 0, #35b44c 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, RGBA(58, 65, 111, 0.5) 0 -3px 0 inset;
-  cursor: pointer;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  text-decoration: none;
-  transition: box-shadow .15s, transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  will-change: box-shadow, transform;
-  width: 420px;
-  height: 115px;
-  color: #ffffff; }
-
-.o-button-whatsapp__btn:focus {
-  box-shadow: #35b44c 0 0 0 1.5px inset, RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #35b44c 0 -3px 0 inset; }
-
-.o-button-whatsapp__btn:hover {
-  box-shadow: RGBA(45, 35, 66, 0.4) 0 4px 8px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #35b44c 0 -3px 0 inset;
-  transform: translateY(-2px);
-  color: #ffffff;
-  text-decoration: none; }
-
-.o-button-whatsapp__btn:active {
-  box-shadow: #35b44c  0 3px 7px inset;
-  transform: translateY(2px); }
-
-.o-button-whatsapp__group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.o-button-whatsapp__btn-title {
-  color: #ffffff;
-  font-size: 26px;
-  font-weight: 700;
-  text-align: center; }
+.o-button-whatsapp {
+  width: 100%; }
+  .o-button-whatsapp__container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .o-button-whatsapp__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5cd464 0, #35b44c 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, RGBA(58, 65, 111, 0.5) 0 -3px 0 inset;
+    cursor: pointer;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: box-shadow, transform;
+    max-width: 420px;
+    width: 100%;
+    height: 115px;
+    color: #ffffff; }
+  .o-button-whatsapp__btn:focus {
+    box-shadow: #35b44c 0 0 0 1.5px inset, RGBA(45, 35, 66, 0.4) 0 2px 4px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #35b44c 0 -3px 0 inset; }
+  .o-button-whatsapp__btn:hover {
+    box-shadow: RGBA(45, 35, 66, 0.4) 0 4px 8px, RGBA(45, 35, 66, 0.3) 0 7px 13px -3px, #35b44c 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #ffffff;
+    text-decoration: none; }
+  .o-button-whatsapp__btn:active {
+    box-shadow: #35b44c  0 3px 7px inset;
+    transform: translateY(2px); }
+  .o-button-whatsapp__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .o-button-whatsapp__btn-title {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center; }
 
 .o-counter__container {
   display: flex;
@@ -934,17 +930,26 @@ hr {
   align-items: center;
   width: 100%;
   z-index: 10; }
+  @media screen and (max-width: 768px) {
+    .o-city-bar {
+      top: 0; } }
   .o-city-bar__container {
     display: inline-block;
     border: 1px solid red;
     background-color: #212529;
     border-radius: 10px;
     padding: 15px 80px; }
+    @media screen and (max-width: 768px) {
+      .o-city-bar__container {
+        padding: 15px 15px; } }
   .o-city-bar__paragraph {
     font-size: 20px;
     font-weight: 600;
     color: #fff;
     text-align: center; }
+    @media screen and (max-width: 768px) {
+      .o-city-bar__paragraph {
+        font-size: 18px; } }
   .o-city-bar__city {
     font-weight: bold;
     color: RGB(255, 255, 0);
@@ -979,6 +984,9 @@ hr {
     font-size: 18px;
     color: black;
     line-height: 1.5; }
+    @media screen and (max-width: 768px) {
+      .c-header__subtitle {
+        font-size: 15px; } }
   .c-header__subtitle-span {
     color: RGB(255, 0, 0); }
   .c-header__paragraph {
@@ -986,6 +994,9 @@ hr {
     text-shadow: RGB(0 0 0/30%) 2px 0px 2px;
     font-size: 30px;
     color: white; }
+    @media screen and (max-width: 768px) {
+      .c-header__paragraph {
+        font-size: 16px; } }
   .c-header__container-video {
     width: 100%;
     position: relative;

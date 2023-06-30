@@ -83,7 +83,7 @@ updateElementContent(".c-title", "Florales Modernos para Negocio 💐");
 
 updateElementContent(".c-header__title", `COMIENZA TU <span class="c-header__title-span">PROPIO NEGOCIO</span> FLORAL SIN ALTAS INVERSIONES DE DINERO Y DOMINA LAS TÉCNICAS FLORALES SIN NECESIDAD DE SER UNA <span class="c-header__title-span">UNA EXPERTA</span>🤩`);
 
-updateElementContent(".c-header__subtitle", `<mark><span>ADVERTENCIA 🚨🖐️:</span> ¡Estas a un paso de descubrir el método innovador que te permitirá <span>GENERAR INGRESOS</span> 🤑<br>creando <span>LUJOSOS ARREGLOS FLORALES</span> 💐, y eso no es todo 👀, también te permitirá emprender un negocio rentable de alta demanda 🤩!</mark>`);
+updateElementContent(".c-header__subtitle", `<mark><span class="c-header__subtitle-span">ADVERTENCIA 🚨🖐️:</span> ¡Estas a un paso de descubrir el método innovador que te permitirá <span class="c-header__subtitle-span">GENERAR INGRESOS</span> 🤑<br>creando <span class="c-header__subtitle-span">LUJOSOS ARREGLOS FLORALES</span> 💐, y eso no es todo 👀, también te permitirá emprender un negocio rentable de alta demanda 🤩!</mark>`);
 
 updateElementContent(".c-header__paragraph", `Mira el Video Hasta el Final👇`);
 

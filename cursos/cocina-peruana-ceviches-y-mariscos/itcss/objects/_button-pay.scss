@@ -7,6 +7,8 @@
     color: #ffffff;
     text-align: center;
 
+    width: 100%; //importante poner el ancho del papa
+
 
     &__btn{
         display: flex;
@@ -28,8 +30,11 @@
         -webkit-user-select: none;
         touch-action: manipulation;
         will-change: box-shadow, transform;
-        width: 420px;
+
+        max-width: 420px;
+        width: 100%;
         height: 115px;
+        
         color: #ffffff;
     }
 

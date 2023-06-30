@@ -36,6 +36,10 @@
         color: black;
 
         line-height: 1.5;
+
+        @include max-rwd(md){
+            font-size: 15px;
+        }
     }
 
     &__subtitle-span{
@@ -47,6 +51,10 @@
         text-shadow: RGB(0 0 0 / 30%) 2px 0px 2px;
         font-size: 30px;
         color: white;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
     }
 
     &__container-video{
