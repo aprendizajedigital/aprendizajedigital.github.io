@@ -31,6 +31,8 @@
 </head>
 
 <body>
+    <div class="o-loader-page"></div>
+
     <header class="c-header">
         <div class="c-header__container o-breakpoint">
             <p class="c-header__title">[DATA]</p>
@@ -43,6 +45,7 @@
             </div>
         </div>
     </header>
+
     <main class="c-main">
         <section class="o-round-button-whatsapp">
             <div class="o-round-button-whatsapp__container">
@@ -59,7 +62,7 @@
                 </a>
             </div>
         </section>
-        <section class="o-city-bar js-city-bar u-none">
+        <section class="o-city-bar js-city-bar">
             <div class="o-city-bar__container">
                 <p class="o-city-bar__paragraph">
                     <span class="o-city-bar__amount js-set-amount">70</span> personas en <span class="o-city-bar__city js-set-city">tu ciudad</span> están viendo esta oferta
@@ -67,7 +70,7 @@
                 </p>
             </div>
         </section>
-        <section class="o-notify animate__animated" style="opacity: 0;"><!--metele algo aqui para que aparezca invisible-->
+        <section class="o-notify animate__animated u-none" style="opacity: 0;"><!--metele algo aqui para que aparezca invisible-->
             <div class="o-notify__container">
                 <div class="o-notify__group">
                     <div class="o-notify__container-img">
@@ -689,6 +692,7 @@
         </div>
     </footer>
 
+    <script src="./js/_loader-page.js"></script>
     <script src="./js/_contenido.js"></script>
     <script src="./js/_city-bar.js"></script>
     <script src="./js/_set-link-whatsapp.js"></script>

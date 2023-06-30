@@ -46,7 +46,7 @@ const observador = new IntersectionObserver(verificarVisibilidad, {
 });
 
 //Entradas validadas
-observador.observe(c_header__title);
+//observador.observe(c_header__title);
 observador.observe(c_our_students__text);
 c_our_students__img.forEach(item => observador.observe(item));
 observador.observe(c_course_information__learning_img);

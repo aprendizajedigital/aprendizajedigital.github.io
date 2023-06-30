@@ -1,5 +1,4 @@
 .o-round-button-whatsapp{
-    
     &__container{
     }
 
@@ -8,6 +7,8 @@
     }
 
     &__img{
+
+        z-index: 1000;
 
         animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
 
