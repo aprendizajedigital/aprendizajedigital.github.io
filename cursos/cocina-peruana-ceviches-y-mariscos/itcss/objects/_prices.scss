@@ -35,6 +35,8 @@
         text-decoration-color: red;
         text-decoration-thickness: 12px;
 
+        transition: text-decoration 2s ease;
+
         @include max-rwd(md){
             text-decoration-thickness: 7px;
         }

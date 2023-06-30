@@ -495,6 +495,12 @@ hr {
     /* More performant than `width` */
     transform: scaleX(0); } }
 
+@keyframes animacion-width-text-decoration-thickness {
+  0% {
+    width: 100%; }
+  100% {
+    width: 50%; } }
+
 /*====================================================*/
 /* END KEYFRAMES */
 /*====================================================*/
@@ -918,7 +924,8 @@ hr {
   color: RGB(0, 0, 126);
   text-decoration: line-through;
   text-decoration-color: red;
-  text-decoration-thickness: 12px; }
+  text-decoration-thickness: 12px;
+  transition: text-decoration 2s ease; }
   @media screen and (max-width: 768px) {
     .o-prices__price:nth-child(1) {
       text-decoration-thickness: 7px; } }

@@ -68,6 +68,11 @@
       transform: scaleX(0);
     }
 }
+
+@keyframes animacion-width-text-decoration-thickness {
+    0% { width: 100%; }
+    100% { width: 50%; }
+}
 /*====================================================*/
 /* END KEYFRAMES */
 /*====================================================*/
