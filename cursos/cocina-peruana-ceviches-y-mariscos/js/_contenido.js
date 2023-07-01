@@ -47,6 +47,9 @@ function editarEtiquetaMeta(selector, contenido, atributo) {
 
 // INICIO - EDITAR META
 
+//ICONO DE LA PAGINA
+document.querySelector(".c-link-icon").href = "./img/ceviche.png"
+
 //INICIO - WEB
 const ogTitleWebContent = "CURSO ONLINE- FLORALES MODERNOS PARA NEGOCIO 😱💐😍";
 const ogDescriptionWebContent = "Con el MasterClass FLORALES MODERNOS PARA NEGOCIO, aprenderás a diseñar arreglos florales de estilos únicos y modernos, para emprender un negocio muy lucrativo y de alta demanda.";
@@ -333,15 +336,15 @@ updateElementContent(".c-recapitulate__title","¡RECAPITULEMOS 😍!");
 updateElementContent(".c-recapitulate__text-1","¡TODO ESTO TE LLEVARÁS EL DÍA DE HOY CON TU INSCRIPCIÓN 👇!");
 
 const contentsRecapitulateParagraph = [
-  `El programa completo de "FLORALES MODERNOS PARA NEGOCIO" (<span class="c-recapitulate__span">s/ 100.00 SOLES</span>)`,
-  `Grupo Privado de Estudiantes (<span class="c-recapitulate__span">s/ 25.00 SOLES</span>)`,
-  `Membresía con acceso para toda la vida (<span class="c-recapitulate__span">s/ 25.00 SOLES</span>)`,
-  `Certificado de participación en el programa (<span class="c-recapitulate__span">s/ 20.00 SOLES</span>)`,
-  `Regalo adicional #1: Módulo introducción y recomendaciones para cubrir fresas con chocolate (<span class="c-recapitulate__span">s/ 45.00 SOLES</span>)`,
-  `Regalo adicional #2: Módulo técnica para fundir el chocolate (<span class="c-recapitulate__span">s/ 45.00 SOLES</span>)`,
-  `Regalo adicional #3: Módulo técnica de color y toppings para fresas (<span class="c-recapitulate__span">s/ 50.00 SOLES</span>)`,
-  `Regalo adicional #4: Módulo fresas doradas (<span class="c-recapitulate__span">s/ 45.00 SOLES)</span>`,
-  `Regalo adicional #5: Módulo osa de chocolate rellena de brownie (<span class="c-recapitulate__span">s/ 45.00 SOLES</span>)`
+  `El programa completo de "FLORALES MODERNOS PARA NEGOCIO" (<span class="c-recapitulate__span">s/100.00 SOLES</span>)`,
+  `Grupo Privado de Estudiantes (<span class="c-recapitulate__span">s/25.00 SOLES</span>)`,
+  `Membresía con acceso para toda la vida (<span class="c-recapitulate__span">s/25.00 SOLES</span>)`,
+  `Certificado de participación en el programa (<span class="c-recapitulate__span">s/20.00 SOLES</span>)`,
+  `Regalo adicional #1: Módulo introducción y recomendaciones para cubrir fresas con chocolate (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`,
+  `Regalo adicional #2: Módulo técnica para fundir el chocolate (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`,
+  `Regalo adicional #3: Módulo técnica de color y toppings para fresas (<span class="c-recapitulate__span">s/50.00 SOLES</span>)`,
+  `Regalo adicional #4: Módulo fresas doradas (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`,
+  `Regalo adicional #5: Módulo osa de chocolate rellena de brownie (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`
 ];
 
 updateAllElementsContent(".c-recapitulate__paragraph", contentsRecapitulateParagraph);

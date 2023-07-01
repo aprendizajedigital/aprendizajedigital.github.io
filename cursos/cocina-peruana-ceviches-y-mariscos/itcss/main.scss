@@ -93,8 +93,6 @@ Donde @breakpoint será la media query que tú decidas.
 
 //OBJECTS
 @import "objects/_loader-page";
-@import "objects/_color";
-@import "objects/_container";
 @import "objects/_breakpoint";
 @import "objects/_button-pay";
 @import "objects/_accordion";
@@ -110,8 +108,6 @@ Donde @breakpoint será la media query que tú decidas.
 //COMPONENTS el componente tiene mas fuerza que OBJECTS por cascada
 @import "components/_header";
 @import "components/_footer";
-@import "components/_tabs";
-@import "components/_main";
 @import "components/_course-information";
 @import "components/_our-students";
 @import "components/_prices";
