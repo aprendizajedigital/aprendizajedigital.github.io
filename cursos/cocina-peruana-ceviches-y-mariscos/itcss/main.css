@@ -965,28 +965,29 @@ hr {
     justify-content: center;
     align-items: center; }
 
-.o-round-button-whatsapp__img {
+.o-round-button-whatsapp__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
   position: fixed;
-  width: 60px;
-  height: 60px;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  border-radius: 30px;
-  fill: #ffffff;
-  padding: 10px;
-  border: 2.5px solid #25d366; }
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
+  transition: all ease-in-out 0.3s;
+  color: #ffffff;
+  background-color: #25d366; }
 
-.o-round-button-whatsapp__img:hover {
-  fill: #25d366;
+.o-round-button-whatsapp__img {
+  font-size: 30px; }
+
+.o-round-button-whatsapp__link:hover {
+  color: #25d366;
   background-color: #ffffff;
-  border: 2.5px solid #25d366;
-  transition: fill ease-in-out 0.3s, border ease-in-out 0.3s; }
-
-.o-round-button-whatsapp__img:not(:hover) {
-  transition: fill ease-in-out 0.3s, border ease-in-out 0.3s; }
+  border: 2.5px solid #25d366; }
 
 .o-notify {
   position: fixed;
@@ -1224,7 +1225,7 @@ hr {
   @media screen and (max-width: 768px) {
     .c-course-information__learning-paragraph, .c-course-information__benefits-paragraph {
       font-size: 16px; } }
-  .c-course-information__learning-text-span {
+  .c-course-information__learning-text-span, .c-course-information__benefits-text-span {
     font-weight: 700;
     color: RGB(72, 180, 184); }
   .c-course-information__benefits-last-text {
@@ -1650,6 +1651,10 @@ hr {
     @media screen and (max-width: 768px) {
       .c-seconds-bonds__title {
         font-size: 18px; } }
+  .c-seconds-bonds__title-span {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 4px; }
   .c-seconds-bonds__description {
     font-size: 18px;
     font-weight: 500; }

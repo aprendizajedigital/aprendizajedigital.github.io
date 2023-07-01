@@ -207,11 +207,11 @@ const contentsSecondsBonds = [
 updateAllElementsContent(".c-seconds-bonds__text", contentsSecondsBonds);
 
 const contentsTitlesGifs = [
-  `REGALO #1 MÓDULO INTRODUCCIÓN Y RECOMENDACIONES PARA CUBRIR FRESAS CON CHOCOLATE<br>(s/ 45.00 SOLES - GRATIS)`,
-  `REGALO #2 MÓDULO TÉCNICA PARA FUNDIR EL CHOCOLATE<br>(s/ 45.00 SOLES - GRATIS)`,
-  `REGALO #3 MÓDULO TÉCNICA DE COLOR Y TOPPINGS PARA FRESAS<br>(s/ 50.00 SOLES - GRATIS)`,
-  `REGALO #4 MÓDULO FRESAS DORADAS<br>(s/ 45.00 SOLES - GRATIS)`,
-  `REGALO #5 MÓDULO OSA DE CHOCOLATE RELLENA DE BROWNIE<br>(s/ 45.00 SOLES - GRATIS)`
+  `REGALO #1 MÓDULO INTRODUCCIÓN Y RECOMENDACIONES PARA CUBRIR FRESAS CON CHOCOLATE<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`,
+  `REGALO #2 MÓDULO TÉCNICA PARA FUNDIR EL CHOCOLATE<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`,
+  `REGALO #3 MÓDULO TÉCNICA DE COLOR Y TOPPINGS PARA FRESAS<br>(<span class="c-seconds-bonds__title-span">s/50.00 SOLES</span> - GRATIS)`,
+  `REGALO #4 MÓDULO FRESAS DORADAS<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`,
+  `REGALO #5 MÓDULO OSA DE CHOCOLATE RELLENA DE BROWNIE<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`
 ]
 
 updateAllElementsContent(".c-seconds-bonds__title", contentsTitlesGifs);
@@ -348,9 +348,9 @@ updateAllElementsContent(".c-recapitulate__paragraph", contentsRecapitulateParag
 
 updateElementContent(".c-recapitulate__hours", `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="c-recapitulate__icon" src="./img/arrow-right-svgrepo-com.svg">&nbsp;clases de contenido (+6 horas en video HD)`);
 
-updateElementContent(".c-recapitulate__text-2",`TOTAL <span class="c-recapitulate__span-text-2">s/ 400.00</span>`);
+updateElementContent(".c-recapitulate__text-2",`TOTAL <span class="c-recapitulate__span-text-2">s/400.00</span>`);
 updateElementContent(".c-recapitulate__text-3",`PERO HOY PODRAS ACCEDER POR:`);
-updateElementContent(".c-recapitulate__text-4",`s/ 100.00`);
+updateElementContent(".c-recapitulate__text-4",`s/100.00`);
 updateElementContent(".c-recapitulate__text-5",`¿QUÉ ESTÁS ESPERANDO?`);
 updateElementContent(".c-recapitulate__text-6",`¡Más de 4000 alumnos de todo el mundo han transformado sus vidas gracias a los arreglos florales!💐
                                                 <br><br>

@@ -70,6 +70,12 @@
         }
     }
 
+    &__title-span{
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-thickness: 4px;
+    }
+
     &__description{
         font-size: 18px;
         font-weight: 500;

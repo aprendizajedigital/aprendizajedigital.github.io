@@ -3,40 +3,37 @@
     }
 
     &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 1000;
         
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+
+        border-radius: 100%;
+
+        width: 60px;
+        height: 60px;
+
+        animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
+               
+        transition: all ease-in-out 0.3s;
+
+        color: #ffffff;
+        
+        background-color: #25d366;
     }
 
     &__img{
-
-        z-index: 1000;
-
-        animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
-
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-       
-        border-radius: 30px;
-
-        fill: #ffffff;
-        padding: 10px;
-        border: 2.5px solid #25d366;
-
+        font-size: 30px; //con esto crece el logo de whatsapp
     }
 
-    &__img:hover{
-        fill: #25d366;
+    &__link:hover{
+        color: #25d366;
         background-color: #ffffff;
-        border: 2.5px solid #25d366;
-        // transition: fill ease-in-out 0.3s;
-        transition: fill ease-in-out 0.3s, border ease-in-out 0.3s;
-    }
-
-    &__img:not(:hover){
-        // transition: fill ease-in-out 0.3s;
-        transition: fill ease-in-out 0.3s, border ease-in-out 0.3s;
+        border: 2.5px solid #25d366; //el secreto de esta hermosa animacion es el border, ya que no existe, pero con el hover existe y se hace una bonita animacion
     }
 }
