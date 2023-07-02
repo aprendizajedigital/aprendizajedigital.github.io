@@ -1,0 +1,134 @@
+/*=======================RESPETA EL ORDEN=======================*/
+/*SETTINGS*/
+/*====================================================*/
+/*SETTINGS*/
+/*====================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*====================================================*/
+/*END SETTINGS*/
+/*====================================================*/
+/*TOOLS - (FUNCS - MIXINS*/
+/*====================================================*/
+/* TOOLS - FUNCTIONS */
+/*====================================================*/
+/*====================================================*/
+/* END TOOLS - FUNCTIONS */
+/*====================================================*/
+/*====================================================*/
+/* TOOLS - MIXINS */
+/*====================================================*/
+/*====================================================*/
+/* END TOOLS - MIXINS */
+/*====================================================*/
+/*GENERIC*/
+/*====================================================*/
+/*GENERIC*/
+/*====================================================*/
+*,
+*:before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: 0px solid;
+  box-sizing: border-box; }
+  *:hover, *:active, *:focus, *:visited,
+  *:before:hover,
+  *:before:active,
+  *:before:focus,
+  *:before:visited,
+  *::after:hover,
+  *::after:active,
+  *::after:focus,
+  *::after:visited {
+    outline: 0px solid; }
+
+/*====================================================*/
+/*END GENERIC*/
+/*====================================================*/
+/*TAGS*/
+body {
+  font-family: Montserrat, sans-serif; }
+
+/*TAGS*/
+/*====================================================*/
+/* KEYFRAMES */
+/*====================================================*/
+/*====================================================*/
+/* END KEYFRAMES */
+/*====================================================*/
+/*OBJECTS*/
+.o-breakpoint {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media screen and (min-width: 576px) {
+    .o-breakpoint {
+      max-width: 540px; } }
+  @media screen and (min-width: 768px) {
+    .o-breakpoint {
+      max-width: 720px; } }
+  @media screen and (min-width: 992px) {
+    .o-breakpoint {
+      max-width: 960px; } }
+  @media screen and (min-width: 1200px) {
+    .o-breakpoint {
+      max-width: 1250px; } }
+
+/*COMPONENTS*/
+/*el componente tiene mas fuerza que OBJECTS por cascada*/
+.c-header {
+  color: #fff;
+  background-color: RGB(237, 24, 0);
+  padding: 40px 0;
+  text-align: center; }
+  .c-header__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center; }
+  .c-header__title {
+    font-size: 40px;
+    font-weight: 800; }
+  .c-header__subtitle {
+    font-size: 30px;
+    font-weight: 400; }
+
+.c-purpose {
+  background: linear-gradient(90deg, #1A237E, #0D47A1, #1976D2);
+  padding: 40px 0;
+  color: #fff;
+  text-align: center; }
+  .c-purpose__title {
+    font-size: 50px;
+    font-weight: 800;
+    font-style: italic; }
+  .c-purpose__subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px; }
+
+.c-footer {
+  background-color: black;
+  padding: 30px 0;
+  color: white;
+  background-image: linear-gradient(RGBA(255, 255, 255, 0.3), RGBA(255, 255, 255, 0.3)), url("../../img/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .c-footer__text {
+    font-size: 16px;
+    text-align: center; }
+
+/*UTILITIES*/
+/*====================================================*/
+/* UTILITIES */
+/*====================================================*/
+.u-none {
+  display: none; }
+
+/*====================================================*/
+/* END UTILITIES */
+/*====================================================*/
