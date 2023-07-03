@@ -8,6 +8,7 @@
     background-color: rgb(196, 196, 196);
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
 
     &__container{
         display: flex;
@@ -71,7 +72,7 @@
         font-style: italic;
 
         @include max-rwd(md){
-            font-size: 25px;
+            font-size: 22px;
         }
     }
 
@@ -131,6 +132,8 @@
 
         @include max-rwd(md){
             padding: 5px 10px;
+
+            font-size: 15px;
         }
     }
 
@@ -139,7 +142,7 @@
         font-size: 18px;
 
         @include max-rwd(md){
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 
@@ -170,6 +173,8 @@
         color: white;
         background: rgb(237, 24, 0);
         border: 1px solid rgb(237, 24, 0);
+
+        cursor: pointer;
 
         padding: 0.5rem 1rem;
         line-height: 1.5;
