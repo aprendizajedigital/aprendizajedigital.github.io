@@ -1,8 +1,9 @@
+
+//NO ANIMES EL BOTON PORQUE 1. YA NO FUNCIONA LA TRANSITION Y 2. SALE UN ERROR DE JAVASCRIPT QUE DICE QUE YA FUE DECLARADO
+
 const c_header__title = document.querySelector(".c-header__title");
 const c_header__subtitle = document.querySelector(".c-header__subtitle");
 const c_gift__img = document.querySelector(".c-gift__img");
-const c_gift__form = document.querySelector(".c-gift__form");
-const c_gift__btn = document.querySelector(".c-gift__btn");
 const c_purpose__title = document.querySelector(".c-purpose__title");
 const c_purpose__subtitle = document.querySelector(".c-purpose__subtitle");
 const c_footer__text = document.querySelector(".c-footer__text");
@@ -28,8 +29,6 @@ const observador = new IntersectionObserver(verificarVisibilidad, {
 observador.observe(c_header__title);
 observador.observe(c_header__subtitle);
 observador.observe(c_gift__img);
-observador.observe(c_gift__form);
-observador.observe(c_gift__btn);
 observador.observe(c_purpose__title);
 observador.observe(c_purpose__subtitle);
 observador.observe(c_footer__text);
