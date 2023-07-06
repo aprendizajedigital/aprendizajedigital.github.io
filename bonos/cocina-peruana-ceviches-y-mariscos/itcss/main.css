@@ -1,0 +1,348 @@
+/*=======================RESPETA EL ORDEN=======================*/
+/*SETTINGS*/
+/*====================================================*/
+/*SETTINGS*/
+/*====================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*====================================================*/
+/*END SETTINGS*/
+/*====================================================*/
+/*TOOLS - (FUNCS - MIXINS*/
+/*====================================================*/
+/* TOOLS - FUNCTIONS */
+/*====================================================*/
+/*====================================================*/
+/* END TOOLS - FUNCTIONS */
+/*====================================================*/
+/*====================================================*/
+/* TOOLS - MIXINS */
+/*====================================================*/
+/*====================================================*/
+/* END TOOLS - MIXINS */
+/*====================================================*/
+/*GENERIC*/
+/*====================================================*/
+/*GENERIC*/
+/*====================================================*/
+@import url(generic/_normalize.css);
+*,
+*:before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: 0px solid;
+  box-sizing: border-box; }
+  *:hover, *:active, *:focus, *:visited,
+  *:before:hover,
+  *:before:active,
+  *:before:focus,
+  *:before:visited,
+  *::after:hover,
+  *::after:active,
+  *::after:focus,
+  *::after:visited {
+    outline: 0px solid; }
+
+/*====================================================*/
+/*END GENERIC*/
+/*====================================================*/
+/*TAGS*/
+/*====================================================*/
+/*TAGS*/
+/*====================================================*/
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
+body {
+  font-family: Montserrat, sans-serif;
+  overflow: hidden; }
+
+mark {
+  background-color: #ffe357; }
+
+hr {
+  width: 100%;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: dotted; }
+
+/*====================================================*/
+/*END TAGS*/
+/*====================================================*/
+/*TAGS*/
+/*====================================================*/
+/* KEYFRAMES */
+/*====================================================*/
+@keyframes mover {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-10px); } }
+
+/*====================================================*/
+/* END KEYFRAMES */
+/*====================================================*/
+/*OBJECTS*/
+.o-breakpoint {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media screen and (min-width: 576px) {
+    .o-breakpoint {
+      max-width: 540px; } }
+  @media screen and (min-width: 768px) {
+    .o-breakpoint {
+      max-width: 720px; } }
+  @media screen and (min-width: 992px) {
+    .o-breakpoint {
+      max-width: 960px; } }
+  @media screen and (min-width: 1200px) {
+    .o-breakpoint {
+      max-width: 1250px; } }
+
+.o-loader-page {
+  position: fixed;
+  z-index: 25000;
+  background: white;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease; }
+
+.o-loader-page::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #3296b0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-left: 2px solid rgba(50, 150, 176, 0);
+  border-top: 2px solid rgba(50, 150, 176, 0);
+  animation: rotarload 1s linear infinite;
+  transform: rotate(0deg); }
+
+@keyframes rotarload {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.o-loader-page::after {
+  content: "";
+  position: absolute;
+  border: 2px solid rgba(50, 150, 176, 0.5);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-left: 2px solid rgba(50, 150, 176, 0);
+  border-top: 2px solid rgba(50, 150, 176, 0);
+  animation: rotarload 1s ease-out infinite;
+  transform: rotate(0deg); }
+
+/*COMPONENTS*/
+/*el componente tiene mas fuerza que OBJECTS por cascada*/
+.c-header {
+  background-color: RGB(237, 24, 0);
+  padding: 25px 0; }
+  .c-header__title {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 800;
+    color: #fff; }
+    @media screen and (max-width: 768px) {
+      .c-header__title {
+        font-size: 20px; } }
+  .c-header__title-span {
+    font-style: normal; }
+
+.c-bonds {
+  padding: 100px 0;
+  background-image: url(https://aprendizajedigital.github.io/ebooks-sin-correos/panadero-en-casa/background2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000vmax rgba(0, 3, 42, 0.8);
+  background-blend-mode: luminosity;
+  background-color: #00032a;
+  text-align: center; }
+  .c-bonds__container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; }
+  .c-bonds__group-bond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; }
+  .c-bonds__title {
+    font-size: 80px;
+    font-weight: 800;
+    color: black;
+    background-color: #ffe357; }
+    @media screen and (max-width: 768px) {
+      .c-bonds__title {
+        font-size: 65px; } }
+  .c-bonds__subtitle {
+    font-size: 45px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.5; }
+    @media screen and (max-width: 768px) {
+      .c-bonds__subtitle {
+        font-size: 35px; } }
+  .c-bonds__description {
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.5; }
+    @media screen and (max-width: 768px) {
+      .c-bonds__description {
+        font-size: 20px; } }
+  .c-bonds__img {
+    width: 550px; }
+    @media screen and (max-width: 768px) {
+      .c-bonds__img {
+        width: 100%; } }
+  .c-bonds__icon {
+    font-size: 80px;
+    color: RGB(237, 24, 0);
+    animation: mover 0.3s infinite alternate; }
+  .c-bonds__btn {
+    padding: 12px 40px;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    background: RGB(237, 24, 0);
+    border: 1px solid RGB(237, 24, 0);
+    border-radius: 90px;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0px 0px 15px #000000;
+    transition: all .4s ease-in-out;
+    text-decoration: none; }
+    @media screen and (max-width: 768px) {
+      .c-bonds__btn {
+        font-size: 23px; } }
+  .c-bonds__btn:hover {
+    box-shadow: 0px 0px 95px #000000;
+    transform: translateY(3px); }
+
+.c-footer {
+  background-color: black;
+  padding: 30px 0;
+  color: white;
+  background-image: linear-gradient(RGBA(0, 0, 0, 0.89), RGBA(0, 0, 0, 0.89)), url(https://aprendizajedigital.github.io/ebooks-sin-correos/cocina-peruana-ceviches-y-mariscos/sabor-peruano-descubre-la-magia-del-ceviche-y-los-mariscos-del-pais/img/background-footer.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .c-footer__text {
+    font-size: 16px;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .c-footer__text {
+        font-size: 12px; } }
+
+/*====================================================*/
+/* SCOPES */
+/*====================================================*/
+.s-debug {
+  /**
+    * Outline all classes
+    */
+  /**
+    * Outline all BEM Elements
+    */
+  /**
+    * Outline all BEM Modifiers
+    */
+  /**
+    * Outline all Object classes
+    */
+  /**
+    * Outline all Component classes
+    */
+  /**
+    * Outline all utility classes
+    */
+  /**
+    * Outline all state classes
+    */
+  /**
+    * Outline all js classes
+    */
+  /**
+    * Outline all theme classes
+    */
+  /**
+    * Outline all scope classes
+    */
+  /**
+    * Outline all qa classes
+    */
+  /**
+    * Outline all Hack classes
+    */
+  /**
+    * Outline all Responsive classes
+    */ }
+  .s-debug [class] {
+    outline: 3px solid lightgray; }
+  .s-debug [class*="__"] {
+    outline-color: grey; }
+  .s-debug [class*="--"] {
+    outline-color: grey; }
+  .s-debug [class^="o-"],
+  .s-debug [class*=" o-"] {
+    outline-color: grey; }
+  .s-debug [class^="c-"],
+  .s-debug [class*=" c-"] {
+    outline-color: grey; }
+  .s-debug [class^="u-"],
+  .s-debug [class*=" u-"] {
+    outline-color: grey; }
+  .s-debug [class^="is-"],
+  .s-debug [class*=" is-"],
+  .s-debug [class^="has-"],
+  .s-debug [class*=" has-"] {
+    outline-color: grey; }
+  .s-debug [class^="js-"],
+  .s-debug [class*=" js-"] {
+    outline-color: grey; }
+  .s-debug [class^="t-"],
+  .s-debug [class*=" t-"] {
+    outline-color: grey; }
+  .s-debug [class^="s-"],
+  .s-debug [class*=" s-"] {
+    outline-color: grey; }
+  .s-debug [class^="qa-"],
+  .s-debug [class*=" qa-"] {
+    outline-color: grey; }
+  .s-debug [class^="_"] {
+    outline-color: grey; }
+  .s-debug [class*="@"] {
+    outline-color: grey; }
+
+/*====================================================*/
+/* END SCOPES */
+/*====================================================*/
+/*UTILITIES*/
+/*====================================================*/
+/* UTILITIES */
+/*====================================================*/
+.u-none {
+  display: none; }
+
+/*====================================================*/
+/* END UTILITIES */
+/*====================================================*/

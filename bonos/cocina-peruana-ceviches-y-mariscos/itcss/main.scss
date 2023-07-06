@@ -1,0 +1,34 @@
+
+/*=======================RESPETA EL ORDEN=======================*/
+
+/*SETTINGS*/
+@import "settings/_settings";
+
+/*TOOLS - (FUNCS - MIXINS*/
+@import "tools/_functions";
+@import "tools/_mixins";
+
+/*GENERIC*/
+@import "generic/_generic";
+@import "generic/_normalize.css";
+
+/*TAGS*/
+@import "tags/_tags";
+
+/*TAGS*/
+@import "keyframes/_keyframes";
+
+/*OBJECTS*/
+@import "objects/_breakpoint";
+@import "objects/_loader-page";
+
+/*COMPONENTS*/ /*el componente tiene mas fuerza que OBJECTS por cascada*/
+@import "components/header";
+@import "components/bonds";
+@import "components/footer";
+
+//SCOPES
+@import "scopes/scopes";
+
+/*UTILITIES*/
+@import "utilities/_utilities";
