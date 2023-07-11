@@ -59,14 +59,14 @@ const ogTitleWebContent = "CURSO ONLINE- COCINA PERUANA: CEVICHES Y MARISCOS �
 const ogDescriptionWebContent = "Con el MasterClas COCINA PERUANA: CEVICHES Y MARISCOS, aprende a preparar los platos típicos y legendarios de este país mágico.";
 const ogTypeWebContent = "website";
 const ogUrlWebContent = "https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/inicio.html";
-const ogImageWebContent = "https://aprendizajedigital.github.io/cursos/florales-modernos-para-negocio/covervideo.png";
-const ogImageSecureUrlWebContent = "https://aprendizajedigital.github.io/cursos/florales-modernos-para-negocio/covervideo.png";
+const ogImageWebContent = "https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/covervideo.png";
+const ogImageSecureUrlWebContent = "https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/covervideo.png";
 const descriptionWebContent = "Con el MasterClas COCINA PERUANA: CEVICHES Y MARISCOS, aprende a preparar los platos típicos y legendarios de este país mágico.";
 //FIN - WEB
 
 //INICIO - WHATSAPP
-const ogImageWhatsapp = "https://aprendizajedigital.github.io/cursos/florales-modernos-para-negocio/mastersello.png";
-const ogImageSecureUrlWhatsapp = "https://aprendizajedigital.github.io/cursos/florales-modernos-para-negocio/mastersello.png";
+const ogImageWhatsapp = "https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/mastersello.png";
+const ogImageSecureUrlWhatsapp = "https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/mastersello.png";
 const ogImageTypeWhatsapp = "image/png";
 const ogImageWidthWhatsapp = "600"; //si no funciona, usa 300 aqui y en la imagen adaptalo a 300
 const ogImageHeightWhatsapp = "600"; //si no funciona, usa 300 aqui y en la imagen adaptalo a 300
