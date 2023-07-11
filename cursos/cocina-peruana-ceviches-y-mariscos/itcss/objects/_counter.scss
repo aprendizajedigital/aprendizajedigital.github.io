@@ -43,8 +43,10 @@
     }
 
     &__group{
-        background-color: RGB(255, 244, 128);
+        background-color: #fedf88;
         padding: 20px;
+        border-radius: 20px;
+        border: 3px dashed black;
     }
 
     &__group-title{

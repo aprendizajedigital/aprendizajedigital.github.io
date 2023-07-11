@@ -91,6 +91,8 @@
 
         flex: 1 1 0;
 
+        overflow: hidden; //esto sirve para que la imagen se adapte segun la propiedad flex
+
         @include max-rwd(lg){
             flex: 0 0 calc(50% - 10px);
         }

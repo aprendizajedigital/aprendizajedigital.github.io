@@ -15,7 +15,7 @@
     &__text{
         font-size: 28px;
         font-weight: 800;
-        text-shadow: RGB(0 0 0 / 15%) 1px 1px 2px;
+        text-shadow: RGB(0 0 0 / 50%) 1px 1px 1px;
         text-align: center;
 
         @include max-rwd(md){
@@ -24,7 +24,7 @@
     }
 
     &__text--color-tonys-pink{
-        color: #e99e88;
+        color: #f8b400;
     }
 
     &__text--color-cinder{

@@ -2,18 +2,18 @@
 /* COMPONENT - HEADER */
 /*====================================================*/
 .c-header{
-    background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 55%, RGBA(243, 62, 103, 0) 65% 100%);
+    background-image: linear-gradient(RGBA(44, 120, 108, 1) 0 55%, RGBA(243, 62, 103, 0) 65% 100%);
     padding-top: 85px;
     padding-bottom: 20px;
 
     @include max-rwd(md){
         padding-top: 60px;
-        background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 65%, RGBA(243, 62, 103, 0) 75% 100%);
+        background-image: linear-gradient(RGBA(44, 120, 108, 1) 0 65%, RGBA(243, 62, 103, 0) 75% 100%);
     }
 
     @include max-rwd(sm){
         padding-top: 80px;
-        background-image: linear-gradient(RGBA(243, 62, 103, 1) 0 75%, RGBA(243, 62, 103, 0) 85% 100%);
+        background-image: linear-gradient(RGBA(44, 120, 108, 1) 0 75%, RGBA(243, 62, 103, 0) 85% 100%);
     }
 
     &__container{
@@ -36,12 +36,12 @@
     }
 
     &__title-span{
-        color: RGB(255, 255, 0);
+        color: #f8b400;
     }
 
     &__subtitle{
         font-weight: 700;
-        text-shadow: RGB(0 0 0 / 30%) 2px 0px 2px;
+        text-shadow: RGB(0 0 0 / 50%) 1px 1px 1px;
         font-size: 18px;
         color: black;
 
@@ -58,7 +58,7 @@
 
     &__paragraph{
         font-weight: 800;
-        text-shadow: RGB(0 0 0 / 30%) 2px 0px 2px;
+        text-shadow: RGB(0 0 0 / 50%) 1px 1px 1px;
         font-size: 30px;
         color: white;
 

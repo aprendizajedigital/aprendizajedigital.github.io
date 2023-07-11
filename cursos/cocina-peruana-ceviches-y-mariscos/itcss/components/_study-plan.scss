@@ -1,6 +1,6 @@
 .c-study-plan{
 
-    background-color: #e99e88;
+    background-color: #4fafa1;
     padding: 40px 0;
 
     &__container{
@@ -15,7 +15,7 @@
 
     &__span{
         text-decoration: underline;
-        text-decoration-color: rgb(72, 180, 184);
+        text-decoration-color: rgb(23, 157, 162);
         text-decoration-thickness: 10px;
 
         @include max-rwd(md){
