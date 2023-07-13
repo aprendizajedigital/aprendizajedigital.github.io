@@ -1,4 +1,4 @@
-let link_hotmart="https://wa.link/nghtsk",
+let link_hotmart="https://hotm.art/curso-online-ceviches-y-mariscos",
     link_vimeo = "https://player.vimeo.com/video/843116828?h=757d719681&portrait=0&byline=0&title=0", //esto solo se cambia en el HTML
     link_wistia = "r248sz6a82", //esto solo se cambia en el HTML
     link_whatsapp = "", //esto solo se cambia en su archivo JS
@@ -236,11 +236,11 @@ const contentsDescriptionsGifs = [
 updateAllElementsContent(".c-seconds-bonds__description", contentsDescriptionsGifs);
 
 const contentsGifsIMG = [
-  `./img/img3.png`,
-  `./img/img4.png`,
-  `./img/img5.png`,
-  `./img/img6.PNG`,
-  `./img/img7.PNG`
+  `./img/bono1.png`,
+  `./img/bono2.png`,
+  `./img/bono3.png`,
+  `./img/bono4.png`,
+  `./img/bono5.png`
 ];
 
 updateAllElementsImages(".c-seconds-bonds__img", contentsGifsIMG);
@@ -269,7 +269,7 @@ const contentsPlanText = [
 
 updateAllElementsContent(".c-study-plan__text", contentsPlanText);
 
-updateElementImage(".c-study-plan__img-certification", "./img/certificado.jpg");
+updateElementImage(".c-study-plan__img-certification", "./img/certificado.png");
 updateElementImage(".c-study-plan__img-course-inside", "./img/curso-por-dentro.png");
 
 updateElementContent(".c-students__title", "¿QUE DICEN NUESTROS ESTUDIANTES SOBRE EL CURSO?");
@@ -371,7 +371,7 @@ updateElementContent(".c-recapitulate__text-8",`¿Qué pasaría si, además, con
 updateElementContent(".c-recapitulate__text-9",`¿Cuánto vale para ti conseguir todo esto?<br>No esperes más…`);
 updateElementContent(".c-recapitulate__text-10",`¡COMIENZA HOY MISMO!`);
 
-updateElementImage(".c-recapitulate__img", "./img/img14.png");
+updateElementImage(".c-recapitulate__img", "./img/full-course.png");
 
 updateElementContent(".c-skills__title",`¿TE IMAGINAS ADQUIRIR ESTAS HABILIDADES?`);
 
