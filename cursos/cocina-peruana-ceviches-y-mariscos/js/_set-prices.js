@@ -14,19 +14,19 @@ let
     recapitulate_price_gift_5;
 
 const prices_peru = () => {
-    price_hight = "s/400.00",
-    price_medium = "s/200.00",
-    price_low = "s/100.00",
+    price_hight = "s/527.00", // s/400.00
+    price_medium = "s/263.50",// s/200.00
+    price_low = "s/131.75",   // s/100.00
     
-    recapitulate_price_regular = "s/100 SOLES",
-    recapitulate_price_vip_group = "s/25.00 SOLES",
-    recapitulate_price_membership = "s/25.00 SOLES",
-    recapitulate_price_certificate = "s/20.00 SOLES",
-    recapitulate_price_gift_1 = "s/45.00 SOLES",
-    recapitulate_price_gift_2 = "s/45.00 SOLES",
-    recapitulate_price_gift_3 = "s/50.00 SOLES",
-    recapitulate_price_gift_4 = "s/45.00 SOLES",
-    recapitulate_price_gift_5 = "s/45.00 SOLES";
+    recapitulate_price_regular = "s/131.75 SOLES",    // s/100.00 SOLES
+    recapitulate_price_vip_group = "s/35.00 SOLES",   // s/25.00 SOLES
+    recapitulate_price_membership = "s/35.00 SOLES",  // s/25.00 SOLES
+    recapitulate_price_certificate = "s/30.25 SOLES", // s/20.00 SOLES
+    recapitulate_price_gift_1 = "s/60.00 SOLES",      // s/45.00 SOLES
+    recapitulate_price_gift_2 = "s/60.00 SOLES",      // s/45.00 SOLES
+    recapitulate_price_gift_3 = "s/55.00 SOLES",      // s/50.00 SOLES
+    recapitulate_price_gift_4 = "s/60.00 SOLES",      // s/45.00 SOLES
+    recapitulate_price_gift_5 = "s/60.00 SOLES";      // s/45.00 SOLES
 };
 
 const prices_usa = () => {
