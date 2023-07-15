@@ -220,7 +220,7 @@ const contentsTitlesGifs = [
   `REGALO #2 - SALSA DE LANGOSTINO<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`,
   `REGALO #3 - SALSA BECHAMEL POTENCIADA<br>(<span class="c-seconds-bonds__title-span">s/50.00 SOLES</span> - GRATIS)`,
   `REGALO #4 - TRES RECETAS ADICIONALES QUE DEBES CONSIDERAR SI ESTÁS PENSANDO COLOCAR TU CEVICHERÍA<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`,
-  `REGALO #5 - LIBRO XD<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`
+  `REGALO #5 - LIBRO RECETARIO EL CEVICHE AZUL<br>(<span class="c-seconds-bonds__title-span">s/45.00 SOLES</span> - GRATIS)`
 ]
 
 updateAllElementsContent(".c-seconds-bonds__title", contentsTitlesGifs);
@@ -230,7 +230,7 @@ const contentsDescriptionsGifs = [
   `Aprenderás los secretos para preparar una salsa exquisita que complementará a la perfección tus ceviches y mariscos peruanos.<br><br>Su textura cremosa y su sabor único añadirán un toque especial a tus platos, deleitando a tus comensales.`,
   `Aprenderás a preparar una versión mejorada de esta clásica salsa, añadiéndole nuevos ingredientes y técnicas que la convertirán en el complemento perfecto para tus creaciones culinarias.<br><br>Sorprende a tu paladar y al de tus invitados con esta deliciosa salsa.`,
   `Aprende a preparar platos innovadores y deliciosos que cautivarán a tus clientes.<br><br>Estas recetas te ayudarán a diferenciarte y destacar en el competitivo mundo de la cocina peruana de ceviches y mariscos.`,
-  `Hola XD Hola XD`
+  `Lograrás aprender recetas fáciles de seguir.<br><br>También incluye consejos sobre cómo elegir los mejores ingredientes, cómo preparar el ceviche correctamente y cómo servirlo de la manera más atractiva.`
 ]
 
 updateAllElementsContent(".c-seconds-bonds__description", contentsDescriptionsGifs);
@@ -350,7 +350,7 @@ const contentsRecapitulateParagraph = [
   `Regalo adicional #2: SALSA DE LANGOSTINO (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`,
   `Regalo adicional #3: SALSA BECHAMEL POTENCIADA (<span class="c-recapitulate__span">s/50.00 SOLES</span>)`,
   `Regalo adicional #4: TRES RECETAS ADICIONALES QUE DEBES CONSIDERAR SI ESTÁS PENSANDO COLOCAR TU CEVICHERÍA (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`,
-  `Regalo adicional #5: LIBRO XD (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`
+  `Regalo adicional #5: LIBRO RECETARIO CEVICHE AZUL (<span class="c-recapitulate__span">s/45.00 SOLES</span>)`
 ];
 
 updateAllElementsContent(".c-recapitulate__paragraph", contentsRecapitulateParagraph);

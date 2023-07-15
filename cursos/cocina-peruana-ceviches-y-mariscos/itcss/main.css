@@ -1280,6 +1280,7 @@ hr {
   .c-seconds-bonds__group-bonds {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px; }
   .c-seconds-bonds__group {
@@ -1288,9 +1289,12 @@ hr {
     justify-content: center;
     gap: 15px;
     flex: 0 0 calc(33.33% - 20px); }
+    @media screen and (max-width: 992px) {
+      .c-seconds-bonds__group {
+        flex: 0 0 calc(50% - 10px); } }
     @media screen and (max-width: 768px) {
       .c-seconds-bonds__group {
-        flex: 0 0 calc(50% - 20px); } }
+        flex: 0 0 calc(50% - 10px); } }
     @media screen and (max-width: 576px) {
       .c-seconds-bonds__group {
         flex: 0 0 100%; } }
