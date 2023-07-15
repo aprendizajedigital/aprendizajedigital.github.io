@@ -27,7 +27,7 @@ function contadorScroll(entries, observer) {
   }
   
   // Crear el observador de la intersección
-  const observador2 = new IntersectionObserver(contadorScroll, {
+  const observador_scroll = new IntersectionObserver(contadorScroll, {
     // root: null,
     // rootMargin: "0px",
     // threshold: 0.5
@@ -35,4 +35,4 @@ function contadorScroll(entries, observer) {
   });
    
   // Observar el elemento
-  o_counter__title_number.forEach(item => observador2.observe(item));
+  o_counter__title_number.forEach(item => observador_scroll.observe(item));
