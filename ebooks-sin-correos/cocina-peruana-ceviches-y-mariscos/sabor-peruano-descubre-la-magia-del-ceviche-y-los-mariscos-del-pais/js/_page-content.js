@@ -67,6 +67,8 @@ function updateElementContent(selector, content) {
   editarEtiquetaMeta('.c-meta-og-image-tidth-whatsapp', descriptionWebContent, 'content');
   editarEtiquetaMeta('.c-meta-og-image-height-whatsapp', descriptionWebContent, 'content');
 
+  
+
   updateElementContent(".c-title", "Florales Modernos para Negocio 💐");
   
   updateElementContent(".c-header__title", "LOS 10 SECRETOS QUE LAS FLORISTAS NO QUIEREN QUE CONOZCAS😱💐😍");

@@ -541,3 +541,4 @@ const contentsAccordionText = [
 
 updateAllElementsContent(".o-accordion__text", contentsAccordionText);
 
+updateElementContent(".o-notify__subtitle", `Acaba de adquirir el curso "Ceviches y Mariscos" 🐟`);

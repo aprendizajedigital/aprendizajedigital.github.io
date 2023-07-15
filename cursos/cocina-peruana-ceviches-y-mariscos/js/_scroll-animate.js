@@ -46,7 +46,6 @@ const observador = new IntersectionObserver(verificarVisibilidad, {
 });
 
 //Entradas validadas
-//observador.observe(c_header__title);
 observador.observe(c_our_students__text);
 c_our_students__img.forEach(item => observador.observe(item));
 observador.observe(c_course_information__learning_img);
@@ -70,3 +69,25 @@ observador.observe(c_recapitulate__text_10);
 observador.observe(c_skills__title);
 c_skills__img.forEach(item => observador.observe(item)) ;
 c_frequent_questions__title.forEach(item => observador.observe(item));
+
+const detectar_slideInDown = (entries) => { //devuelve una lista, por eso se usa el foreach, no importa que sea uno
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("animate__animated");
+            entry.target.classList.add("animate__slideInDown");
+            //entry.style.transformOrigin = "top";
+        }
+        else{
+            // entry.target.classList.remove("animate__zoomIn")
+            // entry.target.classList.add("c-header__title--visible")
+        }
+    })
+}
+
+const observador2 = new IntersectionObserver(detectar_slideInDown, {
+    // root: null,
+    // rootMargin: "0px 0px 0px 0px",
+    // threshold: 1.0
+});
+
+observador2.observe(c_header__title);
