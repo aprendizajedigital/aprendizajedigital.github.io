@@ -1,0 +1,22 @@
+.c-footer{
+    background-color: black;
+    padding: 30px 0;
+    color: white;
+    background-image: linear-gradient(RGBA(0, 0, 0, 0.89), RGBA(0, 0, 0, 0.89)), url("https://aprendizajedigital.github.io/ebooks-sin-correos/cocina-peruana-ceviches-y-mariscos/sabor-peruano-descubre-la-magia-del-ceviche-y-los-mariscos-del-pais/img/background-footer.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container{
+
+    }
+
+    &__text{
+        font-size: 16px;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 12px;
+        }
+    }
+}

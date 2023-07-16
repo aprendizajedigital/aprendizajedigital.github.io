@@ -1,0 +1,187 @@
+.c-gift{
+
+    padding: 100px 0;
+
+    background-image: url("https://aprendizajedigital.github.io/ebooks-sin-correos/cocina-peruana-ceviches-y-mariscos/sabor-peruano-descubre-la-magia-del-ceviche-y-los-mariscos-del-pais/img/background-gift.jpg");
+    box-shadow: inset 0 0 0 1000vmax rgba(196, 196, 196, 0.7);
+    background-blend-mode: luminosity;
+    background-color: rgb(196, 196, 196);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+        @include max-rwd(lg){
+            flex-direction: column;
+        }
+    }
+
+    &__group-img{
+        // flex: 1;
+        width: 540px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include max-rwd(lg){
+            width: 100%;
+        }
+    }
+
+    &__img{
+        width: 100%;
+    }
+
+    &__group-form{
+        // flex: 1;
+        width: 540px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include max-rwd(lg){
+            width: 100%;
+        }
+    }
+
+    &__form{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        background: rgba(255, 255, 255, 0.6);
+        border: 5px dashed black;
+        border-radius: 25px;
+        padding: 37px 30px;
+        text-align: center;
+    }
+
+    &__title{
+        font-size: 31px;
+        font-weight: 800;
+        font-style: italic;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
+    }
+
+    &__label{
+        font-size: 20px;
+        font-weight: 500;
+        align-self: flex-start;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
+    }
+
+    &__label-span{
+
+    }
+
+    &__group-icon-y-input{
+        display: flex;
+    }
+
+    &__group-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon{
+        font-size: 20px;
+
+        padding: 10px 20px;
+
+        border: 1px solid #ced4da;
+
+        background-color: #e9ecef;
+
+        border-radius: 5px 0 0 5px;
+
+        @include max-rwd(md){
+            padding: 5px 10px;
+        }
+    }
+
+    &__input{ 
+        flex: 1 1 auto;
+        width: 0px;
+
+        padding: 10px 20px;
+
+        border: 1px solid #ced4da;
+        font-family: 'Montserrat', sans-serif;
+
+        transition: all 0.3s ease;
+
+        font-weight: 500;
+        font-size: 18px;
+
+        @include max-rwd(md){
+            padding: 5px 10px;
+
+            font-size: 15px;
+        }
+    }
+
+    &__input::placeholder{ 
+        font-weight: 500;
+        font-size: 18px;
+
+        @include max-rwd(md){
+            font-size: 15px;
+        }
+    }
+
+    &__input[type="text"]:focus, //&__input[type="text"] solo haces referencia al input que quiere, pero si usas esto input[type="text"] haces referencia a todos los input text
+    &__input[type="text"]:active {
+        outline: none; /* Elimina el contorno predeterminado */
+        border-color: #80bdff; /* Cambia el color del borde */
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Agrega una sombra alrededor del campo */
+    }
+
+    &__valid-email{
+        color: #28a745;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &__invalid-email{
+        color: RGB(220, 53, 69);
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &__btn{
+        font-size: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;   
+        font-style: italic;
+        color: white;
+        background: rgb(237, 24, 0);
+        border: 1px solid rgb(237, 24, 0);
+
+        cursor: pointer;
+
+        padding: 0.5rem 1rem;
+        line-height: 1.5;
+        border-radius: 0.3rem;
+
+        @include max-rwd(md){
+            font-size: 23px;
+        }
+    }
+}
