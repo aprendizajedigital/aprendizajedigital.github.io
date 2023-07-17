@@ -44,7 +44,7 @@ c_gift__form.addEventListener('submit', function (e) {
   //FIN EMAIL.JS
 
   setTimeout(() => {
-    window.location.href = './gracias-sabor-peruano-descubre-la-magia-del-ceviche-y-los-mariscos-del-pais.html';
+    window.location.href = 'https://aprendizajedigital.github.io/gracias-los-10-secretos-del-ceviche-casero-que-los-chefs-no-quieren-que-sepas.html';
   }, 2000);
 });
 
