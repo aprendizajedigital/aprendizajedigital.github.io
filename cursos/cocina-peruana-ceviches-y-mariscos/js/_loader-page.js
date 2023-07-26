@@ -3,5 +3,5 @@ window.addEventListener('load', function() {
     document.querySelector("body").style.overflow = "auto";
     document.querySelector(".o-loader-page").style.visibility = "hidden";
     document.querySelector(".o-loader-page").style.opacity = "0";
-    }, 50);
+    }, 0.1);
 });

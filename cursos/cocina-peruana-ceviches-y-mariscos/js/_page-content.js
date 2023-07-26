@@ -486,7 +486,7 @@ const contentsAccordionText = [
   `◉ BONO DE REGALO 2: Salsa de Langostino.`,
   `◉ BONO DE REGALO 3: Salsa Bechamel Potenciada.`,
   `◉ BONO DE REGALO 4: Tres recetas adicionales que debes considerar si estás pensando colocar tu cevichería.`,
-  `◉ BONO DE REGALO 5: Libro XD.`,
+  `◉ BONO DE REGALO 5: Libro Recetario "El ceviche azul".`,
 
   `No te preocupes el pago es realizado de forma 100% segura por medio de Hotmart, la plataforma de venta de productos digitales más grande y segura de habla hispana.
   <br><br>
