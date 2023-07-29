@@ -14,14 +14,14 @@ let
     recapitulate_price_gift_5;
 
 const prices_peru = () => {
-    price_hight = "s/532.00", // s/400.00 // s/527.00
-    price_medium = "s/399.50",// s/200.00 // s/263.00
-    price_low = "s/133.00",   // s/100.00 // s/131.75
+    price_hight = "s/530.00", // s/400.00 // s/527.00
+    price_medium = "s/265.00",// s/200.00 // s/263.00
+    price_low = "s/132.50",   // s/100.00 // s/131.75
     
-    recapitulate_price_regular = "s/133.00 SOLES",    // s/100.00 SOLES // s/131.75 SOLES
+    recapitulate_price_regular = "s/132.50 SOLES",    // s/100.00 SOLES // s/131.75 SOLES
     recapitulate_price_vip_group = "s/35.00 SOLES",   // s/25.00 SOLES // s/35.00 SOLES
     recapitulate_price_membership = "s/35.00 SOLES",  // s/25.00 SOLES // s/35.00 SOLES
-    recapitulate_price_certificate = "s/34.00 SOLES", // s/20.00 SOLES // s/30.25 SOLES
+    recapitulate_price_certificate = "s/32.50 SOLES", // s/20.00 SOLES // s/30.25 SOLES
     recapitulate_price_gift_1 = "s/60.00 SOLES",      // s/45.00 SOLES // s/60.00 SOLES
     recapitulate_price_gift_2 = "s/60.00 SOLES",      // s/45.00 SOLES // s/60.00 SOLES
     recapitulate_price_gift_3 = "s/55.00 SOLES",      // s/50.00 SOLES // s/55.00 SOLES
