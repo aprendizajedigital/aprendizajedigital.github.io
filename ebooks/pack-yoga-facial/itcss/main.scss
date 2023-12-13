@@ -21,10 +21,20 @@
 /*OBJECTS*/
 @import "objects/_loader-page";
 @import "objects/_breakpoint";
+@import "objects/_summary-information";
+@import "objects/_counter";
+@import "objects/_facebook-comments";
+@import "objects/_facebook-reply-comments";
+@import "objects/_button-pay";
+@import "objects/_button-whatsapp";
+@import "objects/_city-bar";
+@import "objects/_round-button-whatsapp";
 
 /*COMPONENTS*/ /*el componente tiene mas fuerza que OBJECTS por cascada*/
 @import "components/_header";
 @import "components/_footer";
+@import "components/_first-information";
+@import "components/_warranty";
 
 //SCOPES
 @import "scopes/_scopes";

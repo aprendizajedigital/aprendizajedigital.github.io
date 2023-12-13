@@ -1,0 +1,25 @@
+.c-header{
+    background: #BF5B45;
+    padding-top: 90px;
+    padding-bottom: 20px;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+    }  
+
+    &__title{
+        font-size: 30px;
+        color: #fff;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 36px;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.o-facebook-comments{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    width: 100%;
+
+    &__comment{
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 10px;
+
+    }
+
+    &__text-1{
+        font-size: 12px;
+        line-height:16px;
+        font-weight: 700;
+    }
+
+    &__text-2{
+        font-size: 12px;
+        line-height:16px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__name{
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        color: #365899;
+        border-bottom: 1px solid transparent;
+        display: inline-block;
+    }
+
+    &__name:hover{
+        border-color: #365899;
+    }
+
+    &__message{
+        font-size: 14px;
+    }
+
+    &__group-interaction{
+        font-size: 12px;
+        font-weight: 700;
+        color:#90949c;
+        margin-left: 20px;
+    }
+
+    &__interaction-span-1{
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    &__interaction-span-2{
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    &__interaction-span-3{
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        font-weight: 100;
+    }
+
+    &__interaction-span-1:hover, &__interaction-span-2:hover, &__interaction-span-3:hover{
+        border-bottom: 1px solid #90949c;
+    }
+
+    &__first-image{
+        width:40px;
+        height: 40px;
+
+        border-radius: 100%;
+    }
+
+    &__group-text{
+        flex-grow: 1;
+    }
+
+    &__group-profile{
+        background-color: #f5f5f4;
+        padding: 8px 12px;
+        border-radius: 18px;
+        margin-left: 4px;
+
+        position: relative;
+    }
+
+    &__icons{
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+
+        width: fit-content;
+
+        background-color: #f8fafc;
+
+        filter:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+
+        padding: 4px;
+
+        border-radius: 10px;
+    }
+
+    &__icons-img-1{
+        width:16px;
+        height: 16px;
+    }
+
+    &__icons-img-2{
+        width: 16px;
+        height: 16px;
+    }
+
+    &__icons-text-1{
+        color: #90949c;
+        font-size: 12px;
+
+    }
+}

@@ -9,9 +9,9 @@ h1, h2, h3, h4, h5, h6{
 body{
     font-family: Montserrat, sans-serif;
     
-    // background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/background.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/background.png);
     
-    overflow: hidden; //el loader le cambia de valor
+    //overflow: hidden; //el loader le cambia de valor
 
     // background-position: center center;
     // background-size: cover;
@@ -19,8 +19,9 @@ body{
 }
 
 mark{
-    background-color: #ffe357;
-    // padding: 4px;
+    // background-color: #ffe357;
+    background-color: #ffcd45;
+    padding: 4px;
 }
 
 hr{
@@ -28,6 +29,10 @@ hr{
     border-color: #fff;
     border-width: 2px;
     border-style: dotted;
+}
+
+i{
+    font-size:40px;
 }
 /*====================================================*/
 /*END TAGS*/

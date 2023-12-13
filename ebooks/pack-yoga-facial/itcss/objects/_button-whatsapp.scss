@@ -1,15 +1,14 @@
-.o-button-pay{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    text-align: center;
+.o-button-whatsapp{
+
     width: 100%; //importante poner el ancho del papa
 
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-    &__button{
+  &__btn{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,64 +36,49 @@
         color: #ffffff;
     }
 
-    &__button:focus{
+    &__btn:focus{
         box-shadow: #f0473e 0 0 0 1.5px inset, RGBA(45, 35, 66, .4) 0 2px 4px, RGBA(45, 35, 66, .3) 0 7px 13px -3px, #f0473e 0 -3px 0 inset;
     }
 
-    &__button:hover{
+    &__btn:hover{
         box-shadow: RGBA(45, 35, 66, .4) 0 4px 8px, RGBA(45, 35, 66, .3) 0 7px 13px -3px, #f0473e 0 -3px 0 inset;
         transform: translateY(-2px);
     }
 
-    &__button:active{
+    &__btn:active{
         box-shadow: #f0473e 0 3px 7px inset;
         transform: translateY(2px);
     }
-    
-    &__img{
-        max-width: 500px;
-        width: 100%;
-    }
 
-    &__icon-1{
+    &__icon{
 
     }
 
-    &__icon-2{
-        width:30px;
-    }
-    
-    &__paragraph{
+    &__group{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         gap: 10px;
     }
-    
-    &__span:nth-child(1){
+
+    &__btn-title{
+        color: #ffffff;
         font-size: 26px;
         font-weight: 700;
+        text-align: center;
 
         @include max-rwd(md){
             font-size: 23px;
         }
     }
 
-    &__span:nth-child(2){
-        font-size: 20.8px;
-        font-weight: 400;
+    &__btn-subtitle{
+        font-size: 18px;
 
         @include max-rwd(md){
-            font-size: 18px;
-        }
-    }
-
-    &__text{
-        font-size: 26px;
-        font-weight: 400;
-        color: RGBA(29, 29, 29, 0.84);
-
-        @include max-rwd(md){
-            font-size: 23px;
+            font-size: 16px;
         }
     }
 }

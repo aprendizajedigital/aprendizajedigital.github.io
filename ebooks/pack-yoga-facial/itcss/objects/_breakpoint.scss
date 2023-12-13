@@ -1,0 +1,99 @@
+.o-breakpoint{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include min-rwd(sm){
+        max-width: 540px;
+    }
+
+    @include min-rwd(md){
+        max-width: 720px;
+    }
+
+    @include min-rwd(lg){
+        max-width: 960px;
+    }
+
+    @include min-rwd(xl){
+        max-width: 1250px; //1140px
+    }
+
+    // @include rwd(xxl){
+    //     max-width: 1380px;
+    // }
+
+    &__sm{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include min-rwd(sm){
+            max-width: 540px;
+        }
+    }
+
+    &__md{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include min-rwd(sm){
+            max-width: 540px;
+        }
+    
+        @include min-rwd(md){
+            max-width: 720px;
+        }
+    }
+
+    &__lg{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include min-rwd(sm){
+            max-width: 540px;
+        }
+    
+        @include min-rwd(md){
+            max-width: 720px;
+        }
+    
+        @include min-rwd(lg){
+            max-width: 960px;
+        }
+    }
+
+    &__xl{ //AQUI ES LO MISMO QUE breakpoint
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include min-rwd(sm){
+            max-width: 540px;
+        }
+    
+        @include min-rwd(md){
+            max-width: 720px;
+        }
+    
+        @include min-rwd(lg){
+            max-width: 960px;
+        }
+    
+        @include min-rwd(xl){
+            max-width: 1250px; //1140px
+        }
+    }
+}
