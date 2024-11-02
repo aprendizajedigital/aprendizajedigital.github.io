@@ -1,0 +1,92 @@
+.c-seconds-bonds{
+
+    padding: 40px 0;
+
+    line-height: 1.5;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    &__text{
+        font-size: 28px;
+        font-weight: 800;
+        text-shadow: RGB(0 0 0 / 50%) 1px 1px 1px;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
+    }
+
+    &__text--color-tonys-pink{
+        color: #f8b400;
+    }
+
+    &__text--color-cinder{
+        color: #212529;
+    }
+    
+    &__text--color-flamingo{
+        color: RGB(224, 77, 69);
+    }
+
+    &__group-bonds{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 15px;
+
+        flex: 0 0 calc(33.33% - 20px);
+
+        @include max-rwd(lg){
+            flex: 0 0 calc(50% - 10px);
+        }
+
+        @include max-rwd(md){
+            flex: 0 0 calc(50% - 10px);
+        }
+
+        @include max-rwd(sm){
+            flex: 0 0 100%;
+        }
+    }
+
+    &__title{
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
+    }
+
+    &__title-span{
+        text-decoration: line-through;
+        text-decoration-color: red;
+        text-decoration-thickness: 4px;
+    }
+
+    &__description{
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+.c-prices{
+
+    padding: 40px 0;
+    background-color: #f7f7f7;
+
+    line-height: 1.5;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;    
+    }
+
+    &__text-1{
+        font-size: 40px;
+        font-weight: 900;
+        color: #212529;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
+    }
+
+    &__text-2{
+        color: #ff0000;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
+    }
+
+    &__text-3{
+        color: #212529;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
+    }
+}

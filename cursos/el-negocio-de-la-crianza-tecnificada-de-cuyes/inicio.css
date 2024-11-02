@@ -127,6 +127,11 @@
 
 /*EMPEZAMOS AQUI*/
 
+/*ESTO SE CREO PORQUE POR ALGUNA RAZON BOOTSTRAP PONE PADDING AL ::after*/
+.embed-after-no-padding{
+    padding-top: 0;
+}
+
 body {
     position: relative;
     margin: 0;

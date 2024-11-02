@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .o-size-responsive{
+        @apply max-w-[1080px] w-[90%] mx-auto;
+    }
+
+    .o-base-styles{
+        @apply font-montserrat font-normal text-xl text-center tracking-normal leading-none;
+    }
+
+    .o-btn-primary{
+        @apply inline-flex flex-col gap-0 rounded-2xl bg-green-600 px-6 py-3 text-white font-normal text-2xl shadow-md shadow-slate-950;
+    }
+
+    .o-btn-details{
+        @apply relative -top-1 -left-1 transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full before:w-full before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0;
+    }
+
+    .o-hr-styles{
+        @apply block w-full border-[1px] border-white;
+    }
+
+    .o-cross-out{
+        @apply line-through decoration-4 decoration-red-500 font-bold;
+    }
+}

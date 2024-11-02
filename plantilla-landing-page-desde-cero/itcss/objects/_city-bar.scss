@@ -1,0 +1,49 @@
+.o-city-bar{
+    position: fixed;
+    top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    z-index: 10;
+
+    @include max-rwd(md){
+        top: 0;   
+    }
+
+    &__container{
+        display: inline-block; //el width abarca lo que mide el contenido
+        border: 1px solid red;
+        background-color:#212529;
+        border-radius:10px;
+        padding: 15px 80px;
+
+        @include max-rwd(md){
+            padding: 15px 15px;
+        }
+    }
+
+    &__paragraph{
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
+    }
+
+    &__amount{
+
+    }
+
+    &__city{
+        font-weight: bold;
+        color: RGB(255, 255, 0);
+        text-decoration: underline;
+    }
+}

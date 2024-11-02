@@ -1,0 +1,111 @@
+.c-our-students{
+
+    padding: 25px 0;
+
+    line-height: 1.5;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__emoji{
+        font-style: normal;
+    }
+
+    &__text{
+        text-align: center;
+    }
+
+    &__text:nth-child(1){
+        font-weight: 800;
+        font-size: 30px;
+        text-decoration: underline;
+        font-style: italic;
+        color: #212529;
+
+        @include max-rwd(md){
+            font-size: 25px;
+        }
+    }
+
+    &__text:nth-child(2){  
+        font-weight: 800;
+        font-size: 25px;
+        color: #ff0000;
+        text-decoration: underline;
+        font-style: italic;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
+    }
+
+    &__text:nth-child(3){
+        font-size: 30px;
+        text-shadow: RGBA(0 0 0 / 30%) 2px 0px 2px;
+        color: black;
+        font-weight: 800;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
+    }
+
+    &__text:nth-child(4){
+        color: #ff0000;
+        font-size: 30px;
+        font-weight: 800;
+        padding: 0 15px;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
+    }
+
+    &__text:nth-child(n + 5){
+        font-size: 30px;
+        color: #212529;
+        font-weight: 800;
+
+        @include max-rwd(md){
+            font-size: 20px;
+        }
+    }
+
+    &__group-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+
+    &__img{//EL TAMAÑO DE LAS IMAGENES POR DEFECTO ES DE 293, 293 Y 292 DE ANCHO, YO PUSE MAX-WIDTH 400PX Y SE ENCOJERÁN HASTA QUE LLEGUE AL TAMAÑO POR DEFECTO DE LAS IMAGENES
+        border-radius: 10px;
+        box-shadow: RGBA(0 0 0 / 45%) 0px 4px 8px -1px;
+        padding: 5px;
+
+        flex: 1 1 0;
+
+        overflow: hidden; //esto sirve para que la imagen se adapte segun la propiedad flex
+
+        @include max-rwd(lg){
+            flex: 0 0 calc(50% - 10px);
+        }
+
+        @include max-rwd(md){
+            flex: 0 0 100%;
+        }
+
+        // max-width: 350px;
+        // width: 100%;
+        // flex-shrink: 1;
+        
+        //ESTE VALOR YA LO TIENEN POR DEFECTO, SE PUEDE BORRAR SI ES NECESARIO
+        //flex-basis: 400px;//NO LO USAMOS PORQUE SOLO SE QUEDA EN 400PX Y CUANDO YA NO PUEDE MEDIR ESA CANTIDAD SE DESBORDA
+    }
+}

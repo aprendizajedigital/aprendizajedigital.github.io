@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .swiper-button-next, .swiper-button-prev{
+        --swiper-navigation-size: 15px;
+        --swiper-theme-color: black;
+        
+        font-weight: 900;
+        border-radius: 50px;
+        background-color: white;
+        padding: 15px;
+    }
+
+    .o-size-responsive{
+        @apply max-w-[1080px] w-[90%] mx-auto;
+    }
+
+    .o-base-styles{
+        @apply font-montserrat font-normal text-xl text-center tracking-normal leading-none;
+    }
+
+    .o-btn-primary{
+        @apply inline-flex flex-col gap-0 rounded-2xl px-[40px] py-[20px] text-[24px] bg-[#fff300] text-black font-bold border border-white;
+    }
+
+    .o-btn-shadow-white{
+        @apply shadow-[0px_0px_28px_-3px_rgba(255,255,255,0.68)]
+    }
+
+    .o-btn-shadow-black{
+        @apply shadow-[0px_0px_10px_3px_rgba(0,0,0,0.5)]
+    }
+
+    .o-btn-primary-transition{
+        @apply transition duration-[200ms] ease-in-out delay-0 hover:-translate-y-0 hover:scale-110
+    }
+
+    .o-hr-styles{
+        @apply block w-full border-[1px] border-white;
+    }
+
+    .o-cross-out{
+        @apply line-through decoration-4 decoration-red-500 font-bold;
+    }
+}

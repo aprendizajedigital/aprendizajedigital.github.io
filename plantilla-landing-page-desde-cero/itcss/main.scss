@@ -1,0 +1,129 @@
+/*
+- Metodología de trabajo propuesto por Harry Roberts
+
+- Te ayuda a organizar las carpetas y archivos CSS
+
+- Pretende resolver el caos que se genera en los proyectos a nivel de CSS con los selectores y su nivel de fuerza
+
+- Separa tu código CSS en varias capas:
+
+SETTINGS    -> Variables CSS (Si usas preprocesador) - No genera CSS.
+
+TOOLS       -> Funciones y Mixins SCSS (Si usas preprocesador) - No genera CSS.
+
+GENERIC     -> Código genérico (reset CSS, normalize CSS o tus propios estilos globales).
+
+TAGS        -> Estilos aplicados a los TAGS HTML (selector de tag) (h2, p, strong).
+
+KEYFRAMES   -> Aqui van todos los Keyframes.
+
+OBJECTS     -> Clases Reutilizables en cualquier contexto.
+               
+               Un bloque BEM puede ser un Objeto, de ser así, sus estilos vivirán en esta capa.
+
+COMPONENTS  -> Clases que atacan a una parte específica de la interfaz.
+
+               Un bloque BEM puede ser un Componente, de ser así, sus estilos vivirán en esta capa.
+
+SCOPE       -> Clases en donde se visualiza la parte estructural de la página               
+
+UTILITIES   -> Clases con la capacidad de anular todo el CSS previo.
+
+               Solo aquí esta permitido usar el !important.
+
+               Último recurso a utilizar, no abusar de esta capa.
+
+================================================================================================================================************
+
+BEMIT
+
+BEM + ITCSS = BEMIT
+
+Te presento todos los prefijos y sufijos que nos propone BEMIT.
+
+Hay varios prefijos:
+
+** o- para objetos
+
+** c- para componentes
+
+** u- para utilidades
+
+** is- o has- para determinar un estado
+
+** js- para referenciar un nodo que interactúa con javascript
+
+** t- para un tema de estilos determinado
+
+** s- para contextos y alcance de ámbito (scope)
+
+** qa- para testing de control de calidad
+
+** _ para hacks
+
+Y además de esos prefijos,
+tenemos los sufijos para las media query.
+
+Que se escribe con el @
+
+** class@breakpoint
+
+Donde @breakpoint será la media query que tú decidas.
+
+*/
+
+/*=======================RESPETA EL ORDEN=======================*/
+
+//SETTINGS
+@import "settings/_settings";
+
+//TOOLS - (FUNCS - MIXINS)
+@import "tools/_mixins";
+@import "tools/_functions";
+
+//GENERIC
+@import "generic/_generic";
+@import "generic/_normalize.css";
+
+//TAGS
+@import "tags/_tags";
+
+//KEYFRAMES
+@import "keyframes/_keyframes";
+
+//OBJECTS
+@import "objects/_loader-page";
+@import "objects/_breakpoint";
+@import "objects/_button-pay";
+@import "objects/_accordion";
+@import "objects/_button-facebook";
+@import "objects/_button-whatsapp";
+@import "objects/_counter";
+@import "objects/_prices";
+@import "objects/_progress-bar";
+@import "objects/_round-button-whatsapp";
+@import "objects/_notify";
+@import "objects/_city-bar";
+
+//COMPONENTS el componente tiene mas fuerza que OBJECTS por cascada
+@import "components/_header";
+@import "components/_footer";
+@import "components/_course-information";
+@import "components/_our-students";
+@import "components/_prices";
+@import "components/_problems";
+@import "components/_recapitulate";
+@import "components/_teacher";
+@import "components/_firts-bonds";
+@import "components/_seconds-bonds";
+@import "components/_important";
+@import "components/_study-plan";
+@import "components/_students";
+@import "components/_skills";
+@import "components/_frequent-questions";
+
+//SCOPES
+@import "scopes/_scopes";
+
+//UTILITIES
+@import "utilities/_utilities";

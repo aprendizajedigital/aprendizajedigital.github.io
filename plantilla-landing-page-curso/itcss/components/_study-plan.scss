@@ -1,0 +1,55 @@
+.c-study-plan{
+
+    background-color: #4fafa1;
+    padding: 40px 0;
+
+    &__container{
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__span{
+        text-decoration: underline;
+        text-decoration-color: rgb(23, 157, 162);
+        text-decoration-thickness: 10px;
+
+        @include max-rwd(md){
+            text-decoration-thickness: 5px;
+        }
+    }
+
+    &__title{
+        text-shadow: RGB(0 0 0 / 30%) 2px 0px 1px;
+        font-size: 30px;
+        color: #fdfdfd;
+        font-weight: 700;
+
+        @include max-rwd(md){
+            font-size: 22px;
+        }
+    }
+
+    &__text{
+        font-size: 25px;
+        text-shadow: RGB(0 0 0 / 30%) 2px 0px 1px;
+        font-weight: 600;
+        color: white;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
+    }
+
+    &__img-certification{
+        width: 100%;
+    }
+
+    &__img-course-inside{
+        width: 100%;
+    }
+}

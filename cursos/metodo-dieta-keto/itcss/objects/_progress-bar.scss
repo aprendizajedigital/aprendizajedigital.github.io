@@ -1,0 +1,34 @@
+.o-progress-bar{
+    width: 100%;
+    background-color: #EEE;
+    border-radius: 9px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+    
+    position: relative;
+    display: flex;
+
+    &__bar{
+        width: 80%;
+        height: 20px;
+        
+        border-radius: 9px;
+        
+        background-color:#F8F8F8;
+        background-image: linear-gradient(135deg, #4CAF50 0 25%, #66BB6A 25% 50%, #4CAF50 50% 75%, #66BB6A 75% 100%);
+        background-size: 50px 50px;
+        
+        animation: progressAnimation 1s linear infinite forwards;
+    }
+
+    &__percentage{
+        position: absolute;
+      
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

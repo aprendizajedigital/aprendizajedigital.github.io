@@ -1,0 +1,81 @@
+.o-accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+
+    &__details{
+
+        background-color: white;
+        box-shadow: 0 5px 10px 0 RGBA(147, 147, 147, 0.25);
+        border-radius: 10px;
+        border: 1px solid RGBA(109, 161, 255, 0.9);  
+    }
+
+    &__details[open] &__summary{
+        animation: sweep .5s ease;
+    }
+
+    &__details[open] &__summary::before{
+        content: "🔼";
+        // transform: rotate(45deg);
+    }
+
+    &__summary{
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        list-style: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 800;
+        padding: 20px;
+        outline: none;
+
+        text-align: left;
+
+        // transition: transform .5s ease;
+        transition: background-color .3s;
+
+        &::before{
+            content:"🔽";
+        }
+
+        &:hover{
+            background-color:rgb(235, 235, 235);
+        }
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
+
+    }
+
+    &__container-text{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 10px 10px 10px;
+    }
+
+    &__text{
+        font-size: 18px;
+        font-weight: 500;
+        color: RGB(125, 125, 125);
+        line-height: 1.5rem;
+
+        text-align: left;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
+
+        // display: flex;
+        // justify-content: flex-start;
+        // align-items: center;
+    }
+}

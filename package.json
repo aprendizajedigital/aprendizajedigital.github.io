@@ -1,5 +1,20 @@
 {
   "dependencies": {
+    "node-sass": "^9.0.0",
     "sweetalert2": "^11.4.8"
-  }
+  },
+  "name": "sitio-web",
+  "description": "Notas de pruebas de la primera version del proyecto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scanTailwind": "npx tailwindcss -i ./cursos/alternativas-naturales-para-la-diabetes/css/input-tailwind-styles-main.css -o ./cursos/alternativas-naturales-para-la-diabetes/dist/output-tailwind-styles-main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

@@ -1,0 +1,39 @@
+.o-round-button-whatsapp{
+    &__container{
+    }
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 1000;
+        
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+
+        border-radius: 100%;
+
+        width: 60px;
+        height: 60px;
+
+        animation: glowing 2000ms infinite, horizontal-shaking 4s infinite;
+               
+        transition: all ease-in-out 0.3s;
+
+        color: #ffffff;
+        
+        background-color: #25d366;
+    }
+
+    &__img{
+        font-size: 30px; //con esto crece el logo de whatsapp
+    }
+
+    &__link:hover{
+        color: #25d366;
+        background-color: #ffffff;
+        border: 2.5px solid #25d366; //el secreto de esta hermosa animacion es el border, ya que no existe, pero con el hover existe y se hace una bonita animacion
+    }
+}

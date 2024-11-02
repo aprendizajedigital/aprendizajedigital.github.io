@@ -1,0 +1,47 @@
+.c-problems{
+    line-height: 1.5;
+    
+    padding: 25px 0;
+    
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title{
+        font-size: 35px;
+        font-weight: 700;
+        font-style: italic;
+        color: RGBA(0, 0, 0);
+        text-shadow: RGBA(255, 255, 255) 2px 0px 2px;
+        text-align: center;
+
+        @include max-rwd(md){
+            font-size: 25px;
+        }
+    }
+
+    &__title-span{
+        color: #ff0000;
+    }
+
+    &__emoji{
+        font-style: normal;
+    }
+
+    &__text{
+        font-size: 22px;
+        font-weight: 600;
+        color: RGBA(0, 0, 0);
+        text-shadow: RGBA(255, 255, 255) 2px 0px 2px;
+
+        @include max-rwd(md){
+            font-size: 16px;
+        }
+    }
+
+    &__text--text-align-center{
+        text-align: center;
+    }
+}

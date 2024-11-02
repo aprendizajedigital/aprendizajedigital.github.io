@@ -1,0 +1,100 @@
+.o-button-pay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%; //importante poner el ancho del papa
+
+
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        appearance: none;
+        background-image: radial-gradient(100% 100% at 100% 0, #ffc001 0, #f0473e 100%);
+        border: 0;
+        border-radius: 6px;
+        box-shadow: RGBA(45, 35, 66, .4) 0 2px 4px, RGBA(45, 35, 66, .3) 0 7px 13px -3px, RGBA(58, 65, 111, .5) 0 -3px 0 inset;
+        cursor: pointer;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        text-decoration: none;
+        transition: box-shadow .15s, transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        will-change: box-shadow, transform;
+
+        max-width: 420px;
+        width: 100%;
+        height: 115px;
+        
+        color: #ffffff;
+    }
+
+    &__button:focus{
+        box-shadow: #f0473e 0 0 0 1.5px inset, RGBA(45, 35, 66, .4) 0 2px 4px, RGBA(45, 35, 66, .3) 0 7px 13px -3px, #f0473e 0 -3px 0 inset;
+    }
+
+    &__button:hover{
+        box-shadow: RGBA(45, 35, 66, .4) 0 4px 8px, RGBA(45, 35, 66, .3) 0 7px 13px -3px, #f0473e 0 -3px 0 inset;
+        transform: translateY(-2px);
+    }
+
+    &__button:active{
+        box-shadow: #f0473e 0 3px 7px inset;
+        transform: translateY(2px);
+    }
+    
+    &__img{
+        max-width: 500px;
+        width: 100%;
+    }
+
+    &__icon-1{
+
+    }
+
+    &__icon-2{
+        width:30px;
+    }
+    
+    &__paragraph{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    &__span:nth-child(1){
+        font-size: 26px;
+        font-weight: 700;
+
+        @include max-rwd(md){
+            font-size: 23px;
+        }
+    }
+
+    &__span:nth-child(2){
+        font-size: 20.8px;
+        font-weight: 400;
+
+        @include max-rwd(md){
+            font-size: 18px;
+        }
+    }
+
+    &__text{
+        font-size: 26px;
+        font-weight: 400;
+        color: RGBA(29, 29, 29, 0.84);
+
+        @include max-rwd(md){
+            font-size: 23px;
+        }
+    }
+}
