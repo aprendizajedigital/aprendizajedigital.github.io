@@ -184,7 +184,7 @@ header {
     max-width: 1140px;
     width: 100%;
     height: auto;
-    line-height: 1.1;
+    line-height: 1.5;
 
     /* background-color: rgb(255, 255, 0); */
 
@@ -240,13 +240,31 @@ header {
 .header--question {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 600;
 
     color: rgba(0, 0, 0);
 
-    background-color:  #FFEA00;
+    /* background-color:  #FFEA00; */
 
     text-shadow: rgba(255, 255, 255) 2px 0px 2px;
+}
+
+.header--phrase{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+
+    font-style: italic;
+
+    color: rgba(0, 0, 0);
+
+    text-shadow: rgba(255, 255, 255) 2px 0px 2px;
+
+    text-align: center;
+}
+
+.header--phrase span{
+    color: #ff0000;
 }
 
 .estudiante__img{
@@ -272,14 +290,28 @@ img[src="img2.png"] {
     border-radius: 30px;
 }
 
-.main--title {
+.main--title:nth-child(1){
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.main--title:nth-child(2) {
     font-family: Montserrat, sans-serif;
     font-weight: 800;
     font-size: 25px;
+    color: #ff0000;
+
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .main--subtitle {
-    color: rgb(224, 77, 69);
+    color:#ff0000;
+    /* color: #ff0000; */
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
