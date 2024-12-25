@@ -305,79 +305,79 @@ getCountry();
 
 //-------USUARIOS FALSOS-------
 
-let intervalID;
+// let intervalID;
 
-function startNotify() {
-  intervalID = setInterval(() => {
-    openNotify();
-    setTimeout(closeNotify, 10000);
-  }, 180000);
-}
+// function startNotify() {
+//   intervalID = setInterval(() => {
+//     openNotify();
+//     setTimeout(closeNotify, 10000);
+//   }, 180000);
+// }
 
-function stopNotify() {
-  clearInterval(intervalID);
-}
+// function stopNotify() {
+//   clearInterval(intervalID);
+// }
 
-startNotify();
+// startNotify();
 
-//------------------------------
+// //------------------------------
 
-function openNotify() {
+// function openNotify() {
 
-  randomUser();
+//   randomUser();
 
-  document.querySelector('.notify__timerBar').style.display = '';
-  document.querySelector('.notify__timerBar').style.animationPlayState = 'running'
+//   document.querySelector('.notify__timerBar').style.display = '';
+//   document.querySelector('.notify__timerBar').style.animationPlayState = 'running'
 
-  if (document.querySelector('.notify').style.display == 'none') {
-    document.querySelector('.notify').style.display = '';
-  }
+//   if (document.querySelector('.notify').style.display == 'none') {
+//     document.querySelector('.notify').style.display = '';
+//   }
 
-  if (!document.querySelector('animate__animated')) {
-    document.querySelector('.notify').classList.add('animate__animated');
-  }
+//   if (!document.querySelector('animate__animated')) {
+//     document.querySelector('.notify').classList.add('animate__animated');
+//   }
 
-  if (!document.querySelector('animate__bounceOut')) {
-    document.querySelector('.notify').classList.remove('animate__bounceOut');
-  }
+//   if (!document.querySelector('animate__bounceOut')) {
+//     document.querySelector('.notify').classList.remove('animate__bounceOut');
+//   }
 
-  document.querySelector('.notify').classList.add('animate__bounceIn');
-}
+//   document.querySelector('.notify').classList.add('animate__bounceIn');
+// }
 
-function closeNotify() {
+// function closeNotify() {
 
-  document.querySelector('.notify__timerBar').style.display = 'none';
-  document.querySelector('.notify__timerBar').style.animationPlayState = 'paused'
+//   document.querySelector('.notify__timerBar').style.display = 'none';
+//   document.querySelector('.notify__timerBar').style.animationPlayState = 'paused'
 
-  document.querySelector('.notify').classList.remove('animate__bounceIn');
-  document.querySelector('.notify').classList.add('animate__bounceOut');
-}
+//   document.querySelector('.notify').classList.remove('animate__bounceIn');
+//   document.querySelector('.notify').classList.add('animate__bounceOut');
+// }
 
-function randomUser() {
-  // let image = document.querySelector('.notify__img').src.substr(-6);
+// function randomUser() {
+//   // let image = document.querySelector('.notify__img').src.substr(-6);
 
   
-  // let names = [];
-  // let users = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg","09.jpg","10.jpg"]
+//   // let names = [];
+//   // let users = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg","09.jpg","10.jpg"]
 
-  // let random_user = Math.floor(Math.random() * users.length + 1) + ".jpg";
+//   // let random_user = Math.floor(Math.random() * users.length + 1) + ".jpg";
 
-  let random_number = Math.floor(Math.random() * (users.length + 1))
+//   let random_number = Math.floor(Math.random() * (users.length + 1))
 
-  if (random_number == users.length) {
-    random_number = random_number - 1; //pongo -1 porque se empieza a contar desde 0 los arreglos
-  }
+//   if (random_number == users.length) {
+//     random_number = random_number - 1; //pongo -1 porque se empieza a contar desde 0 los arreglos
+//   }
 
-  let random_user = users[random_number];
+//   let random_user = users[random_number];
 
-  document.querySelector('.notify__img').src = "./compradores/" + random_user["photo"];
-  document.querySelector(".name").innerText = random_user["name"];
-  document.querySelector(".country").innerText = random_user["country"];
+//   document.querySelector('.notify__img').src = "./compradores/" + random_user["photo"];
+//   document.querySelector(".name").innerText = random_user["name"];
+//   document.querySelector(".country").innerText = random_user["country"];
 
-  // console.log(random_user["name"]);
-  // console.log(random_user["photo"]);
-  // console.log(random_user["country"]);
-}
+//   // console.log(random_user["name"]);
+//   // console.log(random_user["photo"]);
+//   // console.log(random_user["country"]);
+// }
 //---------------------------------------------------------------------------------------
 
 //animate__zoomIn LOOP

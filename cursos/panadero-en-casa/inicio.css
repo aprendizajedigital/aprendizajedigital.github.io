@@ -153,7 +153,7 @@ header {
 
 .header--title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 48px; /*50px*/
     font-weight: 900;
     text-shadow: rgb(0 0 0 / 30%) 2px 0px 2px;
     margin: 0;
@@ -448,7 +448,8 @@ img[src="img2.png"] {
 
 .main--container--bonds:after {
     content: '';
-    background-image: url(./background.png);
+    /* background-image: url(./background.png); */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/background.png);
     background-repeat: repeat;
     background-position: center center;
     position: absolute;
@@ -1433,6 +1434,49 @@ hr{
     animation: rotarload 1s linear infinite;
     transform: rotate(0deg); }
   
+    .o-notify {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 2000; }
+        .o-notify__container {
+          width: 350px;
+          height: 150px;
+          background-color: #fff;
+          border: 1px solid black;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly; }
+        .o-notify__group {
+          display: flex;
+          gap: 10px;
+          padding: 0 10px; }
+        .o-notify__container-img {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .o-notify__description {
+          flex: 2;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+        .o-notify__img {
+          width: 100%;
+          border-radius: 100%; }
+        .o-notify__time-bar {
+          width: 100%;
+          height: 5px;
+          background-color: #e99e88;
+          transform-origin: left center;
+          animation: roundtime 10s linear;
+          animation-iteration-count: infinite; }
+        .o-notify__title {
+          font-weight: bold; }
+      
   @keyframes rotarload {
     0% {
       transform: rotate(0deg); }
@@ -1543,7 +1587,7 @@ hr{
 
     .header--background {
         /* height: 300px; */
-        height: 550px;
+        height: 2350px;
     }
 
     .header--title {
