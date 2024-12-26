@@ -4,6 +4,10 @@
     --tertiary-color: rgb(72, 180, 184);
 }
 
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(https://aprendizajedigital.github.io/cursos/cocina-peruana-ceviches-y-mariscos/img/background.png);
+}
+
 .container__city_bar{
     display: flex;
     justify-content: center;
