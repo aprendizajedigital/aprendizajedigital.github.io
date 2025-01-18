@@ -59,7 +59,7 @@ document.querySelector("#form").addEventListener('submit', function (e) {
   }, 1000);
 
   //INICIO EMAIL.JS
-  const serviceID = 'default_service';
+  const serviceID = 'service_z017lxx'; //default_service
   const templateID = 'template_fc02x9n';  
 
   emailjs.sendForm(serviceID, templateID, this)
